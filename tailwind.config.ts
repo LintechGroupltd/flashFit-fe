@@ -21,7 +21,9 @@ const config: Config = {
 
       spacing: {},
     },
-    fontFamily: {},
+    fontFamily: {
+      'sans': ['Inter', 'sans-serif'],
+    },
   },
   plugins: [],
 };

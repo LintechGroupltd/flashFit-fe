@@ -13,5 +13,10 @@
 
 html,
 body {
-  font-family: var(--font-archivo);
+  font-family:inter;
 }
+
+/* .navbar{
+  background: var(--Primary-colour, #2A317F);
+} */
+
