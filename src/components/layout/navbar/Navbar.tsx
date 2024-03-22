@@ -64,7 +64,7 @@ function Navbar() {
   };
 
   return (
-    <div className="px-[100px] w-full">
+    <div className="w-full">
       <div className=" md:flex md:justify-between items-center py-4">
         {/* Left Section - Logo */}
         <div className=" items-center pt-2 md:block hidden">
@@ -79,8 +79,7 @@ function Navbar() {
         <div className="hidden md:flex space-x-7 font-sans">
           <Link
             href="#"
-            className="text-white text-[16px] hover:text-gray-300 transition duration-300 "
-          >
+            className="text-white text-[16px] hover:text-gray-300 transition duration-300 ">
             Home
           </Link>
 
@@ -88,8 +87,7 @@ function Navbar() {
             <div className="flex items-center gap-1">
               <Link
                 href="#"
-                className="text-white  text-[16px] hover:text-gray-300 transition duration-300 "
-              >
+                className="text-white  text-[16px] hover:text-gray-300 transition duration-300 ">
                 Services
               </Link>
               <Image
@@ -104,13 +102,14 @@ function Navbar() {
                 {serviceDropDownOption?.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-5 py-[14px] px-3 hover:bg-[#E9EAF9] mt-2 rounded-[9px]"
-                  >
+                    className="flex items-center gap-5 py-[14px] px-3 hover:bg-[#E9EAF9] mt-2 rounded-[9px]">
                     <Image src={item?.logoImg} alt="" />
 
                     <Link href="">
                       <div className="">
-                        <h2 className="text-[15px] text-[#000] font-sans" style={{fontWeight:'500'}}>
+                        <h2
+                          className="text-[15px] text-[#000] font-sans"
+                          style={{ fontWeight: "500" }}>
                           {item?.serviceOption}
                         </h2>
                         <p className="text-[12px] text-[#505050] font-sans mt-[5px]">
@@ -133,14 +132,12 @@ function Navbar() {
 
           <Link
             href="#"
-            className="text-white  text-[16px] hover:text-gray-300 transition duration-300"
-          >
+            className="text-white  text-[16px] hover:text-gray-300 transition duration-300">
             About Us
           </Link>
           <Link
             href="#"
-            className="text-white  text-[16px] hover:text-gray-300 transition duration-300"
-          >
+            className="text-white  text-[16px] hover:text-gray-300 transition duration-300">
             Gallery
           </Link>
         </div>
@@ -149,15 +146,13 @@ function Navbar() {
         <div className="md:hidden flex justify-end pr-4">
           <button
             onClick={toggleMenu}
-            className="text-white  focus:outline-none"
-          >
+            className="text-white  focus:outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+              stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -169,7 +164,9 @@ function Navbar() {
         </div>
 
         {/* Right Section - Contact Button */}
-        <button style={{fontWeight:'600'}} className="bg-[#FDAD39] md:block font-sans hidden text-[#000] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300">
+        <button
+          style={{ fontWeight: "600" }}
+          className="bg-[#FDAD39] md:block font-sans hidden text-[#000] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300">
           Contact
         </button>
       </div>
@@ -189,15 +186,13 @@ function Navbar() {
 
               <button
                 onClick={toggleMenu}
-                className="text-white focus:outline-none"
-              >
+                className="text-white focus:outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                  stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -211,26 +206,22 @@ function Navbar() {
             <div className="mt-4">
               <Link
                 href="#"
-                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300"
-              >
+                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300">
                 Home
               </Link>
               <Link
                 href="#"
-                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300"
-              >
+                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300">
                 Service
               </Link>
               <Link
                 href="#"
-                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300"
-              >
+                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300">
                 About Us
               </Link>
               <Link
                 href="#"
-                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300"
-              >
+                className="block px-3 py-2 text-white hover:bg-gray-700 transition duration-300">
                 Gallery
               </Link>
             </div>

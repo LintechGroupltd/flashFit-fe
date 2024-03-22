@@ -19,11 +19,13 @@ const config: Config = {
     extend: {
       colors: {},
 
-      spacing: {},
+      spacing: {
+        "window-capped-width": "var(--window-capped-width)",
+      },
     },
     fontFamily: {
-      'sans': ['Inter', 'sans-serif'],
-      'serif': ['Sora', 'serif'],
+      sans: ["Inter", "sans-serif"],
+      serif: ["Sora", "serif"],
     },
   },
   plugins: [],
