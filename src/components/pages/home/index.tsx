@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Footer from "@/components/layout/footer/Footer";
+// import Footer from "@/components/layout/footer/Footer";
 import Navbar from "@/components/layout/navbar/Navbar";
 import HomeBanner from "./homeBanner/homeBanner";
 import heroBgImg from "../../../../public/assets/home/bannerSection/HeroBackground.svg";
@@ -27,7 +27,7 @@ function HOME() {
           <HomeBanner />
         </div>
 
-        <div className="absolute px-[100px] w-full  h-[44] top-[650px] md:top-[620px] lg:top-[570px] xl:top-[570px] 2xl:top-[860px] 3xl:top-[790px]">
+        <div className="absolute px-[100px] w-full  h-[44] top-[650px] md:top-[620px] lg:top-[570px] xl:top-[610px] 2xl:top-[860px] 3xl:top-[790px]">
           <SearchVehicle />
         </div>
       </div>
