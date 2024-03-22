@@ -1,22 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  background-color: #fff;
+  --window-capped-width: 1726px;
+   
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 html,
 body {
+  overflow-x: hidden;
   font-family:inter;
 }
 
-/* .navbar{
-  background: var(--Primary-colour, #2A317F);
-} */
+
 

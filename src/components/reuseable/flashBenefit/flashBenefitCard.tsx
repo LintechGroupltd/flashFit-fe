@@ -48,10 +48,10 @@ function FlashBenefitCard() {
           </div>
 
           <div className="">
-            <h2 className="text-[#000] text-[24px] font-sans font-[600]">
+            <h2 className="text-[#000] text-[24px] font-serif font-[600]">
               {item?.title}
             </h2>
-            <p className="text-[15px] text-[#2D2D2D] mt-2 font-sans">
+            <p className="text-[16px] text-[#2D2D2D] mt-2 font-sans font-[400]">
               {item?.description}
             </p>
           </div>

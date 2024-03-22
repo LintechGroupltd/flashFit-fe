@@ -40,7 +40,7 @@ function HomeServiceCard() {
   ];
 
   return (
-    <div className="mt-8 w-full grid grid-cols-2 gap-5">
+    <div className="mt-10 w-full grid grid-cols-2 gap-5">
       {homeServiceData?.map((item, index) => (
         <div key={index} className=" bg-[#F5F5F7] flex gap-4  p-8 rounded-[12px]">
          
@@ -58,8 +58,8 @@ function HomeServiceCard() {
             </div>
 
             <div className="">
-              <h2 className="text-[#000] text-[24px] font-sans font-[600]">{item?.title}</h2>
-              <p className="text-[15px] text-[#2D2D2D] mt-2 font-sans">{item?.description}</p>
+              <h2 className="text-[#000] text-[24px] font-serif font-[600]">{item?.title}</h2>
+              <p className="text-[15px] text-[#2D2D2D] mt-[10px] font-sans">{item?.description}</p>
             </div>
          
       

@@ -64,8 +64,8 @@ function Navbar() {
   };
 
   return (
-    <div className=" w-full">
-      <div className=" md:flex md:justify-around items-center py-4">
+    <div className="px-[100px] w-full">
+      <div className=" md:flex md:justify-between items-center py-4">
         {/* Left Section - Logo */}
         <div className=" items-center pt-2 md:block hidden">
           <Image
@@ -90,7 +90,7 @@ function Navbar() {
                 href="#"
                 className="text-white  text-[16px] hover:text-gray-300 transition duration-300 "
               >
-                Service
+                Services
               </Link>
               <Image
                 src={downArrow}

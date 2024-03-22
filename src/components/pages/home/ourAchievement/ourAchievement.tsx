@@ -7,11 +7,11 @@ import Image from "next/image";
 
 function OurAchievement() {
   return (
-    <div className="px-[100px] mt-32 py-5">
+    <div className=" mt-32 py-5">
         <div className="grid grid-cols-2 gap-5 h-[289px] ">
             <div className="bg-[#2A317F] flex justify-between rounded-[38px]">
                <div>
-                   <h2 className="text-[#FFFFFF] text-[48px] leading-[56px] mt-36 ml-10">OUR <br/> ACHIEVEMENT</h2>
+                   <h2 className="text-[#FFFFFF] text-[48px] font-[600] leading-[56px] mt-36 ml-10 font-serif">OUR <br/> ACHIEVEMENT</h2>
                 </div>  
                <div>
                   <Image src={ourAchievementArrowIcon} alt="icon"/>
@@ -22,9 +22,9 @@ function OurAchievement() {
 
               <div className="flex justify-between items-center  p-14">
                 <div>
-                   <h2 className="text-[94px]">37</h2>
+                   <h2 className="text-[93px] font-[400] font-serif">37</h2>
                 </div>
-                <div className="text-[29px] font-[600]">
+                <div className="text-[29px] font-[600] font-sans leading-[60px]">
                   <h2>Active<br/> Portfolio<br/> Companies</h2>
                 </div>
               </div>  
@@ -40,7 +40,7 @@ function OurAchievement() {
          </div>
 
          <div className="bg-[#F5F5F7] col-span-4 rounded-[38px]">
-           <h2 className="text-[94px] flex justify-center items-center mt-14">37</h2>
+           <h2 className="text-[93px] font-[400] flex justify-center items-center font-serif mt-14">37</h2>
          </div>
        
        </div>
