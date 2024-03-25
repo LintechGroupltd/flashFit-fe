@@ -159,7 +159,7 @@ function NavListMenu() {
             </div>
           </div>
          
-          <div className="bg-[#2A317F] text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
+          <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
             <button>Contact Us</button>
             <div>
               <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>

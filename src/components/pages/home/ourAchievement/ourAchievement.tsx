@@ -47,15 +47,15 @@ function OurAchievement() {
       </div>
 
       <div>
-        <div className="grid md:grid-cols-12 gap-[35px]  mt-[33px] w-full ">
+        <div className="grid md:grid-cols-12 gap-[35px] min-h-[300px] mt-[33px] w-full ">
 
-          <div className="md:col-span-7 w-full  h-[300px]" data-aos='fade-up-right' data-aos-duration="500">
+          <div className="md:col-span-7 w-full  " data-aos='fade-up-right' data-aos-duration="500">
             <Image src={wheelImg} alt="wheelImg" className="w-full " />
 
           </div>
 
           <div className="bg-[#F5F5F7] md:col-span-5  w-full   rounded-[38px]" data-aos='fade-up-left' data-aos-duration="1000">
-            <Image src={ourAchievementSmallTyreImg} alt="ourAchievementCar" className="w-full h-full"/>
+            <Image src={ourAchievementSmallTyreImg} alt="ourAchievementCar" className=""/>
           </div>
         </div>
       </div>
