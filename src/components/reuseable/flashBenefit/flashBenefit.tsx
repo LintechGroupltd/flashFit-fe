@@ -15,7 +15,7 @@ function FlashBenefit() {
         <p className="md:text-[18px] md:hidden block text-[16px] font-[400] text-[#fff] font-sans mt-3">Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights.</p>
       </div>  
 
-     <div className="mt-10">
+     <div className="mt-10 ">
        <FlashBenefitCard/>
      </div>
 

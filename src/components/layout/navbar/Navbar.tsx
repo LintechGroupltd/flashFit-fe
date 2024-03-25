@@ -5,6 +5,7 @@ import navbarLogo from "../../../../public/assets/navabar/FlashfitLogo.svg";
 import downArrow from "../../../../public/assets/navabar/Arrow_Down.svg";
 import serviceDropdownOptionLogo from "../../../../public/assets/navabar/serviceDropdownOptionLogo.svg";
 import contactUs_arrow_right from "../../../../public/assets/navabar/contactUs-arrow-right.svg";
+import DropdonMegamenuImage from "../../../../public/assets/navabar/DropdonMegamenuImage.svg";
 
 import {
   Navbar,
@@ -80,7 +81,7 @@ function NavListMenu() {
               placeholder=""
               variant="h6"
               color="blue-gray"
-              className="  text-[16px] font-sans font-[500]"
+              className="  text-[16px] font-sans font-[600]"
             >
               {title}
             </Typography>
@@ -140,17 +141,28 @@ function NavListMenu() {
         </MenuHandler>
 
         <MenuList
-          className="hidden max-w-full p-[0px] border border-none lg:ml-[180px] xl:ml-[200px] xl:w-[790px] rounded-xl lg:block menulist_style"
+          className="hidden max-w-full p-[0px] border border-none xl:ml-[70px] rounded-xl lg:block menulist_style"
           placeholder=""
-        >
-          <ul className="grid grid-cols-2  gap-y-2 outline-none outline-0 ">
-            {renderItems}
-          </ul>
-
-          <div className="bg-[#2A317F] text-[16px] flex justify-center gap-2 py-3 text-[#F8AD39] font-[500] ">
+        > 
+          <div className="flex  outline-none outline-0 ">
+            <div className="p-4 bg-[#F5F5F7]">
+               <Image src={DropdonMegamenuImage} alt="DropdonMegamenuImage"/>
+               <div>
+                 <p className="text-[#000] text-[16px] font-[600] font-sans mt-5">Driven by a passion for cars and a<br/> dedication to quality</p>
+               </div>
+              
+            </div>
+            <div>
+             <ul className="grid grid-cols-2 p-4 gap-y-2">        
+               {renderItems}
+             </ul>
+            </div>
+          </div>
+         
+          <div className="bg-[#2A317F] text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
             <button>Contact Us</button>
             <div>
-              <Image src={contactUs_arrow_right} alt="" />
+              <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>
             </div>
           </div>
         </MenuList>
