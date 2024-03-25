@@ -3,7 +3,8 @@ import ourAchievementArrowIcon from "../../../../../public/assets/home/ourAchiev
 import wheelImg from "../../../../../public/assets/home/ourAchievement/wheelImg.svg";
 import wheelImg2 from "../../../../../public/assets/home/ourAchievement/wheel2Img.svg";
 
-import ourAchievementCar from "../../../../../public/assets/home/ourAchievement/Animation - 1711287802760 1.svg";
+import ourAchievementSmallTyreImg from "../../../../../public/assets/home/ourAchievement/ourAchievementSmallTyreImg.svg";
+
 import Image from "next/image";
 
 function OurAchievement() {
@@ -48,13 +49,13 @@ function OurAchievement() {
       <div>
         <div className="grid md:grid-cols-12 gap-[35px]  mt-[33px] w-full ">
 
-          <div className="md:col-span-9 w-full h-full" data-aos='fade-up-right' data-aos-duration="500">
-            <Image src={wheelImg} alt="wheelImg" className="w-full" />
+          <div className="md:col-span-7 w-full  h-[300px]" data-aos='fade-up-right' data-aos-duration="500">
+            <Image src={wheelImg} alt="wheelImg" className="w-full " />
 
           </div>
 
-          <div className="bg-[#F5F5F7] md:col-span-3  w-full p-14   rounded-[38px]" data-aos='fade-up-left' data-aos-duration="1000">
-            <Image src={ourAchievementCar} alt="ourAchievementCar" className="md:ml-0 ml-8"/>
+          <div className="bg-[#F5F5F7] md:col-span-5  w-full   rounded-[38px]" data-aos='fade-up-left' data-aos-duration="1000">
+            <Image src={ourAchievementSmallTyreImg} alt="ourAchievementCar" className="w-full h-full"/>
           </div>
         </div>
       </div>
