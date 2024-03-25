@@ -1,5 +1,6 @@
 export const quickLinks = [
-    {
+    { 
+      id:1,
       title: "Quick Link",
       children: [
         {
@@ -7,18 +8,14 @@ export const quickLinks = [
           title: "Home",
           link: "/",
         },
-        // {
-        //   title: "Testimonials",
-        //   link: "/",
-        // },
-        // {
-        //   title: "Portfolio",
-        //   link: "/",
-        // },
-        // {
-        //   title: "Gallery",
-        //   link: "/",
-        // },
+        {
+          title: "Gallery",
+          link: "/",
+        },
+        {
+          title: "About Us",
+          link: "/",
+        },
         {
           title: "Contact Us",
           link: "/",
@@ -27,30 +24,35 @@ export const quickLinks = [
           title: "Privacy Policy",
           link: "/",
         },
+        {
+          title: "Terms and Conditions",
+          link: "/",
+        },
       ],
     },
   
     {
-      title: "Commercial Renovation",
+      id:2,
+      title: "Services",
       children: [
         {
-          title: "Restaurant Franchise Renovation",
+          title: "MOT",
           link: "/",
         },
         {
-          title: "Restaurant Renovation",
+          title: "Servicing",
           link: "/",
         },
         {
-          title: "Hotel Renovation Service",
+          title: "Brakes",
           link: "/",
         },
         {
-          title: "Office Space Renovation",
+          title: "Exhust",
           link: "/",
         },
         {
-          title: "Retail Space Renovation",
+          title: "Tyres & Wheels Alignment",
           link: "/",
         },
         // {
@@ -58,52 +60,20 @@ export const quickLinks = [
         //   link: "/",
         // },
         {
-          title: "Night Club Renovation",
+          title: "Exhust",
           link: "/",
         },
         {
-          title: "Bar Renovation",
+          title: "Diagnostic testing",
           link: "/",
         },
       ],
     },
   
-    {
-      title: "Residential Renovation",
-      children: [
-        {
-          title: "Luxury Home Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Apartment Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury House Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Mansion Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Living Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Villa Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Bathroom Renovation",
-          link: "/",
-        },
-        {
-          title: "Luxury Kitchen Renovation",
-          link: "/",
-        },
-      ],
-    },
+    // {
+    //   id:3,   
+    //   title: "Our Info",
+     
+    // },
   ];
   

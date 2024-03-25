@@ -6,29 +6,10 @@ import faqMinusIcon from "../../../../public/assets/reuseableComponentImg/Faq/Fa
 
 
 import Image from "next/image";
+import { FaqData } from "./data";
 
 const FaqSection = () => {
-  const FaqData = [
-    {
-      id: "01",
-      title: "How long does the luxury renovation process typically take?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur.",
-    },
-    {
-      id: "02",
-      title: "What sets your luxury renovation process apart from others?",
-      content:
-        "Our process is a meticulous blend of vision, precision, and innovation, categorized into distinct stages. From conceptualization to the final touches, each step is designed to elevate your space with unparalleled craftsmanship and attention to detail.",
-    },
-    {
-      id: "03",
-      title: "Can I be involved in the decision-making process during the renovation?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur. Pulvinar arcu mattis in at sodales condimentum. Gravida arcu aliquet rutrum erat varius. Tellus felis sed pretium in egestas. Lorem ipsum dolor sit amet consectetur.",
-    },
-  ];
-
+ 
   const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
 
   const toggleAccordion = (id: string) => {
@@ -36,52 +17,62 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="px-[100px] py-10">
+    <div className="md:py-10 mt-20">
 
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-12">
 
-      <div className="">
-        <h2 className="text-[48px] font-serif font-[600]">FAQs</h2> 
-        <p className="text-[18px] font-sans font-[400]">Discover Everything You Need to Know About<br/> Servicing: Unveiling the Most Commonly Asked<br/> Questions (FAQs) with Detailed Answers</p>
+      <div className="col-span-5 ">
+        <h2 className="md:text-[48px] text-[37px] font-serif font-[600]">FAQs</h2> 
+        <p className="text-[18px] md:block hidden mt-2 font-sans font-[400]">Discover Everything You Need to Know About<br/> Servicing: Unveiling the Most Commonly Asked<br/> Questions (FAQs) with Detailed Answers</p>
+        <p className="md:text-[18px] text-[16px] mt-2 md:hidden block font-sans font-[400]">Discover Everything You Need to Know About Servicing: Unveiling the Most Commonly Asked Questions (FAQs) with Detailed Answers</p>
       </div>
      
 
-      <div className="md:mt-9 mt-7">
+      <div className="md:mt-9 mt-7 col-span-7">
         <div>
           {FaqData.map(({ id, title, content }) => (
             <div
               key={id}
-              className=' py-7  border-b-[1px] border-[#E5E5E5] md:px-5 px-2 bg-[#fff]' 
+              className={`   md:px-5 px-2 bg-[#fff]`}
             >
-              <div className="flex md:gap-0 gap-3 justify-between  ">
-                <div className="flex  md:gap-4 gap-2">
-              
-                  <h2
-                    className='text-[18px] font-[500] font-sans text-[#000]'  
-                  >
+              <div className="flex md:gap-0 gap-3 justify-between  pt-5">
+                <div className="md:w-full w-10/12">
+                  <h2 className='md:text-[18px] text-[16px] text-start font-[500] font-sans text-[#000]'>
                     {title}
                   </h2>
+              
                 </div>
-
-                <button
+            
+              <div className="">
+              <button
                   onClick={() => toggleAccordion(id)}
-                  className={` focus:outline-none`}
+                  className={` focus:outline-none w-full`}
                 >
                   {openAccordionId === id ? 
-                   <Image src={faqMinusIcon} alt="faqMinusIcon" />
+                   <Image src={faqMinusIcon} alt="faqMinusIcon" className="md:w-[24px] md:h-[24px] w-[17px] h-[17px]"/>
                   : 
-                  <Image src={faqPlusIcon} alt="faqPlusIcon" />
+                  <Image src={faqPlusIcon} alt="faqPlusIcon" className="md:w-[24px] md:h-[24px] w-[17px] h-[17px]"/>
                   
                   }
                 </button>
+              </div>  
+                
               </div>
               {openAccordionId === id && (
                 <p
-                  className='mt-3  text-justify text-[15px] font-sans font-[400] text-[#505050]'
+                  className='mt-3  text-justify md:text-[15px] text-[15px] font-sans font-[400] text-[#505050]'
                 >
                   {content}
                 </p>
               )}
+
+              <div    className={` w-full pt-5
+              
+              ${id !=='5' ? "border-b-[1px] border-[#E5E5E5]" : "border-none"}
+
+            ` 
+            } /> 
+  
             </div>
           ))}
         </div>

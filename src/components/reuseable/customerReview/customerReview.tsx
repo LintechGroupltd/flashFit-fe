@@ -8,8 +8,9 @@ function CustomerReview() {
  
 
   return (
-    <div className="my-14 pb-20 w-full">
-       <div>
+    <div className="md:my-14 pb-20 w-full pt-7">
+      <h2 className="md:text-[46px] text-[35px] font-serif font-[600] md:leading-[63px] leading-[50px]">Hear What our<br/> Customers has to Say</h2>
+       <div className="md:mt-6 mt-4">
           <CustomerReviewCard/>
        </div>
     </div>

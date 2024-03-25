@@ -5,6 +5,8 @@ import rightArrow from "../../../../public/assets/reuseableComponentImg/customer
 import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/leftArrow.svg";
 
 function CustomerReviewCard() {
+  const [hoveredIndex, setHoveredIndex] = React.useState(null);
+
   const customerReviewData = [
     {
       id: 1,
@@ -19,31 +21,37 @@ function CustomerReviewCard() {
   ];
 
   return (
-    <div className="w-full px-[100px]">
+    <div className="w-full ">
       {customerReviewData.map((review) => (
-        <div key={review.id} className="flex justify-between gap-10">
-          <div className=" w-full h-full">
-            <Image src={review.customerImg} alt="Customer" className="w-full h-full"/>
+        <div key={review.id} className="grid md:grid-cols-12  md:gap-2">
+
+       {/* left image section  */}
+          <div className="3xl:col-span-3 xl:col-span-5 lg:col-span-4  w-full h-full">
+            <Image src={review.customerImg} alt="Customer" className="md:pr-[90px] w-full h-[420px]"/>
           </div>
 
-
-         <div className="">
+ 
+      {/* right section */}
+        <div className="3xl:col-span-9 xl:col-span-7 lg:col-span-8  2xl:mt-8">
          <div className="">
            
            {[...Array(5)].map((_, index) => (
              <span key={index} className="text-yellow-500 text-[30px]">&#9733;</span>
            ))}
          </div>
-         <p className=" mb-2 text-[36px] font-sans italic font-[500] mt-2 leading-[48px] text-[#101828]">{review.title}</p>
+         <p className="mt-[5px] mb-2 md:text-[33px] text-[27px] font-sans italic font-[500]  md:leading-[45px] leading-[40px] text-[#101828]">{review.title}</p>
        
         <div className="py-3">
-          <p className=" mb-2 text-[18px] font-[500] font-sans text-[#101828] mt-3">{review.customerName}</p>
+          <p className=" mb-2 text-[18px] font-[500] font-sans text-[#101828] ">{review.customerName}</p>
           <p className=" mb-2 text-[#505050] font-sans text-[16px]">{review.designation}</p>
         </div>     
         
          <div className="flex gap-4">
-           <Image src={review.leftArrow} alt="Left Arrow" />
-           <Image src={review.rightArrow} alt="Right Arrow" />
+          <div className="bg-[#D7D7D7] hover:bg-[#F8AD39] w-[55px] h-[55px] rounded-full">
+            <Image src={review.leftArrow} alt="Left Arrow"  className="md:w-[24px] w-[50px] md:h-[55px] h-[24px]  mx-auto"/>
+          </div> 
+          
+           <Image src={review.rightArrow} alt="Right Arrow"  className="md:w-[55px] w-[50px] md:h-[55px] h-[50px]"/>
          </div>
          </div>    
           

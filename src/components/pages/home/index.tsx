@@ -12,54 +12,71 @@ import VehicleStatics from "./vehicleStatics/vehicleStatics";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
+import Footer from "@/components/layout/footer/Footer";
 
 function HOME() {
   return (
     <div className="">
-      <div className="relative">
-        <div
-          className="w-full bg-cover bg-center "
-          style={{
-            backgroundImage: `url(${heroBgImg.src})`,
-          }}
-        >
+      <div
+        className="root_parent_wrapper bg-[#2A317F]"
+        style={{
+          backgroundImage: `url(${heroBgImg.src})`,
+        }}
+      >
+        <div className="root_child_wrapper">
           <Navbar />
           <HomeBanner />
         </div>
+      </div>
 
-        <div className="absolute px-[100px] w-full  h-[44] top-[650px] md:top-[620px] lg:top-[570px] xl:top-[610px] 2xl:top-[860px] 3xl:top-[790px]">
-          <SearchVehicle />
+      <div className="root_parent_wrapper">
+        <div className="root_child_wrapper">
+          <div className="">
+            <SearchVehicle />
+          </div>
+
+          <div className="">
+            <HomeServices />
+          </div>
+
+          <div className="">
+            <OurAchievement />
+          </div>
         </div>
       </div>
 
-      <div className="px-[100px]">
-        <div className="mt-44 ">
-          <HomeServices />
-        </div>
-
-        <div>
-          <OurAchievement />
-        </div>
-
-        <div>
+      <div className="root_parent_wrapper bg-[#2A317F]">
+        <div className="root_child_wrapper">
           <FlashBenefit />
         </div>
       </div>
 
-      <div className="bg-[#F5F5F7] mt-20">
-        <VehicleStatics/>
-        <CustomerReview/>
+      <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">
+        <div className="root_child_wrapper">
+          <div className="">
+            <VehicleStatics />
+          </div>
+          <CustomerReview />
+        </div>
       </div>
-  
-     <div>
-       <FaqSection/>  
-     </div>
 
-     <div className="px-[100px]">
-        <BookContact/>  
-     </div>     
+      <div className="root_parent_wrapper  ">
+        <div className="root_child_wrapper">
+          <FaqSection />
+        </div>
+      </div>
 
-      {/* <Footer /> */}
+      <div className="root_parent_wrapper  mt-24">
+        <div className="root_child_wrapper">
+          <BookContact />
+        </div>
+      </div>
+
+      <div className="root_parent_wrapper  mt-20 bg-[#F5F5F7]  ">
+        <div className="root_child_wrapper">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

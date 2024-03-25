@@ -29,79 +29,122 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import flahFitFooterLogo from '../../../../public/assets/footer/FlashfitLogo.svg'
+
+import telephoneIcon from '../../../../public/assets/footer/telephone.svg'
+import infoWhatsApp from '../../../../public/assets/footer/infoWhatsApp.svg'
+import locationIcon from '../../../../public/assets/footer/locationIcon.svg'
+
 
 // import call_white from "@/assets/icons/call_white.svg";
 // import whatsapp_white from "@/assets/icons/whatsapp_white.svg";
 import { quickLinks } from "./data";
+import { socialLinks } from "@/constants";
 
 function Footer() {
   return (
-    <footer className='bg-primary-dark  w-full py-[50px] sm:py-[80px] lg:py-[120px] px-[16px] xs:px-[30px] rounded-b-[20px];'>
-      <main className=' w-full mx-auto flex flex-wrap items-start justify-between max-w-[1420px] gap-[24px];'>
+    <footer className='w-full py-[50px] sm:py-[80px] lg:pt-[110px] rounded-b-[20px];'>
+      <main className=' w-full mx-auto flex flex-wrap items-start justify-between  gap-[24px];'>
         <div>
           <Link href={"/"}>
             <Image
-              src="/icons/logo.svg"
+              src={flahFitFooterLogo}
               alt="logo"
-              width={300}
-              height={100}
+              className="h-[58px] w-[270px]"
               // className={styles.logo}
             />
           </Link>
 
-          <h4 className='text-white font-bold pt-[25px] md:pt-[40px] pb-[15px]'>Find Us On Social Media</h4>
-          <div className='flex gap-[16px] items-center'>
-            {/* {socialLinks.map((socail, idx) => (
+          <h4 className='text-[#000] font-serif font-[600] text-[20px] pt-[25px] md:pt-[38px] pb-[15px]'>Find Us On Social Media</h4>
+          <div className='flex gap-[15px] items-center'>
+            {socialLinks.map((socail, idx) => (
               <Link href={socail.url} key={idx}>
-                <Image src={socail.img} alt={socail.label} />
+                <Image src={socail.img} alt={socail.label} className="w-9 h-9" />
               </Link>
-            ))} */}
+            ))}
           </div>
 
-          <h4 className='text-white font-bold pt-[25px] md:pt-[40px] pb-[15px]'>Our Info</h4>
-          <div className='flex items-center gap-[12px] mb-[15px]'> 
-            <div>
-              {/* <Image src={call_white} alt={call_white} /> dsdsfgfgdf zds*/}
-              <span className="">
-                0121 272 9229 
-                <br />
-                (Fri-Sat)
-              </span>
-            </div>
-            <div>
-              {/* <Image src={whatsapp_white} alt={whatsapp_white} /> */}
-              <span>
-                +447301253447
-                <br />
-                (Fri-Sat)
-              </span>
-            </div>
-          </div>
+
         </div>
 
         {quickLinks.map((item, i) => {
           return (
-            <div className='flex flex-col items-start justify-start mb-[10px] gap-[10px] xs:gap-[16px] md:gap-[24px]' key={`${i}`}>
-              <h4 className='text-white pb-[6px] sm:pb-[15px]'>{item.title}</h4>
+            <div className='flex flex-col mt-3 items-start justify-start mb-[10px] gap-[10px] xs:gap-[16px] md:gap-[24px]' key={`${i}`}>
+              <h4 className='text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px]'>
+                {item.title} 
+              </h4>
+        
               {item?.children?.length
-                ? item.children.map((child, indx) => (
+                ? item.children.map((child, index) => (
                     <Link href={child.link}>
-                      <span style={{ color: "#A9A9A9 !important" }}>
+                      <span className="font-sans text-[14px] font-[500] text-[#505050]">
                         {child.title}
+                       
                       </span>
                     </Link>
                   ))
                 : null}
+
+               
+           
             </div>
           );
         })}
 
+           <div>
+             <h4 className="text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px]"> Our Info</h4>   
+             <div className=''> 
+ 
+          {/* telephone */}
+            <div className="flex gap-2 mt-[22px]">
+              <div>
+                <Image src={telephoneIcon} alt='telephoneIcon' /> 
+              </div> 
+              <div>
+               <span className="text-[14px] font-[500] font-sans">
+                 0121 272 9229 
+                <br />
+                (Fri-Sat)
+              </span>
+              </div>                    
+            </div>
+         
+           {/* whatsApp */}
+            <div className="flex items-center gap-2 mt-4">
+              <div>
+                <Image src={infoWhatsApp} alt='infoWhatsApp' />
+              </div>
+              <div>
+               <span className="text-[14px] font-[500] font-sans">
+                 +447301253447
+               </span>
+              </div> 
+            </div>
+           
+          {/* location  */}
+             <div className="flex gap-2 mt-[22px]">
+              <div>
+                <Image src={locationIcon} alt='locationIcon' /> 
+              </div> 
+              <div>
+               <span className="text-[14px] font-[500] font-sans">
+                 123 Main Street
+                <br />
+                 Cityville, USA
+              </span>
+              </div>                    
+            </div>
+
+
+          </div> 
+           </div>
+
         <div className="w-full">
-          <div className='bg-[#454545] w-full h-[1px] my-[30px] sm:my-[60px]' />
-          <p className='w-full text-center text-white pb-[0px]'>
-             Copyright © 2024 John Clive Industries Ltd. Registered in England and Wales, UK. 
+          <div className='bg-[#D7D7D7] w-full h-[1px] my-[30px] sm:my-[60px]' />
+          <p className='w-full text-center text-[#000] pb-[0px] text-[16px] font-sans'>
+             Copyright © 2024 John Clive Industries Ltd. Registered in England and Wales, UK
           </p>
-          <p className='w-full text-center text-white pb-[0px]'>All rights reserved Website Developed by Lintech Group</p>
+          <p className='w-full text-center text-[#000] text-[16px] pb-[0px] font-sans'>All rights reserved Website Developed by Lintech Group</p>
         </div>
       </main>
     </footer>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,22 +6,39 @@
 
 :root {
   background-color: #fff;
-  --window-capped-width: 1726px;
-   
+  --window-capped-width: calc(1200 / 1420 * 100vw);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 html,
 body {
   overflow-x: hidden;
-  font-family:inter;
+  font-family: inter;
 }
 
+.root_parent_wrapper {
+  @apply w-full px-[30px];
+}
 
+.root_child_wrapper {
+  @apply w-window-capped-width mx-auto;
+}
 
+.navbar_width{
+   width: 100% !important;
+   background-color: yellow;
+}
+
+MenuList{
+  position: absolute;
+  top: 12px !important;
+  left: 389.352px;
+  opacity: 1;
+  transform-origin: center top;
+  transform: scale(1);
+}

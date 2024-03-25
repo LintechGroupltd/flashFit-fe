@@ -35,11 +35,11 @@ function FlashBenefitCard() {
   ];
 
   return (
-    <div className="mt-8 w-full grid grid-cols-2 gap-5">
+    <div className="mt-8 w-full grid md:grid-cols-2  gap-[35px]">
       {flashBenefitCardData?.map((item, index) => (
         <div
           key={index}
-          className=" bg-[#F5F5F7] flex   p-8 rounded-[12px]"
+          className=" bg-[#F5F5F7] md:flex gap-3  p-8 rounded-[12px]"
         >
           <div className="w-48 2xl:w-36">
             <div>
@@ -48,10 +48,10 @@ function FlashBenefitCard() {
           </div>
 
           <div className="">
-            <h2 className="text-[#000] text-[24px] font-serif font-[600]">
+            <h2 className="text-[#000] md:text-[24px] text-[22px] font-serif font-[600] md:mt-0 mt-2">
               {item?.title}
             </h2>
-            <p className="text-[16px] text-[#2D2D2D] mt-2 font-sans font-[400]">
+            <p className="md:text-[16px] text-[15px] text-[#2D2D2D] mt-2 font-sans font-[400]">
               {item?.description}
             </p>
           </div>
