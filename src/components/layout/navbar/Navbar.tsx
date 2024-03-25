@@ -177,10 +177,10 @@ function NavListMenu() {
           <div className="">
             {renderItems}
           </div>
-          <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
+          <div className="bg-[#2A317F] outline-none outline-0 text-[15px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
             <button>Contact Us</button>
             <div>
-              <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>
+              <Image src={contactUs_arrow_right} alt="" className="w-[20px] h-[20px]"/>
             </div>
           </div>
         </Collapse>
@@ -265,7 +265,7 @@ function MegaMenuWithHover() {
           placeholder=""
           variant="text"
           color="white"
-          className="lg:hidden"
+          className="lg:hidden ml-20"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
