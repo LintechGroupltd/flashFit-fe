@@ -25,6 +25,7 @@ function SearchVehicle() {
         boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.12)",
       }}
       className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px] translate-y-[-50%] mx-auto relative" // Add relative positioning here
+       
     >
       <div className="flex bg-[#a4a7c8] h-[56px]">
         {data.map((item) => {

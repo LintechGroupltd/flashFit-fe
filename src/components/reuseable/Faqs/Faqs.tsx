@@ -21,14 +21,14 @@ const FaqSection = () => {
 
       <div className="grid md:grid-cols-12">
 
-      <div className="col-span-5 ">
+      <div className="col-span-5 " data-aos='fade-right'>
         <h2 className="md:text-[48px] text-[37px] font-serif font-[600]">FAQs</h2> 
         <p className="text-[18px] md:block hidden mt-2 font-sans font-[400]">Discover Everything You Need to Know About<br/> Servicing: Unveiling the Most Commonly Asked<br/> Questions (FAQs) with Detailed Answers</p>
         <p className="md:text-[18px] text-[16px] mt-2 md:hidden block font-sans font-[400]">Discover Everything You Need to Know About Servicing: Unveiling the Most Commonly Asked Questions (FAQs) with Detailed Answers</p>
       </div>
      
 
-      <div className="md:mt-9 mt-7 col-span-7">
+      <div className="md:mt-9 mt-7 col-span-7" data-aos='fade-left'>
         <div>
           {FaqData.map(({ id, title, content }) => (
             <div

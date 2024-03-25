@@ -29,9 +29,9 @@ function HOME() {
         </div>
       </div>
 
-      <div className="root_parent_wrapper">
+      <div className="root_parent_wrapper " >
         <div className="root_child_wrapper">
-          <div className="">
+          <div className="" data-aos='fade-up' data-aos-duration='1500'>
             <SearchVehicle />
           </div>
 
@@ -66,7 +66,7 @@ function HOME() {
         </div>
       </div>
 
-      <div className="root_parent_wrapper  mt-24">
+      <div className="root_parent_wrapper  mt-24" data-aos='fade-up' date-aos-duration='1000'>
         <div className="root_child_wrapper">
           <BookContact />
         </div>
