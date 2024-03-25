@@ -71,7 +71,7 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description }, key) => (
       <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg" placeholder="">
+        <MenuItem className="flex items-center gap-3  rounded-lg" placeholder="">
           <div className=" rounded-lg  p-2 ">
             {" "}
             <Image src={icon} alt="" />
@@ -81,7 +81,7 @@ function NavListMenu() {
               placeholder=""
               variant="h6"
               color="blue-gray"
-              className="  text-[16px] font-sans font-[600]"
+              className="md:text-[16px] text-[14px] font-sans font-[600]"
             >
               {title}
             </Typography>
@@ -111,11 +111,11 @@ function NavListMenu() {
           <Typography
             as="div"
             variant="small"
-            className="font-medium"
+            className="font-medium "
             placeholder=""
           >
             <div
-              className="flex cursor-pointer w-full items-center  py-2 pr-[20px]  text-[#fff] text-[16px] font-[500] font-sans"
+              className="flex cursor-pointer  w-full items-center py-2 pr-[20px]  text-[#fff] text-[16px] font-[500] font-sans"
               // selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
               // placeholder=""
@@ -130,18 +130,22 @@ function NavListMenu() {
                   }`}
                 />
               </div>
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
+
+              <Image
+                  src={downArrow}
+                  alt="Logo"
+                  className={`block h-5 w-9 transition-transform lg:hidden ${
+                    isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
+                />
+
+            
             </div>
           </Typography>
         </MenuHandler>
 
         <MenuList
-          className="hidden max-w-full p-[0px] border border-none xl:ml-[70px] rounded-xl lg:block menulist_style"
+          className="hidden max-w-full p-[0px] mt-[32px] border border-none xl:ml-[70px] rounded-[16px] lg:block menulist_style"
           placeholder=""
         > 
           <div className="flex  outline-none outline-0 ">
@@ -167,9 +171,21 @@ function NavListMenu() {
           </div>
         </MenuList>
       </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+
+      <div className="block lg:hidden bg-[#fff] rounded-xl">
+        <Collapse open={isMobileMenuOpen}>
+          <div className="">
+            {renderItems}
+          </div>
+          <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
+            <button>Contact Us</button>
+            <div>
+              <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>
+            </div>
+          </div>
+        </Collapse>
       </div>
+
     </React.Fragment>
   );
 }
@@ -177,7 +193,7 @@ function NavListMenu() {
 function NavList() {
   return (
     <List
-      className="mt-4 mb-6 p-0 text-[#fff] lg:mt-0 lg:mb-0 lg:flex-row lg:p-1"
+      className="mt-4 mb-6 p-0 text-[#fff] md:h-0 h-screen lg:mt-0 lg:mb-0 lg:flex-row lg:p-1"
       placeholder=""
     >
       <Typography
@@ -231,19 +247,20 @@ function MegaMenuWithHover() {
 
   return (
     <div className="text-[#fff] pt-3">
-      <div className="flex items-center justify-between text-[#fff] ">
+      <div className="flex mt-2 justify-between text-[#fff] ">
         <Typography
           placeholder=""
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 mt-2 cursor-pointer py-1.5 lg:ml-2"
+          className="mr-4 mt-1 cursor-pointer py-1.5 lg:ml-2"
         >
           <Image src={navbarLogo} alt="navbarLogo" />
         </Typography>
-        <div className="hidden lg:block ">
+        <div className="hidden lg:block pt-[4px]">
           <NavList />
         </div>
+        
         <IconButton
           placeholder=""
           variant="text"
@@ -258,12 +275,15 @@ function MegaMenuWithHover() {
           )}
         </IconButton>
 
+        <div className="pt-[8px]">
         <button
           style={{ fontWeight: "600" }}
           className="bg-[#FDAD39] md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
         >
           Contact
         </button>
+        </div>
+  
       </div>
       <Collapse open={openNav}>
         <NavList />
