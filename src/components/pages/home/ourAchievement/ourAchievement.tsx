@@ -63,6 +63,10 @@ function OurAchievement() {
     // </div>
 
 
+
+
+
+
 <div className="w-full h-auto flex flex-col gap-10 md:mt-36 mt-24">
   <div className="flex flex-col md:flex-row gap-10 w-full h-full">
     <div className="bg-[#2A317F] w-full md:flex justify-between rounded-[38px] " data-aos="fade-right">
@@ -74,11 +78,7 @@ function OurAchievement() {
 
 
       <div>
-        <Image
-          src={ourAchievementArrowIcon}
-          alt="icon"
-          className="md:block hidden"
-        />
+        <Image src={ourAchievementArrowIcon} alt="icon" className="md:block hidden" />
       </div>
     </div>
     <div className="bg-[#F5F5F7] w-full rounded-[38px]" data-aos="fade-left">
@@ -105,17 +105,7 @@ function OurAchievement() {
 
 
     <div className="bg-[#F5F5F7] w-full md:w-1/4 h-auto rounded-[38px]" data-aos="fade-up-left" data-aos-duration="1000">
-      <Image
-        src={wheelImg2}
-        alt="ourAchievementCar"
-        className="w-full h-full"
-        style={{
-          objectFit: "cover",
-          maxHeight: "300px",
-          height: "100%",
-          borderRadius:'38px'
-        }}
-      />
+      <Image src={wheelImg2} alt="ourAchievementCar" className="w-full h-full" style={{objectFit: "cover", maxHeight: "300px", height: "100%", borderRadius:'38px'}}/>
     </div>
   </div>
 </div>
