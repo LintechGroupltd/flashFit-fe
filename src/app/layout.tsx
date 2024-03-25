@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
+import { AOSInit } from "@/lib/Aos";
 
 export const metadata: Metadata = {
   title: "Website",
@@ -14,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <AOSInit />
+        {children}
+        </body>
     </html>
   );
 }
+
+

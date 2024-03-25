@@ -17,7 +17,7 @@ function HomeServiceCard() {
       logo: serviceCardLogo,
       arrowIcon: serviceCardArrow,
       hoverLogo:serviceCardYellowBgLogo,
-      hoverArrowIcon:hoverWhiteBgArrowIcon
+      hoverArrowIcon:hoverWhiteBgArrowIcon,
     },
     {
       id: 2,

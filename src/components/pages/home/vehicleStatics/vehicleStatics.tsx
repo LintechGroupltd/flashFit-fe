@@ -8,7 +8,7 @@ function VehicleStatics() {
     <div className="">
       <div className="grid md:grid-cols-3 gap-[35px] py-[100px] ">
         {/* 1st section  */}
-        <div className="bg-[#2A317F] text-center flex flex-col justify-between h-full rounded-[40px]">
+        <div className="bg-[#2A317F] text-center flex flex-col justify-between h-full rounded-[40px]" data-aos='fade-right'>
           <div>
            <h2 className="font-serif md:text-[84px] text-[50px] font-[600] text-[#fff] pt-3">
              1000+
@@ -28,17 +28,20 @@ function VehicleStatics() {
 
         {/* 2nd section  */}
         <div className="grid gap-[32px] ">
-          <div className="bg-[#fff] px-7 md:py-3 py-14 md:text-start text-center  rounded-[40px] ">
+          <div className="bg-[#fff] px-7 md:py-3 py-14 md:text-start text-center  rounded-[40px] " data-aos='fade-down'>
             <h2 className="font-serif md:text-[92px] text-[50px] font-[400]">43%</h2>
             <p className="text-[18px] font-sans font-[400] ">Increase in Customer<br/> Satisfaction</p>
           </div>
-          <div className="w-full">
+
+
+
+          <div className="w-full" data-aos='fade-up' data-aos-duration='1000'>
             <Image src={vehicleStaticsImg1} alt="carWheel" className="w-full"/>
           </div>
         </div>
 
         {/* 3rd section   */}
-        <div className="h-full">
+        <div className="h-full" data-aos='fade-left' data-aos-duration='1500'>
           <div className="h-full">  
             <Image src={vehicleStaticsImg2} alt="carWheel" className="h-full"/>
           </div>
