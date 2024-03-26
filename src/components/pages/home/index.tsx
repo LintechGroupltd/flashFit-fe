@@ -69,17 +69,17 @@ function HOME() {
         </div>
       </div>
 
-      <div className="root_parent_wrapper  mt-24" data-aos='fade-up' date-aos-duration='1000'>
+      <div className="root_parent_wrapper  py-24" data-aos='fade-up' date-aos-duration='1000'>
         <div className="root_child_wrapper">
           <BookContact />
         </div>
       </div>
 
-      <div className="root_parent_wrapper  mt-20 bg-[#F5F5F7]  ">
+      {/* <div className="root_parent_wrapper  mt-20 bg-[#F5F5F7]  ">
         <div className="root_child_wrapper">
           <Footer />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

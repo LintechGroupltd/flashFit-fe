@@ -8,7 +8,6 @@ interface StepProps {
 
 const ContactForm = ({ handleStepChange }: StepProps) => {
   return (
-    // <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-5 md:px-36 border-2">
 <div className="font-serif flex flex-col items-center md:items-start gap-10 lg:gap-20 md:flex-row ">
       <h1 className="text-6xl min-w-sm text-center md:text-left">Input your  personal info</h1>
 
