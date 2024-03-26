@@ -39,7 +39,7 @@ function FlashBenefitCard() {
       {flashBenefitCardData?.map((item, index) => (
         <div
           key={index}
-          className=" bg-[#F5F5F7] md:flex gap-3 h-[220px] p-8 rounded-[12px]"
+          className=" bg-[#F5F5F7] md:flex gap-3 md:h-[220px] p-8 rounded-[12px]"
         >
           <div className="w-48 2xl:w-36">
             <div>

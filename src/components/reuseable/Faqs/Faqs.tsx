@@ -17,12 +17,12 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="md:py-10 mt-20">
+    <div className="md:py-10 mt-14">
 
       <div className="grid md:grid-cols-12">
 
       <div className="col-span-5 " data-aos='fade-right'>
-        <h2 className="md:text-[48px] text-[37px] font-serif font-[600]">FAQs</h2> 
+        <h2 className="md:text-[48px] text-[35px] font-serif font-[600]">FAQs</h2> 
         <p className="text-[18px] md:block hidden mt-2 font-sans font-[400]">Discover Everything You Need to Know About<br/> Servicing: Unveiling the Most Commonly Asked<br/> Questions (FAQs) with Detailed Answers</p>
         <p className="md:text-[18px] text-[16px] mt-2 md:hidden block font-sans font-[400]">Discover Everything You Need to Know About Servicing: Unveiling the Most Commonly Asked Questions (FAQs) with Detailed Answers</p>
       </div>

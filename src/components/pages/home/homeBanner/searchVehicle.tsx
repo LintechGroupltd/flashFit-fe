@@ -3,9 +3,13 @@ import searchVehicleDownArrow from '../../../../../public/assets/home/serachVehi
 import Image from "next/image";
 
 const data = [
-  { id: "1", title: "Search by Vehicle " },
-  { id: "2", title: "Search by Tyre Size " },
+  { id: "1", title: "Search by Vehicle" },
+  { id: "2", title: "Search by Tyre Size" },
+  // { id: "3", mobileTitle: "Vehicle" },
+  // { id: "4", mobileTitle: "Tyre Size" },
+ 
 ];
+
 
 const options = ['Tyres', 'Others'];
 
@@ -24,7 +28,7 @@ function SearchVehicle() {
       style={{
         boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.12)",
       }}
-      className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px] translate-y-[-50%] mx-auto relative" // Add relative positioning here
+      className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px] md:translate-y-[-50%] translate-y-[-20%] mx-auto " // Add relative positioning here
        
     >
       <div className="flex bg-[#a4a7c8] h-[56px]">
@@ -40,9 +44,10 @@ function SearchVehicle() {
                   : "w-auto h-full px-[24px] bg-inherit text-[#ffffff] font-serif font-semibold flex gap-[12px] items-center justify-center"
               }
             >
-              <span className="text-inherit">{item?.title}</span>
+              <span className="font-serif text-[14px]">{item?.title}</span>
+          
               <img
-                className="w-[20px] h-[20px] object-cover"
+                className="md:w-[20px] md:h-[20px] w-[15px] h-[15px] object-cover"
                 src={
                   isActive
                     ? "/assets/icons/search_blue.svg"
@@ -54,9 +59,9 @@ function SearchVehicle() {
         })}
       </div>
 
-      <div className="flex items-center px-[24px] py-[24px] gap-[24px]">
+      <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
         <div className="flex flex-col flex-1 gap-[5px] relative">
-          <label className="text-[#000000] font-sans font-semibold mb-[5px]">
+          <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
             What are you looking for?
           </label>
           <input
@@ -68,7 +73,7 @@ function SearchVehicle() {
           <div
             className={`${
               isDropdownOpen ? "block" : "hidden"
-            } absolute top-[0]  right-0 mt-[-45px] w-full bg-white shadow-lg rounded-md`} // Adjusted positioning
+            } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`} // Adjusted positioning
           >
             {options.map((option) => (
               <div
@@ -85,8 +90,8 @@ function SearchVehicle() {
           </div>
         </div>
 
-        <div className="relative flex flex-col flex-1 gap-[5px]">
-           <label className="text-[#000000]  font-semibold font-sans mb-[5px]">
+        <div className="relative flex flex-col flex-1 gap-[5px] md:mt-0 mt-5">
+           <label className="text-[#000000]  font-semibold font-sans mb-[5px] text-[14px]">
              Vehicle Registration
            </label>
            <input className="h-[48px] font-sans text-[16px] border border-grey-500 rounded-[8px] pl-14 focus:outline-none"
@@ -97,8 +102,8 @@ function SearchVehicle() {
            </div>
          </div>
 
-         <div className="flex flex-col flex-1 gap-[5px]">
-           <label className="text-[#000000] font-semibold font-sans mb-[5px]">
+         <div className="flex flex-col flex-1 gap-[5px] md:mt-0 mt-5">
+           <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
              Postcode
            </label>
            <input className="h-[48px] border border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none" 
@@ -108,7 +113,7 @@ function SearchVehicle() {
          </div>
 
          <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
-           <button className="bg-[#F8AD39] h-[48px] rounded-[8px] font-sans">
+           <button className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans">
              Contact
            </button>
          </div>

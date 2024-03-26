@@ -12,19 +12,19 @@ function HomeServices() {
   };
 
   return (
-    <div className="md:mt-10 mt-2">
+    <div className="md:mt-10 ">
 
         <div className="md:flex justify-between items-center">
           <div data-aos='fade-right'>
-             <h2 className="md:text-[48px] text-[36px] font-[600] md:leading-[55px] leading-[45px] font-serif">Browse our set<br/> of services</h2> 
+             <h2 className="md:text-[48px] text-[34px] font-[600] md:leading-[55px] leading-[43px] font-serif">Browse our set<br/> of services</h2> 
           </div>
       
-              <div
-          className={`flex justify-center gap-3 border border-[#2A317F] px-7 py-3 rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${isHovered ? 'bg-[#2A317F]' : ''}`}
+            <div
+          className={`lg:flex md:block hidden  justify-center  gap-3 border border-[#2A317F] px-7 py-3 rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${isHovered ? 'bg-[#2A317F]' : ''}`}
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
         >
-          <button className="text-[16px] font-sans  hover:text-[#fff] font-[500]">Browse All</button>
+          <button className="text-[16px] font-sans  hover:text-[#fff] font-[600]">Browse All</button>
           {isHovered ? (
             <Image src={BrowseAllHoverArrowIcon} alt="arrow" />
           ) : (
@@ -40,6 +40,21 @@ function HomeServices() {
           <HomeServiceCard/>
         </div>
 
+       <div className="md:hidden block">
+       <div
+          className={`flex justify-center gap-3 border border-[#2A317F] px-7 py-3 rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${isHovered ? 'bg-[#2A317F]' : ''}`}
+          onMouseEnter={handleHover}
+          onMouseLeave={handleHover}
+        >
+          <button className="text-[16px] font-sans  hover:text-[#fff] font-[600]">Browse All</button>
+          {isHovered ? (
+            <Image src={BrowseAllHoverArrowIcon} alt="arrow" />
+          ) : (
+            <Image src={arrowRight} alt="arrow" />
+          )}
+        </div>
+       </div>
+      
         
     </div>
   );

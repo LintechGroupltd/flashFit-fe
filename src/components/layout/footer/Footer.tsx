@@ -1,30 +1,3 @@
-// import React from "react";
-// import Image from "next/image";
-// import flashFitLogo from '../../../../public/assets/footer/FlashfitLogo.svg'
-// import whatsApp from '../../../../public/assets/footer/whatsApp.svg'
-// import tiktok from '../../../../public/assets/footer/whatsApp.svg'
-// import instagram from '../../../../public/assets/footer/whatsApp.svg'
-// import facebook from '../../../../public/assets/footer/whatsApp.svg'
-
-// import telephoneIcon from '../../../../public/assets/footer/telephone.svg'
-// import infoWhatsApp from '../../../../public/assets/footer/infoWhatsApp.svg'
-// import locationIcon from '../../../../public/assets/footer/locationIcon.svg'
-
-
-
-// function HomeServices() {
-//   return (
-//     <div className="">
-//        <div>
-
-//        </div>
-//     </div>
-//   );
-// }
-
-// export default HomeServices;
-
-
 import React from "react";
 
 import Image from "next/image";
@@ -54,7 +27,7 @@ function Footer() {
             <Image
               src={flahFitFooterLogo}
               alt="logo"
-              className="h-[58px] w-[270px]"
+              className="md:h-[58px] md:w-[270px] w-[250px] h-[45px] md:mr-0 pr-10"
               // className={styles.logo}
             />
           </Link>

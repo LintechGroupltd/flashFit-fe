@@ -1,9 +1,8 @@
 "use client";
 
-import About from "@/components/pages/about";
 
 const page = () => {
-  return <About />;
+  return <div></div>;
 };
 
 export default page;
