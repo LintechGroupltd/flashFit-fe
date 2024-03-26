@@ -19,9 +19,7 @@ function HOME() {
     <div className="">
       <div
         className="root_parent_wrapper bg-[#2A317F]"
-        style={{
-          backgroundImage: `url(${heroBgImg.src})`,
-        }}
+      
       >
         <div className="root_child_wrapper">
           <Navbar />
@@ -66,8 +64,11 @@ function HOME() {
         </div>
       </div>
 
-      <div className="root_parent_wrapper  mt-24" data-aos='fade-up' date-aos-duration='1000'>
-        <div className="root_child_wrapper">
+      <div className="md:root_parent_wrapper   mt-24" data-aos='fade-up' date-aos-duration='1000'>
+        <div className="md:block hidden root_child_wrapper">
+          <BookContact />
+        </div>
+        <div className="md:hidden block ">
           <BookContact />
         </div>
       </div>

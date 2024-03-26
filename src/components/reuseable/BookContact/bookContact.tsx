@@ -4,7 +4,7 @@ import bookContactBg from '../../../../public/assets/reuseableComponentImg/bookC
 
 const BookContact = () => {
   return (
-    <div className='mt-20 bg-[#2A317F] rounded-[30px]'
+    <div className='mt-20 bg-[#2A317F] md:rounded-[30px]'
     style={{
         backgroundImage: `url(${bookContactBg.src})`,
         backgroundRepeat: 'no-repeat',
@@ -12,7 +12,7 @@ const BookContact = () => {
       }}
     >
       <div className='text-center mt-28 py-24'>
-        <h1 className="md:text-[48px] text-[32px] font-serif font-[600] text-[#fff] leading-[55px]">Get Your Vehicle<br/> Running Smoothly Today</h1>
+        <h1 className="md:text-[48px] text-[32px] font-serif font-[600] text-[#fff] leading-[50px]">Get Your Vehicle<br/> Running Smoothly Today</h1>
         <p className="md:text-[18px] text-[16px] md:px-0 px-2 font-serif text-[#fff] mt-4">
           "Book Now for Expert Car Care and MOT Services with Flash Fit!"
         </p>

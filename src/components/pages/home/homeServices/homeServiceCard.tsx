@@ -6,7 +6,8 @@ import serviceCardArrow from "../../../../../public/assets/home/HomeServices/ser
 import hoverWhiteBgArrowIcon from "../../../../../public/assets/home/HomeServices/hoverWhiteBgArrowIcon.svg";
 
 function HomeServiceCard() {
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
+  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
+  // const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   const homeServiceData = [
     {
@@ -53,7 +54,7 @@ function HomeServiceCard() {
   
 
   return (
-    <div className="mt-10 w-full grid md:grid-cols-2 gap-[35px]">
+    <div className="md:mt-10 mt-5 w-full grid md:grid-cols-2 gap-[35px]">
       {homeServiceData.map((item, index) => (
         <div
           key={index}
@@ -84,7 +85,7 @@ function HomeServiceCard() {
             <h2 className="  md:text-[24px] text-[22px] font-serif font-[600] md:mt-0 mt-3">
               {item.title}
             </h2>
-            <p className="text-[15px] mt-[10px] font-sans">{item.description}</p>
+            <p className="text-[15px] mt-[10px]  font-sans">{item.description}</p>
           </div>
         </div>
       ))}
