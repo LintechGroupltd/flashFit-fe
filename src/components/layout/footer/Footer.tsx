@@ -43,7 +43,7 @@ import { socialLinks } from "@/constants";
 
 function Footer() {
   return (
-    <footer className='w-full py-[50px] sm:py-[80px] lg:pt-[110px] rounded-b-[20px];'>
+    <footer className='w-full py-[50px] sm:py-[80px] lg:pt-[110px] rounded-b-[20px];' style={{backgroundColor:'#F5F5F7'}}>
       <main className=' w-full mx-auto flex flex-wrap items-start justify-between  gap-[24px];'>
         <div>
           <Link href={"/"}>

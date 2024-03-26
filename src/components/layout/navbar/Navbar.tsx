@@ -26,6 +26,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const navListMenuItems = [
   {
@@ -160,7 +161,9 @@ function NavListMenu() {
           </div>
          
           <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
-            <button>Contact Us</button>
+            <Link href={'/contact-us'}>
+            <button >Contact Us</button>
+             </Link>
             <div>
               <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>
             </div>
@@ -191,6 +194,7 @@ function NavList() {
           Home
         </div>
       </Typography>
+
       <NavListMenu />
       <Typography
         placeholder=""
@@ -262,7 +266,9 @@ function MegaMenuWithHover() {
           style={{ fontWeight: "600" }}
           className="bg-[#FDAD39] md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
         >
+          <Link href={'/contact-us'}>
           Contact
+          </Link>
         </button>
       </div>
       <Collapse open={openNav}>

@@ -27,7 +27,10 @@ function HOME() {
           <Navbar />
           <HomeBanner />
         </div>
+
       </div>
+
+      
 
       <div className="root_parent_wrapper " >
         <div className="root_child_wrapper">
