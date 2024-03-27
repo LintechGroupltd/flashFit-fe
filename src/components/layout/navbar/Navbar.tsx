@@ -205,7 +205,7 @@ function NavList() {
       <Typography
         placeholder=""
         as="a"
-        href="#"
+        href="/"
         variant="small"
         className="font-medium"
       >
@@ -267,7 +267,7 @@ function MegaMenuWithHover() {
         <Typography
           placeholder=""
           as="a"
-          href="#"
+          href="/"
           variant="h6"
           className="md:mr-0 mr-4 mt-1 cursor-pointer py-1.5 lg:ml-2"
         >
