@@ -42,36 +42,45 @@ const navListMenuItems = [
     icon: MotLogo,
     title: "MOT Testing",
     description: "Road-Worthy Assurance, Compliance Certified",
+    url:'/services/mot-testing',
   },
   {
     icon: serviceLogo,
     title: "Servicing",
     description: "Optimized Performance, Lasting Reliability",
+    url:'/services/servicing',
   },
   {
     icon: BrakersLogo,
     title: "Brakes",
     description: "Enhanced Safety, Seamless Stops",
+    url:'/services/brake-service',
+
   },
   {
     icon: ExhaustLogo,
     title: "Exhust",
     description: "Efficiency Restored, Performance Preserved",
+    url:'/service/exhaust-maintenance',
+
   },
   {
     icon: TyresLogo,
     title: "Tyres and Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
+    url:'/services/tyres',
   },
   {
     icon: wheesLogo,
     title: "Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
+    url:'/services/wheels-alignments',
   },
   {
     icon: diagnosisLogo,
     title: "Diagnosis Testing",
     description: "Precision Problem Solving",
+    url:'/services/diagnosis-testing',
   },
 ];
 
@@ -79,8 +88,8 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description,url }, key) => (
+      <Link href={url} key={key}>
         <MenuItem className="flex items-center gap-3  rounded-lg" placeholder="">
           <div className=" rounded-lg  p-2 ">
             {" "}
@@ -104,7 +113,7 @@ function NavListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   );
 

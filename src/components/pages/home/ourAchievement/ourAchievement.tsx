@@ -18,6 +18,8 @@ function OurAchievement() {
 
 <div className="w-full h-auto flex flex-col gap-10 md:mt-36 mt-24">
   <div className="flex flex-col md:flex-row gap-10 w-full h-full md:max-h-[290px]">
+
+
     <div className="bg-[#2A317F] w-full md:flex justify-between rounded-[35px] " data-aos="fade-right">
       <div className="">
         <h2 className="text-[#FFFFFF]  md:text-[47px] text-[32px] font-[600] leading-[56px] md:mt-36 md:py-0 py-10 md:text-start text-center md:ml-10 font-serif">
@@ -40,7 +42,10 @@ function OurAchievement() {
       </div>
        
     </div>
+
+    
   </div>
+
 
 
 

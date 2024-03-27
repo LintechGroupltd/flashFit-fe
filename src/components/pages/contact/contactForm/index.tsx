@@ -8,8 +8,8 @@ interface StepProps {
 
 const ContactForm = ({ handleStepChange }: StepProps) => {
   return (
-<div className="font-serif flex flex-col items-center md:items-start gap-10 lg:gap-20 md:flex-row ">
-      <h1 className="text-6xl min-w-sm text-center md:text-left">Input your  personal info</h1>
+<div className="font-serif flex flex-col items-center lg:items-start gap-10 lg:gap-20 lg:flex-row ">
+      <h1 className="text-6xl min-w-sm text-center lg:text-left">Input your  personal info</h1>
 
       <div className="w-full ">
         <form action=""  className="w-full flex flex-col gap-6">
