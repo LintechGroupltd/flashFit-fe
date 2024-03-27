@@ -1,0 +1,87 @@
+.main {
+  @apply w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30;
+  /* transform: translateY(150px); */
+}
+
+.nav {
+  @apply w-full  max-w-[717px] mx-auto bg-white  
+    p-[8px] rounded-[12px] 
+     mb-[20px] sm:mb-[40px] min-w-[100px] xs:min-w-[300px];
+
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+.nav_inner {
+  @apply flex items-center justify-center
+    gap-[8px];
+}
+
+.nav_button {
+  @apply h-[48px] flex items-center justify-center 
+  flex-wrap rounded-[12px] px-[4px] xs:px-[16px] sm:px-[16px]
+  gap-[4px] xs:gap-[8px] border border-[#D7D7D7] flex-1;
+
+  min-width: 120px; /* Set the minimum width for children */
+}
+
+.nav_button_img {
+  @apply hidden xs:block w-[16px] h-[16px] xs:w-[18px] xs:h-[18px]  sm:w-[24px] sm:h-[24px] object-contain;
+}
+
+.nav_button span {
+  @apply font-semibold xs:font-normal
+  font-sans
+  text-inherit text-[12px] xs:text-[14px] leading-[24px] lg:text-[16px] lg:leading-[28px];
+}
+
+.sub_links_wrapper {
+  @apply w-full  max-w-[717px] mx-auto bg-white relative z-[50]    
+    p-[8px] rounded-tr-[12px] rounded-tl-[12px]   mb-[0px]  
+    flex flex-wrap items-center justify-center;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -4px 12px;
+}
+
+.sub_links_wrapper > div {
+  @apply w-full   mx-auto    gap-[8px] z-50 
+    flex flex-wrap items-start justify-between py-[10px];
+}
+.sub_links_wrapper_button {
+  @apply w-[calc(49%-8px)]  items-center flex gap-[8px] md:gap-[16px] p-[6px] md:p-[12px] rounded-[8px] hover:bg-[#E9EAF3];
+}
+.sub_links_wrapper_button img {
+  @apply w-[25px] h-[25px] md:w-[40px] md:h-[40px];
+}
+.sub_links_wrapper_button span {
+  @apply text-[#0F0F0F]  text-[12px] xs:text-[14px] leading-[24px] lg:text-[16px] lg:leading-[28px]
+  font-sans font-semibold;
+}
+
+.sub_links_wrapper_button small {
+  @apply text-[#505050]  text-[10px] xs:text-[12px] leading-[20px]
+  font-sans font-medium;
+}
+
+.close_button {
+  @apply absolute top-[22px] right-[22px];
+}
+
+.hideInSmallScreen {
+}
+
+.hideInBigScreen {
+  @apply hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .sub_links_wrapper_button small {
+    @apply hidden;
+  }
+
+  .hideInSmallScreen {
+    @apply hidden;
+  }
+
+  .hideInBigScreen {
+    @apply block;
+  }
+}
