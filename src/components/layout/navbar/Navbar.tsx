@@ -4,18 +4,18 @@ import React from "react";
 import navbarLogo from "../../../../public/assets/navabar/FlashfitLogo.svg";
 import downArrow from "../../../../public/assets/navabar/Arrow_Down.svg";
 
-import MotLogo from "../../../../public/assets/navabar/MOT.png";
-import serviceLogo from "../../../../public/assets/navabar/Service.png";
-import BrakersLogo from "../../../../public/assets/navabar/Brakes.png";
-import ExhaustLogo from "../../../../public/assets/navabar/Exhaust.png";
-import TyresLogo from "../../../../public/assets/navabar/Tyres.png";
-import wheesLogo from "../../../../public/assets/navabar/WheelsAlignments.png";
-import diagnosisLogo from "../../../../public/assets/navabar/DiagnosisTesting.png";
-import navbarRightArrowIcon from "../../../../public/assets/navabar/navbarRightArrowIcon2.png";
+import MotLogo from "../../../../public/assets/navabar/MOT_Blue_Bg.svg";
+import serviceLogo from "../../../../public/assets/navabar/Service_Blue_Bg.svg";
+import BrakersLogo from "../../../../public/assets/navabar/Brakes_Blue_Bg.svg";
+import ExhaustLogo from "../../../../public/assets/navabar/Exhaust_Blue_Bg.svg";
+import TyresLogo from "../../../../public/assets/navabar/Tyres_Blue_Bg.svg";
+import wheesLogo from "../../../../public/assets/navabar/Wheels_Alignments_Blue_Bg.svg";
+import diagnosisLogo from "../../../../public/assets/navabar/Diagnosis_Testing_Blue_Bg.svg";
 
+import GetInTouchArrow_Right from "../../../../public/assets/navabar/GetInTouchArrowRight.svg";
 
 import contactUs_arrow_right from "../../../../public/assets/navabar/contactUs-arrow-right.svg";
-import DropdownMegamenuImage from "../../../../public/assets/navabar/DropdownMegamenuImage.png";
+import DropdownMegamenuImage from "../../../../public/assets/navabar/DropdonMegamenuImage.svg";
 
 import {
   Navbar,
@@ -29,11 +29,7 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
-import {
-
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -43,45 +39,43 @@ const navListMenuItems = [
     icon: MotLogo,
     title: "MOT Testing",
     description: "Road-Worthy Assurance, Compliance Certified",
-    url:'/services/mot-testing',
+    url: "/services/mot-testing",
   },
   {
     icon: serviceLogo,
     title: "Servicing",
     description: "Optimized Performance, Lasting Reliability",
-    url:'/services/servicing',
+    url: "/services/servicing",
   },
   {
     icon: BrakersLogo,
     title: "Brakes",
     description: "Enhanced Safety, Seamless Stops",
-    url:'/services/brake-service',
-
+    url: "/services/brake-service",
   },
   {
     icon: ExhaustLogo,
     title: "Exhust",
     description: "Efficiency Restored, Performance Preserved",
-    url:'/service/exhaust-maintenance',
-
+    url: "/service/exhaust-maintenance",
   },
   {
     icon: TyresLogo,
     title: "Tyres and Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
-    url:'/services/tyres',
+    url: "/services/tyres",
   },
   {
     icon: wheesLogo,
     title: "Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
-    url:'/services/wheels-alignments',
+    url: "/services/wheels-alignments",
   },
   {
     icon: diagnosisLogo,
     title: "Diagnosis Testing",
     description: "Precision Problem Solving",
-    url:'/services/diagnosis-testing',
+    url: "/services/diagnosis-testing",
   },
 ];
 
@@ -89,9 +83,12 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description,url }, key) => (
+    ({ icon, title, description, url }, key) => (
       <Link href={url} key={key}>
-        <MenuItem className="flex items-center gap-3  rounded-lg" placeholder="">
+        <MenuItem
+          className="flex items-center gap-3  rounded-lg"
+          placeholder=""
+        >
           <div className=" rounded-lg  p-2 ">
             {" "}
             <Image src={icon} alt="" />
@@ -130,6 +127,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography
             as="div"
+            href="/about"
             variant="small"
             className="font-medium "
             placeholder=""
@@ -140,7 +138,7 @@ function NavListMenu() {
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
               // placeholder=""
             >
-              Services
+              <Link href={"/services/our-services"}>Services</Link>
               <div className="w-full">
                 <Image
                   src={downArrow}
@@ -152,14 +150,12 @@ function NavListMenu() {
               </div>
 
               <Image
-                  src={downArrow}
-                  alt="Logo"
-                  className={`block h-5 w-9 transition-transform lg:hidden ${
-                    isMobileMenuOpen ? "rotate-180" : ""
-                  }`}
-                />
-
-            
+                src={downArrow}
+                alt="Logo"
+                className={`block h-5 w-9 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}
+              />
             </div>
           </Typography>
         </MenuHandler>
@@ -167,28 +163,31 @@ function NavListMenu() {
         <MenuList
           className="hidden max-w-full p-[0px] mt-[32px] border border-none xl:ml-[70px] rounded-[16px] lg:block menulist_style"
           placeholder=""
-        > 
+        >
           <div className="flex  outline-none outline-0 ">
             <div className="p-4 bg-[#F5F5F7]">
-               <Image src={DropdownMegamenuImage} alt="DropdonMegamenuImage"/>
-               <div>
-                 <p className="text-[#000] text-[16px] font-[600] font-sans mt-5">Driven by a passion for cars and a<br/> dedication to quality</p>
-               </div>
-              
+              <Image src={DropdownMegamenuImage} alt="DropdonMegamenuImage" />
+              <div>
+                <p className="text-[#000] text-[16px] font-[600] font-sans mt-5">
+                  Driven by a passion for cars and a<br /> dedication to quality
+                </p>
+              </div>
             </div>
             <div>
-             <ul className="grid grid-cols-2 p-4 gap-y-2">        
-               {renderItems}
-             </ul>
+              <ul className="grid grid-cols-2 p-4 gap-y-2">{renderItems}</ul>
             </div>
           </div>
-         
+
           <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
-            <Link href={'/contact-us'}>
-            <button >Contact Us</button>
-             </Link>
+            <Link href={"/contact-us"}>
+              <button>Contact Us</button>
+            </Link>
             <div>
-              <Image src={contactUs_arrow_right} alt="" className="w-[24px] h-[24px]"/>
+              <Image
+                src={contactUs_arrow_right}
+                alt=""
+                className="w-[24px] h-[24px]"
+              />
             </div>
           </div>
         </MenuList>
@@ -196,14 +195,9 @@ function NavListMenu() {
 
       <div className="block lg:hidden bg-[#383F88] rounded-xl">
         <Collapse open={isMobileMenuOpen}>
-          <div className="">
-            {renderItems}
-          </div>
-         
+          <div className="">{renderItems}</div>
         </Collapse>
       </div>
-    
-
     </React.Fragment>
   );
 }
@@ -250,16 +244,19 @@ function NavList() {
           Gallery
         </div>
       </Typography>
-       
-       <div className="md:hidden block mt-6">
-        <div className="bg-[#F8AD39] rounded-[8px] outline-none outline-0 text-[15px] flex justify-center gap-2 py-3 text-[#fff] font-[600] ">
-            <button>Contact Us</button>
-            <div>
-              <Image src={contactUs_arrow_right} alt="" className="w-[20px] h-[20px]"/>
-            </div>
-          </div>
-       </div>
 
+      <div className="md:hidden block mt-6">
+        <div className="bg-[#F8AD39] rounded-[8px] outline-none outline-0 text-[15px] flex justify-center gap-2 py-3 text-[#fff] font-[600] ">
+          <button>Contact Us</button>
+          <div>
+            <Image
+              src={contactUs_arrow_right}
+              alt=""
+              className="w-[20px] h-[20px]"
+            />
+          </div>
+        </div>
+      </div>
     </List>
   );
 }
@@ -284,12 +281,16 @@ function MegaMenuWithHover() {
           variant="h6"
           className="md:mr-0 mr-4 mt-1 cursor-pointer py-1.5 lg:ml-2"
         >
-          <Image src={navbarLogo} alt="navbarLogo" className="md:w-[215px] md:h-[48px] w-[190px] h-[40px]"/>
+          <Image
+            src={navbarLogo}
+            alt="navbarLogo"
+            className="md:w-[215px] md:h-[48px] w-[190px] h-[40px]"
+          />
         </Typography>
         <div className="hidden lg:block pt-[4px]">
           <NavList />
         </div>
-        
+
         <IconButton
           placeholder=""
           variant="text"
@@ -305,19 +306,22 @@ function MegaMenuWithHover() {
         </IconButton>
 
         <div className="mt-[8px]">
-        <button
-          style={{ fontWeight: "600" }}
-          className=" md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
-        >
-          <Link href={'/contact-us'} className="flex items-center gap-3">
-            <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
-              <Image src={navbarRightArrowIcon} alt="navbarRightArrowIcon" className=""/>
-            </div> 
-             Get in touch
-          </Link>
-        </button>
+          <button
+            style={{ fontWeight: "600" }}
+            className=" md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
+          >
+            <Link href={"/contact-us"} className="flex items-center gap-3">
+              <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
+                <Image
+                  src={GetInTouchArrow_Right}
+                  alt="navbarRightArrowIcon"
+                  className=""
+                />
+              </div>
+              Get in touch
+            </Link>
+          </button>
         </div>
-  
       </div>
       <Collapse open={openNav}>
         <NavList />
@@ -327,9 +331,3 @@ function MegaMenuWithHover() {
 }
 
 export default MegaMenuWithHover;
-
-
-
-
-
-

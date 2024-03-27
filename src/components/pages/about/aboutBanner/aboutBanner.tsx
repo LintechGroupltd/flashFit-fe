@@ -5,7 +5,7 @@ import aboutPositioningBannerImg from '../../../../../public/assets/about/aboutB
 function AboutBanner() {
   return (
     <div className="md:h-[530px] relative md:py-24 py-20">
-      <div className="text-center text-[#fff]">
+      <div className="text-center text-[#fff]" data-aos='fade-right'>
         <h2 className="md:text-[72px] text-[50px] leading-[60px] font-serif font-[600]">About FlashFit</h2>
         <p className="text-[18px] font-sans font-[400] md:block hidden mt-10">
           Where Automotive Passion Meets Precision:

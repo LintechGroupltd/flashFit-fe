@@ -1,9 +1,10 @@
+import OurServices from '@/components/pages/OurServices'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-        import service page here
+        <OurServices/>
     </div>
   )
 }
