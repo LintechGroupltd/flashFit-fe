@@ -8,11 +8,11 @@ import SearchVehicle from "./homeBanner/searchVehicle";
 import HomeServices from "./homeServices/homeServices";
 import OurAchievement from "./ourAchievement/ourAchievement";
 import FlashBenefit from "@/components/reuseable/flashBenefit/flashBenefit";
-import VehicleStatics from "./vehicleStatics/vehicleStatics";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
 import Footer from "@/components/layout/footer/Footer";
+import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics";
 
 function HOME() {
   return (

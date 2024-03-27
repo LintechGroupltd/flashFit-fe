@@ -51,6 +51,7 @@ module.exports = withMT({
       xl: "1440px",
       "2xl": "1536px",
       "3xl": "1750px",
+      '4xl': '2300px'
     },
     extend: {
       colors: {},

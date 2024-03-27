@@ -30,6 +30,7 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import {
+
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -216,7 +217,7 @@ function NavList() {
       <Typography
         placeholder=""
         as="a"
-        href="#"
+        href="/about"
         variant="small"
         className="font-medium"
       >
