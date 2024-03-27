@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-// import Footer from "@/components/layout/footer/Footer";
 import Navbar from "@/components/layout/navbar/Navbar";
 import HomeBanner from "./homeBanner/homeBanner";
 import heroBgImg from "../../../../public/assets/home/bannerSection/HeroBackground.svg";
@@ -67,9 +66,7 @@ function HOME() {
         </div>
       </div>
 
-      {/* <div className="root_parent_wrapper  py-24" data-aos='fade-up' date-aos-duration='1000'>
-        <div className="root_child_wrapper"> */}
-
+  
       <div className="md:root_parent_wrapper   py-24" data-aos='fade-up' date-aos-duration='1000'>
         <div className="md:block hidden root_child_wrapper">
           <BookContact />

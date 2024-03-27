@@ -50,10 +50,10 @@ const ContactPage = () => {
 
   return (
     <div
-      className="relative w-full h-screen flex flex-col justify-between px-28 py-10 text-white border-2"
+      className="relative w-full h-screen flex flex-col justify-between px-6 md:px-12 lg:px-28 py-10 text-white border-2"
       style={{ backgroundColor: "#2A317F" }}
     >
-      <div className="w-full flex justify-between">
+      <div className="w-full flex items-center justify-between">
         <div>
          {activeStep <= 0  && activeStep !== 1 &&(  <FlashLogo />)}
          {activeStep > 0 && <div className="cursor-pointer" onClick={handleBack} > <RoundedBackBtn /> </div>}
