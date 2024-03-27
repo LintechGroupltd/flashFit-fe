@@ -63,6 +63,7 @@ module.exports = withMT({
     fontFamily: {
       sans: ["Inter", "sans-serif"],
       serif: ["Sora", "serif"],
+      archivo: ['Archivo', 'sans-serif'],
     },
   },
   plugins: [],
