@@ -1,48 +1,36 @@
 "use client";
+
 import BookContact from "@/components/reuseable/BookContact/bookContact";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
-import heroImg from "../../../../public/assets/services/images/motHeroImg.png";
 import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/motHeroImg.png";
+import img2 from "../../../../public/assets/services/images/manCheckingCar.png"
+import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
 import React from "react";
 
 export const benefits = [
   { id: 1, item: "Early Issue Detection" },
-  { id: 2, item: "Accurate Repairs" },
-  { id: 3, item: "Transparent Communication" },
-  { id: 4, item: "Confidence in Vehicle Performance" },
+  { id: 1, item: "Accurate Repairs" },
+  { id: 1, item: "Transparent Communication" },
+  { id: 1, item: "Confidence in Vehicle Performance" },
 ];
 
-const MotTesting = () => {
+const ExhaustMaintenance = () => {
   return (
     <div className="font-serif relative">
       <ServicesTopSection
-        title="MOT Testing"
+        title="Exhaust Maintenance"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
         heroImg={heroImg}
       />
 
-
-
       <ServicePageDesc
-        title=" Road-Ready MOT Testing at FlashFit"
-        desc1="At Flash Fit, we prioritize your safety on the road. Our MOT
-                testing services are designed to ensure your vehicle meets
-                regulatory standards, providing you with peace of mind every
-                time you drive. Our certified technicians conduct thorough
-                inspections of essential components, including lights, brakes,
-                exhaust emissions, and more."
-        desc2="  Using state-of-the-art equipment and meticulous attention to
-        detail, we accurately assess your vehicle's condition and help
-        you stay compliant with legal requirements. Trust Flash Fit for
-        reliable MOT testing that goes above and beyond to ensure your
-        vehicle is roadworthy and ready for the journey ahead. Drive
-        with confidence knowing your vehicle is in expert hands at Flash
-        Fit."
+        title="FlashFit's Diagnostic Expertise"
+        desc1="Diagnostic testing is the cornerstone of our approach at Flash Fit. We understand that identifying and addressing automotive issues early is crucial to maintaining vehicle performance and safety. That's why we invest in state-of-the-art diagnostic equipment and employ skilled technicians who are trained to interpret diagnostic data accurately.   "
+        desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run.   "
       />
 
       <ServiceBenefits
@@ -89,4 +77,4 @@ const MotTesting = () => {
   );
 };
 
-export default MotTesting;
+export default ExhaustMaintenance;

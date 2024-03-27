@@ -62,15 +62,16 @@ const navListMenuItems = [
     icon: ExhaustLogo,
     title: "Exhust",
     description: "Efficiency Restored, Performance Preserved",
-    url:'/service/exhaust-maintenance',
+    url:'/services/exhaust-maintenance',
 
   },
   {
     icon: TyresLogo,
     title: "Tyres and Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
-    url:'/services/tyres',
+    url:'/services/tyres-servicing',
   },
+  
   {
     icon: wheesLogo,
     title: "Wheels Alignments",
