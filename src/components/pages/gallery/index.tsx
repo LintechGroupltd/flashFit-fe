@@ -2,67 +2,41 @@
 import React from "react";
 import Navbar from "@/components/layout/navbar/Navbar";
 import Footer from "@/components/layout/footer/Footer";
-import AboutBanner from "./aboutBanner/aboutBanner";
-import FlashFitNumbers from "./flashFitNumbers/flashFitNumbers";
-import WhoWeAre from "./whoWeAre/whoWeAre";
+
 import FlashBenefit from "@/components/reuseable/flashBenefit/flashBenefit";
 import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
+import GalleryBanner from "./galleryBanner/galleryBanner";
+import GalleryImageCard from "./gallerySection/galleryImageCard";
 
 
 
-function ABOUT() {
+
+function GALLERY() {
   return (
     <div className="">
       <div
-        className="md:h-[1000px]"
+        className=""
       
       >
        <div className="root_parent_wrapper bg-[#2A317F]">
          <div className="root_child_wrapper ">
           <Navbar />
-          <AboutBanner/>
+          <GalleryBanner/>
         </div>
         </div> 
       
       </div>
       
-      <div className="root_parent_wrapper">
+      <div className="root_parent_wrapper mt-28  ">
         <div className="root_child_wrapper">
-           <FlashFitNumbers/>
-        </div>
-      </div>
-      
-      <div className="root_parent_wrapper">
-        <div className="root_child_wrapper">
-          <WhoWeAre/>
+          <GalleryImageCard/>
         </div>
       </div>
 
-
-      <div className="root_parent_wrapper bg-[#2A317F] mt-24">
-        <div className="root_child_wrapper">
-           <FlashBenefit/>
-        </div>
-      </div>
     
-      <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">
-        <div className="root_child_wrapper">
-          <div className="">
-            <VehicleStatics />
-          </div>
-          <CustomerReview />
-        </div>
-      </div>
-
-   
-      <div className="root_parent_wrapper  ">
-        <div className="root_child_wrapper">
-          <FaqSection />
-        </div>
-      </div>
 
       <div className="md:root_parent_wrapper mb-24  mt-24" data-aos='fade-up' date-aos-duration='1000'>
         <div className="md:block hidden root_child_wrapper">
@@ -79,8 +53,9 @@ function ABOUT() {
           <Footer />
         </div>
       </div> */}
+
     </div>
   );
 }
 
-export default ABOUT;
+export default GALLERY;

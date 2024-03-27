@@ -5,6 +5,20 @@ import serviceCardYellowBgLogo from "../../../../../public/assets/home/HomeServi
 import serviceCardArrow from "../../../../../public/assets/home/HomeServices/serviceCardArrowSign.svg";
 import hoverWhiteBgArrowIcon from "../../../../../public/assets/home/HomeServices/hoverWhiteBgArrowIcon.svg";
 
+
+import MOT_Blue_Bg from '../../../../../public/assets/services/OurServicesCardIcon/MOT_Blue_Bg.svg'
+import MOT_Yellow_Bg from '../../../../../public/assets/services/OurServicesCardIcon/MOT_Yellow_Bg.svg'
+
+import Service_Blue_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Service_Blue_Bg.svg'
+import Service_Yellow_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Service_Yellow_Bg.svg'
+
+import Brakes_Blue_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Brakes_Blue_Bg.svg'
+import Brakes_Yellow_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Brakes_Yellow_Bg.svg'
+
+import Exhaust_Blue_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Exhaust_Blue_Bg.svg'
+import Exhaust_Yellow_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Exhaust_Yellow_Bg.svg'
+
+
 function HomeServiceCard() {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   // const [hoveredIndex, setHoveredIndex] = React.useState(null);
@@ -15,39 +29,39 @@ function HomeServiceCard() {
       title: "MOT Testing",
       description:
         "MOT Testing: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
-      logo: serviceCardLogo,
+      logo: MOT_Blue_Bg,
       arrowIcon: serviceCardArrow,
-      hoverLogo:serviceCardYellowBgLogo,
+      hoverLogo:MOT_Yellow_Bg,
       hoverArrowIcon:hoverWhiteBgArrowIcon,
     },
     {
       id: 2,
-      title: "MOT Testing",
+      title: "Service",
       description:
-        "MOT Testing: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
-      logo: serviceCardLogo,
+        "Service: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+      logo: Service_Blue_Bg,
       arrowIcon: serviceCardArrow,
-      hoverLogo:serviceCardYellowBgLogo,
+      hoverLogo:Service_Yellow_Bg,
       hoverArrowIcon:hoverWhiteBgArrowIcon
     },
     {
       id: 3,
-      title: "MOT Testing",
+      title: "Brake",
       description:
-        "MOT Testing: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
-      logo: serviceCardLogo,
+        "Brake: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+      logo: Brakes_Blue_Bg,
       arrowIcon: serviceCardArrow,
-      hoverLogo:serviceCardYellowBgLogo,
+      hoverLogo:Brakes_Yellow_Bg,
       hoverArrowIcon:hoverWhiteBgArrowIcon
     },
     {
       id: 4,
-      title: "MOT Testing",
+      title: "Exhaust",
       description:
-        "MOT Testing: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
-      logo: serviceCardLogo,
+        "Exhaust: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+      logo: Exhaust_Blue_Bg,
       arrowIcon: serviceCardArrow,
-      hoverLogo:serviceCardYellowBgLogo,
+      hoverLogo:Exhaust_Yellow_Bg,
       hoverArrowIcon:hoverWhiteBgArrowIcon
     },
   ];
