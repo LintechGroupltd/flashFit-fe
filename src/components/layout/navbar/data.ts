@@ -29,7 +29,7 @@ export const navListMenuItems = [
     icon: ExhaustLogo,
     title: "Exhust",
     description: "Efficiency Restored, Performance Preserved",
-    url: "/service/exhaust-maintenance",
+    url: "/services/exhaust-maintenance",
   },
   {
     icon: TyresLogo,
