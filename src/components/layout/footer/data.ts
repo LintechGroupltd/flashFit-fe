@@ -22,11 +22,11 @@ export const quickLinks = [
         },
         {
           title: "Privacy Policy",
-          link: "/",
+          link: "/privacy-policy",
         },
         {
           title: "Terms and Conditions",
-          link: "/",
+          link: "/terms-conditions",
         },
       ],
     },
