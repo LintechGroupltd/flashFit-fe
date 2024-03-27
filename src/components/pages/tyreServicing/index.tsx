@@ -17,15 +17,36 @@ export const benefits = [
   { id: 4, item: "Confidence in Vehicle Performance" },
 ];
 
+export const solutions = [
+  {
+    id: 1,
+    tag: " New Tyres from Major Brands ",
+    item: "Warning lights are indicators on the dashboard of a vehicle that alert the driver of a potential problem or malfunction. They can range from simple reminders, such as low fuel or seat belt not fastened, to critical warnings, such as engine overheating or brake failure.",
+  },
+  {
+    id: 2,
+    tag: "Budget Tyres",
+    item: "We understand that not everyone needs premium tyres, which is why we offer budget-friendly options without compromising on quality. Our budget tyres provide reliable performance and longevity at an affordable price point ",
+  },
+  {
+    id: 3,
+    tag: "Puncture Repairs",
+    item: "Dealing with a flat tyre can be frustrating, but our expert technicians are here to help. We offer prompt and efficient puncture repairs using industry-leading techniques to ensure a lasting solution and get you back on the road safely.",
+  },
+  {
+    id: 4,
+    tag: "Wheel Balancing",
+    item: "Even minor imbalances in your wheels can lead to vibrations and premature tyre wear. Our precision wheel balancing services use advanced equipment to identify and correct any imbalances, resulting in a smoother, more comfortable ride and extended tyre life. ",
+  },
+];
+
 const TyreServicing = () => {
   return (
     <div className="font-serif relative">
       <ServicesTopSection
         title="Tyres"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
-        //   heroImg={heroImg}
         showSearchVehicle={true}
-
       />
 
       <ServicePageDesc
@@ -34,7 +55,11 @@ const TyreServicing = () => {
         desc2="at Flash Fit, we prioritize transparency and customer satisfaction. We always seek authorization before beginning any additional work during your car service, and our team is available to assist with all inquiries, estimates, and advice for your vehicle repair needs."
       />
 
-      <ServiceSolution />
+      <ServiceSolution
+        title="Our Comprehensive Solution for a Smooth Ride"
+        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
 
       <ServiceBenefits
         img1={img1}
@@ -50,6 +75,10 @@ const TyreServicing = () => {
               recommendations for repairs."
         data={benefits}
       />
+
+
+
+
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">
