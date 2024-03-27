@@ -11,7 +11,7 @@ import ExhaustLogo from "../../../../public/assets/navabar/Exhaust.png";
 import TyresLogo from "../../../../public/assets/navabar/Tyres.png";
 import wheesLogo from "../../../../public/assets/navabar/WheelsAlignments.png";
 import diagnosisLogo from "../../../../public/assets/navabar/DiagnosisTesting.png";
-
+import navbarRightArrowIcon from "../../../../public/assets/navabar/navbarRightArrowIcon2.png";
 
 
 import contactUs_arrow_right from "../../../../public/assets/navabar/contactUs-arrow-right.svg";
@@ -298,10 +298,13 @@ function MegaMenuWithHover() {
         <div className="mt-[8px]">
         <button
           style={{ fontWeight: "600" }}
-          className="bg-[#FDAD39] md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
+          className=" md:block font-sans hidden text-[#fff] px-5 py-[10px] rounded-lg   text-[15px] transition duration-300"
         >
-          <Link href={'/contact-us'}>
-          Contact
+          <Link href={'/contact-us'} className="flex items-center gap-3">
+            <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
+              <Image src={navbarRightArrowIcon} alt="navbarRightArrowIcon" className=""/>
+            </div> 
+             Get in touch
           </Link>
         </button>
         </div>

@@ -11,7 +11,7 @@ function WhoWeAre() {
        <h2 className="md:text-[48px] text-[34px] font-serif font-[600] leading-[50px]">Who we are</h2>
      </div>
      <div className="w-full">
-       <p className="md:text-start font-archivo text-justify md:text-[24px] text-[20px] font-[400] mt-3">At FlashFit, our mission is to revolutionize the automotive industry by providing unparalleled car care services infused with passion,
+       <p className="md:text-start font-archivo text-justify md:text-[23px] text-[20px] font-[400] mt-3">At FlashFit, our mission is to revolutionize the automotive industry by providing unparalleled car care services infused with passion,
          precision, and a commitment to excellence. We strive to elevate the standard of vehicle maintenance and repair, ensuring that every customer 
          who walks through our doors receives top-notch service and leaves with complete satisfaction. Our vision is to be the leading authority in 
          automotive care, trusted by drivers for our expertise, reliability, and dedication to customer service.<br/><br/>
