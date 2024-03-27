@@ -233,7 +233,7 @@ function NavList() {
       <Typography
         placeholder=""
         as="a"
-        href="#"
+        href="/gallery"
         variant="small"
         className="font-medium"
       >
@@ -318,3 +318,9 @@ function MegaMenuWithHover() {
 }
 
 export default MegaMenuWithHover;
+
+
+
+
+
+
