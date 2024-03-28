@@ -21,8 +21,14 @@ const ContactPage = () => {
     setSelectedOptions([...selectedOptions, option]);
   };
 
-  const totalSteps = 3;
-  const progressWidth = (activeStep / (totalSteps - 1)) * 100;
+  const totalSteps = 2;
+  // const progressWidth = (activeStep / (totalSteps - 1)) * 100;
+  const progressWidth = (activeStep === 0 ? 50 : 100);
+
+
+
+
+
  
 
   const handleBack = () => {
@@ -42,10 +48,10 @@ const ContactPage = () => {
     >
       <div className="contactNav w-full flex items-center justify-between">
         <div>
-          {(activeStep <= 0 || activeStep === totalSteps - 1) &&  (<div className=" " data-aos='fade-right'><Link href={'/'}> <FlashLogo /> </Link></div>)}
+          {(activeStep <= 0 || activeStep === 2) &&  (<div className=" " data-aos='fade-right'><Link href={'/'}> <FlashLogo /> </Link></div>)}
      
  
-             {(activeStep !== 0 && activeStep !== totalSteps -1 )  && ( 
+             {(activeStep !== 0 && activeStep !== 2 )  && ( 
              <div className={`${styles.arrowMain} border px-2 py-5 rounded-full cursor-pointer`} onClick={handleBack}> 
             <div className={`${styles.arrowWrapper}`}>
             <span className={`${styles.arrowSpan}`}>
@@ -86,7 +92,7 @@ const ContactPage = () => {
 
 
      
-      {activeStep !== totalSteps -1 && <div className="absolute top-28 lg:top-10 left-1/2 -translate-x-1/2 w-auto flex items-center justify-center">
+      {activeStep !== 2 && <div className="absolute top-28 lg:top-10 left-1/2 -translate-x-1/2 w-auto flex items-center justify-center">
           {selectedOptions.map((option, index) => (
             <button
               type="button"
@@ -115,13 +121,13 @@ const ContactPage = () => {
 
  
       {/*________________________progress bar ____________________*/}
-      <div className="w-full flex items-center">
+    { activeStep !== 2 &&  <div className="w-full flex items-center">
         <div className="progress-bar w-full flex items-center  justify-center">
           <div className="progress-step w-2/5  h-2 bg-gray-300 sm:w-[100%]] rounded-md">
             <div className="active h-full rounded-md" style={{ width: `${progressWidth}%`, backgroundColor: "#F8AD39" }}></div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
