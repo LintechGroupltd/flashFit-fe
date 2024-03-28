@@ -22,7 +22,7 @@ const MotTesting = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="MOT Testing"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Ensure Roadworthy Performance with Our Comprehensive MOT Assurance Service"
         heroImg={heroImg}
       />
 
