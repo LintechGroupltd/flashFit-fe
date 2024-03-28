@@ -1,5 +1,5 @@
 .main {
-  @apply w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30;
+  @apply w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30 hidden lg:flex;
   /* transform: translateY(150px); */
 }
 
@@ -10,6 +10,7 @@
 
   overflow-x: auto; /* Enable horizontal scrolling */
 }
+
 .nav_inner {
   @apply flex items-center justify-center
     gap-[8px];
