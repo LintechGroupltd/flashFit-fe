@@ -1,15 +1,12 @@
-import MotTesting from '@/components/pages/motTesting';
-import React from 'react'
+import MotTesting from "@/components/pages/motTesting";
+import React from "react";
 
 const Page = () => {
   return (
     <div>
- 
-
-
       <MotTesting />
-      </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Page;

@@ -75,7 +75,8 @@ const ContactPage = () => {
         </div>}
 
 
-        <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`} onClick={handleBack}> 
+        <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`}> 
+        <Link href={'/'}>
             <div className={`${styles.arrowWrapper}`}>
             <span className={`${styles.arrowSpan}`}>
                <div  className={`${styles.arr1} flex items-center justify-center`}>
@@ -87,6 +88,7 @@ const ContactPage = () => {
                 </div>
             </span>
           </div>
+          </Link>
           </div> 
 
 
@@ -96,7 +98,8 @@ const ContactPage = () => {
 
       {(activeStep > 0 && activeStep !== totalSteps - 1) && ( <div className="absolute bottom-4" data-aos='fade-right'> <FlashLogo /> </div> )}
 
-      {/*____________________________ contact page content _____________________*/}
+
+
       <div className="w-full h-full flex items-center justify-center">
         <>
           {activeStep === 0 && ( <ContactServiceType handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
@@ -105,7 +108,7 @@ const ContactPage = () => {
         </>
       </div>
 
-
+ a
       {/*________________________ contact bottom  ____________________*/}
       <div className="w-full flex items-center">
         <div className="progress-bar w-full flex items-center  justify-center">
