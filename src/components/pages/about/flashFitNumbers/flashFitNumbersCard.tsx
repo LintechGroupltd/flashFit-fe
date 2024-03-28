@@ -13,22 +13,22 @@ function FlashFitNumbersCard() {
     },
     {
       id: 2,
-      percentage: "98%",
-      description: "Customer Satisfaction",
+      percentage: "2,000+",
+      description: "Vehicles Serviced Annually",
     },
     {
       id: 3,
-      percentage: "98%",
-      description: "Customer Satisfaction",
+      percentage: "99%",
+      description: "MOT Test Pass Rate",
     },
   ];
 
   return (
-    <div className="grid md:grid-cols-3 gap-[35px] w-full">
+    <div className="grid md:grid-cols-3 md:gap-[35px] gap-[30px] w-full">
       {NumbersCardData.map((data) => (
         <div key={data.id} className="flex flex-col justify-center items-center h-[184px] bg-[#F5F5F7] rounded-[8px]  p-4">
-          <div className="text-[60px] font-serif font-[400]  text-[#2D2D2D]">{data.percentage}</div>
-          <div className="text-[16px] font-[500] font-sans text-[#2D2D2D] mt-[2px]">{data.description}</div>
+          <div className="md:text-[60px] text-[48px] font-serif font-[400]  text-[#2D2D2D]">{data.percentage}</div>
+          <div className="text-[16px] font-[600] font-sans text-[#2D2D2D] mt-[2px]">{data.description}</div>
         </div>
       ))}
     </div>

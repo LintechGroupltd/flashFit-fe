@@ -32,27 +32,28 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, url }, key) => (
+    ({ icon,mobile_icon, title, description, url }, key) => (
       <Link href={url} key={key}>
         <MenuItem
-          className="flex items-center gap-3  rounded-lg"
+          className="flex md:items-center md:gap-3 gap-4 md:hover:bg-[#E9EAF3] hover:bg-[#2A317F] rounded-lg"
           placeholder="">
-          <div className=" rounded-lg  p-2 ">
+          <div className=" rounded-lg  md:p-2 ">
             {" "}
-            <Image src={icon} alt="" />
+            <Image src={icon} alt="" className="md:block hidden" /> 
+            <Image src={mobile_icon} alt="" className="md:hidden block" />
           </div>
-          <div className="mt-2">
+          <div className="mt-2 ">
             <Typography
               placeholder=""
               variant="h6"
               color="blue-gray"
-              className="md:text-[16px] text-[14px] font-sans font-[600] lg:text-[#000] text-[#fff]">
+              className="md:text-[16px] text-[14px] font-sans font-[600] lg:text-[#000] text-[#fff] ">
               {title}
             </Typography>
             <Typography
               placeholder=""
               variant="paragraph"
-              className="text-[12px] font-[400] md:text-[#505050] text-[#fff] font-sans mt-2">
+              className="text-[12px] md:font-[400] font-[500] md:text-[#505050] text-[#fff] font-sans mt-2 md:block hidden">
               {description}
             </Typography>
           </div>
@@ -77,7 +78,7 @@ function NavListMenu() {
             className="font-medium "
             placeholder="">
             <div
-              className="flex cursor-pointer md:border-none border-b border-[#3F4696] w-full items-center py-2 pr-[20px]  text-[#fff] text-[16px] font-[500] font-sans"
+              className="flex cursor-pointer md:border-none border-b border-[#3F4696] w-full items-center md:py-2 py-4 pr-[20px]  text-[#fff] text-[16px] font-[500] font-sans"
               // selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
               // placeholder=""
@@ -117,7 +118,7 @@ function NavListMenu() {
               </div>
             </div>
             <div>
-              <ul className="grid grid-cols-2 p-4 gap-y-2">{renderItems}</ul>
+              <ul className="grid grid-cols-2 p-4 gap-y-2 ">{renderItems}</ul>
             </div>
           </div>
 
@@ -136,7 +137,7 @@ function NavListMenu() {
         </MenuList>
       </Menu>
 
-      <div className="block lg:hidden bg-[#383F88] rounded-xl">
+      <div className="block lg:hidden bg-[#2A317F]  rounded-xl">
         <Collapse open={isMobileMenuOpen}>
           <div className="">{renderItems}</div>
         </Collapse>
@@ -156,7 +157,7 @@ function NavList() {
         href="/"
         variant="small"
         className="font-medium">
-        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 py-2 pr-[30px] text-[16px] font-[500] font-sans">
+        <div className="flex lg:border-none border-b border-[#3F4696]  items-center gap-2 md:py-2 py-5 pr-[30px] text-[16px] font-[500] font-sans">
           Home
         </div>
       </Typography>
@@ -168,7 +169,7 @@ function NavList() {
         href="/about"
         variant="small"
         className="font-medium">
-        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 py-2 pr-[30px] text-[16px] font-[500] font-sans">
+        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 md:py-2 py-4 pr-[30px] text-[16px] font-[500] font-sans">
           About Us
         </div>
       </Typography>
@@ -179,7 +180,7 @@ function NavList() {
         href="/gallery"
         variant="small"
         className="font-medium">
-        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 pr-[30px] py-2 text-[16px] font-[500] font-sans">
+        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 pr-[30px] md:py-2 py-4 text-[16px] font-[500] font-sans">
           Gallery
         </div>
       </Typography>
@@ -227,7 +228,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
             <Image
               src={navbarLogo}
               alt="navbarLogo"
-              className="md:w-[215px] md:h-[48px] w-[190px] h-[40px] object-contain "
+              className="md:w-[215px] md:h-[48px] w-[180px] h-[35px] object-contain "
             />
           </Typography>
 
@@ -243,7 +244,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
             onClick={() => setOpenNav(!openNav)}>
             {openNav ? (
               <XMarkIcon
-                className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+                className="w-[30px] h-[30px] md:w-[40px] md:h-[40px] "
                 strokeWidth={2}
               />
             ) : (
@@ -256,7 +257,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
 
           <button
             style={{ fontWeight: "600" }}
-            className="  font-sans hidden lg:block mt-3 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
+            className="  font-sans hidden lg:block mt-2 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
             <Link href={"/contact-us"} className="flex items-center gap-3">
               <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
                 <Image
@@ -287,7 +288,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
             <Image
               src={navbarLogo}
               alt="navbarLogo"
-              className="md:w-[215px] md:h-[48px] w-[190px] h-[40px] object-contain "
+              className="md:w-[215px] md:h-[48px] w-[180px] h-[40px] object-contain "
             />
           </Typography>
 

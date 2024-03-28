@@ -15,7 +15,7 @@ import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics
 
 function HOME() {
   return (
-    <div className="">
+    <div className="mt-1">
       <div className="root_parent_wrapper bg-[#2A317F]">
         <div className="root_child_wrapper">
           <Navbar />

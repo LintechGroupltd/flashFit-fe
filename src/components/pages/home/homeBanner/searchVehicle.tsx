@@ -28,7 +28,7 @@ function SearchVehicle() {
       style={{
         boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.12)",
       }}
-      className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px] md:translate-y-[-50%] translate-y-[-20%] mx-auto " // Add relative positioning here
+      className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px] md:translate-y-[-50%] translate-y-[-30%] mx-auto " // Add relative positioning here
        
     >
       <div className="flex bg-[#a4a7c8] h-[56px]">
@@ -114,7 +114,7 @@ function SearchVehicle() {
 
          <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
            <button className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans">
-             Contact
+              Search
            </button>
          </div>
        

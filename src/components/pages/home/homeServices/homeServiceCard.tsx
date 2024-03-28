@@ -38,7 +38,7 @@ function HomeServiceCard() {
       id: 2,
       title: "Service",
       description:
-        "Service: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+        "Keep your car running smoothly and efficiently with Flash Fit's comprehensive servicing packages. From oil changes to fluid checks and filter replacements, our tailored services maintain peak performance and prolong the lifespan of your vehicle.",
       logo: Service_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Service_Yellow_Bg,
@@ -48,7 +48,7 @@ function HomeServiceCard() {
       id: 3,
       title: "Brake",
       description:
-        "Brake: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+        "Safeguard your vehicle's safety and performance with Flash Fit's meticulous brake inspections and expert repairs. Our skilled technicians ensure your brakes are in top condition, providing responsive stopping power and peace of mind on the road.",
       logo: Brakes_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Brakes_Yellow_Bg,
@@ -58,7 +58,7 @@ function HomeServiceCard() {
       id: 4,
       title: "Exhaust",
       description:
-        "Exhaust: Ensure your vehicle meets safety and environmental standards with Flash Fits comprehensive MOT testing services. Our accredited testers rigorously inspect key components, including brakes, and emissions, to ensure compliance with legal requirements.",
+        " Maintain optimal engine performance and reduce harmful emissions with our exhaust maintenance services. Our thorough inspections and precise repairs ensure your exhaust system functions efficiently, promoting a smoother engine.",
       logo: Exhaust_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Exhaust_Yellow_Bg,

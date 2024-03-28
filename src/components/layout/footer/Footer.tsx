@@ -54,7 +54,7 @@ function Footer() {
               {item?.children?.length
                 ? item.children.map((child, index) => (
                     <Link href={child.link}>
-                      <span className="font-sans text-[14px] font-[500] text-[#505050]">
+                      <span className="font-sans text-[14px] font-[500] text-[#505050] hover:text-[#E08800] ">
                         {child.title}
                        
                       </span>

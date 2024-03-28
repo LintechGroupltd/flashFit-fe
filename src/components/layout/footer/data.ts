@@ -10,15 +10,15 @@ export const quickLinks = [
         },
         {
           title: "Gallery",
-          link: "/",
+          link: "/gallery",
         },
         {
           title: "About Us",
-          link: "/",
+          link: "/about",
         },
         {
           title: "Contact Us",
-          link: "/",
+          link: "/contact-us",
         },
         {
           title: "Privacy Policy",
@@ -37,35 +37,31 @@ export const quickLinks = [
       children: [
         {
           title: "MOT",
-          link: "/",
+          link: "/services/mot-testing",
         },
         {
           title: "Servicing",
-          link: "/",
+          link: "/services/servicing",
         },
         {
           title: "Brakes",
-          link: "/",
+          link: "/services/brake-service",
         },
         {
-          title: "Exhust",
-          link: "/",
+          title: "Exhaust",
+          link: "/services/exhaust-maintenance",
         },
         {
-          title: "Tyres & Wheels Alignment",
-          link: "/",
+          title: "Tyres",
+          link: "/services/tyres-servicing",
         },
-        // {
-        //   title: "Office Space Renovation",
-        //   link: "/",
-        // },
         {
-          title: "Exhust",
-          link: "/",
+          title: "Wheels Alignment",
+          link: "/services/wheels-alignments",
         },
         {
           title: "Diagnostic testing",
-          link: "/",
+          link: "/services/diagnosis-testing",
         },
       ],
     },

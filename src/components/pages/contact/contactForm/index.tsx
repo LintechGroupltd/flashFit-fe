@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@/components/reuseable/button/Button";
 import { useForm } from "react-hook-form";
+import CalendarIcon from "@/components/svg/CalendarIcon";
 
 interface StepProps {
   handleStepChange: (step: number) => void;
@@ -53,6 +54,34 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
               {...register("emailAddress")}
             />
           </div>
+
+
+
+          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
+            <input
+              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              type="text"
+              placeholder="Vehicle Number"
+              {...register("vehicleNumber")}
+            />
+
+            <div className="w-full relative">
+            <input
+              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              type="email"
+              placeholder="Book Date"
+              {...register("bookingDate")}
+            />
+
+            {/* <div className="absolute right-5 bottom-5 cursor-pointer">
+              <CalendarIcon />
+              </div> */}
+            </div>
+          
+
+          </div>
+
+
 
           <div>
             <textarea

@@ -21,10 +21,8 @@ const BookContact = () => {
         </p>
 
         <div className="mt-8">
-          <Link href="">
-            <button className="bg-[#F8AD39]  px-[70px] py-3 rounded-[8px] md:text-[16px] text-[15px] text-[#fff] font-[500] font-sans">
-              Contact
-            </button>
+         <Link href='/contact-us'>
+            <button className="bg-[#F8AD39]  px-[70px] py-3 rounded-[8px] md:text-[16px] text-[15px] text-[#fff] font-[500] font-sans">Contact</button>
           </Link>
         </div>
       </div>
