@@ -257,7 +257,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
 
           <button
             style={{ fontWeight: "600" }}
-            className="  font-sans hidden lg:block mt-3 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
+            className="  font-sans hidden lg:block mt-2 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
             <Link href={"/contact-us"} className="flex items-center gap-3">
               <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
                 <Image

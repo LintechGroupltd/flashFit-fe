@@ -15,7 +15,7 @@ function FlashBenefitCard() {
       id: 2,
       title: "Comprehensive Solutions",
       description:
-        "We take pride in our workmanship and use only the highest quality parts and equipment for all repairs and replacements. Rest assured, your vehicle is in capable hands with Flash Fit.",
+        "Our automotive service center offers everything from routine servicing to MOT testing, ensuring your vehicle receives comprehensive care conveniently. Our commitment is seamless care.",
       logo: flashBenefitCardIcon,
     },
     {
@@ -29,7 +29,7 @@ function FlashBenefitCard() {
       id: 4,
       title: "Expertise you can trust",
       description:
-        "We take pride in our workmanship and use only the highest quality parts and equipment for all repairs and replacements. Rest assured, your vehicle is in capable hands with Flash Fit.",
+        "We believe in keeping our customers informed every step of the way. You'll receive clear explanations of any issues found during inspections, along with honest recommendations for necessary repairs.",
       logo: flashBenefitCardIcon,
     },
   ];

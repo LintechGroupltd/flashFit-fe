@@ -18,16 +18,12 @@ function HomeBanner() {
 
           {/*for desktop  */}
           <p className="text-white md:text-[18px] text-[16px] mt-7 font-sans md:block hidden">
-            Secure payment solutions for sellers. Enjoy hassle-free
-            <br /> transactions, instant processing, and no hidden fees.
-            <br /> Simplify your sales and get paid faster.
+             Elevate your ride with FlashFit where expert care<br/> meets unmatched performance, experience the<br/> difference today.
           </p>
 
           {/*for Mobile  */}
           <p className="text-white md:text-[18px] text-[16px] mt-4 font-sans md:hidden block ">
-            Secure payment solutions for sellers. Enjoy hassle-free
-            transactions, instant processing, and no hidden fees. Simplify your
-            sales and get paid faster.
+            Elevate your ride with FlashFit where expert care meets unmatched performance, experience the difference today.
           </p>
         </div>
 

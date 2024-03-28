@@ -9,6 +9,7 @@ import wheelImg2 from "../../../../../public/assets/home/ourAchievement/wheel2Im
 import ourAchievementSmallTyreImg from "../../../../../public/assets/home/ourAchievement/ourAchievementSmallTyreImg.svg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 function OurAchievement() {
   return (
@@ -36,9 +37,9 @@ function OurAchievement() {
       <div className="p-8">
          <h2 className="md:text-[24px] text-[18px] font-serif font-[600]">Driven by a passion for cars and a dedication to quality</h2>
          <p className="md:text-[16px] text-[15px] font-[400] font-sans py-4">We strive to elevate the standard of vehicle maintenance and repair, ensuring that every customer who walks through our doors receives top-notch service and leaves with complete satisfaction. </p>
-          <div>
+          <Link href='/about'>
             <button className="bg-[#F8AD39] px-6 py-2 rounded-[7px] text-[16px] font-[500] text-[#fff] font-sans">About Us</button>
-          </div> 
+          </Link> 
       </div>
        
     </div>
