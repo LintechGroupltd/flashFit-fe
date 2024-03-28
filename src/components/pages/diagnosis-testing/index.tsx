@@ -10,6 +10,7 @@ import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
 import img2 from "../../../../public/assets/services/images/manCheckingCar.png";
 import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
 import React from "react";
+import ServiceSolution from "@/components/reuseable/serviceSolution";
 
 export const benefits = [
   { id: 1, item: "Early Issue Detection" },
@@ -18,13 +19,38 @@ export const benefits = [
   { id: 1, item: "Confidence in Vehicle Performance" },
 ];
 
+
+export const solutions = [
+  {
+    id: 1,
+    tag: "Engine Performance",
+    item: "We analyze engine parameters such as fuel delivery, ignition timing, and exhaust emissions to ensure optimal performance and efficiency.",
+  },
+  {
+    id: 2,
+    tag: "Comprehensive Solutions",
+    item: "Our diagnostic tests assess transmission fluid levels, shift points, and overall operation to detect any signs of wear or malfunction. ",
+  },
+  {
+    id: 3,
+    tag: "Quality Assurance",
+    item: "We inspect brake pads, rotors, calipers, and hydraulic components to ensure your brakes are operating correctly and safely.",
+  },
+  {
+    id: 4,
+    tag: "Expertise you can trust",
+    item: "Our tests evaluate suspension components, including shocks, struts, and control arms, as well as steering responsiveness and alignment.",
+  },
+];
+
+
 const DiagnosisTesting = () => {
   return (
     <div className="font-serif relative">
       <ServicesTopSection
         title="Diagnostics Testing"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
-        heroImg={"/assets/services/servicing.jpg"}
+        heroImg={"/assets/services/diagonistics.webp"}
       />
 
       <ServicePageDesc
@@ -32,6 +58,13 @@ const DiagnosisTesting = () => {
         desc1="Diagnostic testing is the cornerstone of our approach at Flash Fit. We understand that identifying and addressing automotive issues early is crucial to maintaining vehicle performance and safety. That's why we invest in state-of-the-art diagnostic equipment and employ skilled technicians who are trained to interpret diagnostic data accurately.."
         desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run."
       />
+
+      <ServiceSolution title="Key Components and Systems We Inspect"
+       desc="Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+       data={solutions} />
+
+
+
 
       <ServiceBenefits
         img1={img1}
