@@ -53,6 +53,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
           </div>
           <div className="mt-[24px] lg:mt-0 flex-1 flex h-[clamp(300px,calc(300/1420*100vw),415px)]  bg-gray-500 rounded-[16px] overflow-hidden"></div>
         </div> */}
+
         {/* <div className="block lg:flex gap-[24px] mt-[24px]">
           <div className="hidden lg:flex flex-2  bg-yellow-500 rounded-[16px] overflow-hidden h-[clamp(300px,calc(300/1420*100vw),415px)]"></div>
           <div className="flex-1 flex h-[clamp(300px,calc(300/1420*100vw),415px)]  bg-gray-500 rounded-[16px] overflow-hidden"></div>
