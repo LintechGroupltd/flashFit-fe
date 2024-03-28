@@ -13,7 +13,7 @@ function HomeServices() {
   };
 
   return (
-    <div className="md:mt-10 ">
+    <div className="md:mt-10">
       <div className="md:flex justify-between items-center">
         <div data-aos="fade-right">
           <h2 className="md:text-[48px] text-[34px] font-[600] md:leading-[55px] leading-[43px] font-serif">

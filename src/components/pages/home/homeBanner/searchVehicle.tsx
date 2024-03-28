@@ -28,7 +28,7 @@ function SearchVehicle() {
       style={{
         boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.12)",
       }}
-      className="bg-[#fff] z-10 shadow-lg  w-full overflow-hidden rounded-[24px] md:h-[190px]  md:translate-y-[-50%] bottom-40  mx-auto " // Add relative positioning here
+      className="bg-[#fff] z-10 shadow-lg  w-full overflow-hidden rounded-[24px] md:h-[190px]  md:translate-y-[-50%] translate-y-[-30%]  mx-auto " // Add relative positioning here
        
     >
       <div className="flex bg-[#a4a7c8] h-[56px]">
