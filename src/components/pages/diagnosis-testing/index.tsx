@@ -24,7 +24,7 @@ const DiagnosisTesting = () => {
       <ServicesTopSection
         title="Diagnostics Testing"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
-        heroImg={"/assets/services/servicing.jpg"}
+        heroImg={"/assets/services/diagonistics.jpg"}
       />
 
       <ServicePageDesc
