@@ -48,7 +48,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
 
   return (
     <div
-      className="w-full h-full pt-14 pb-[30px]"
+      className="w-full h-full pt-14 pb-[30px]  lg:py-28"
       style={{ backgroundColor: "#F5F5F7" }}>
       <div className="font-serif root_parent_wrapper">
         <div className="root_child_wrapper flex flex-col gap-[16px] xl:gap-10 ">

@@ -18,7 +18,7 @@ const ServicesTopSection: React.FC<Props> = ({
 }: Props) => {
   console.log({ heroImg });
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full ">
       <div className="">
         <TopBar title={title} subTitle={subTitle} />
       </div>
