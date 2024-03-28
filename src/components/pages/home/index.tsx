@@ -77,6 +77,11 @@ function HOME() {
           <Footer />
         </div>
       </div> */}
+
+
+      <div className="floatingBtn boreder border-r-deep-orange-600 p-10 rounded-full">
+       
+      </div>
     </div>
   );
 }

@@ -19,7 +19,6 @@ export const benefits = [
   { id: 1, item: "Confidence in Vehicle Performance" },
 ];
 
-
 export const solutions = [
   {
     id: 1,
@@ -43,7 +42,6 @@ export const solutions = [
   },
 ];
 
-
 const DiagnosisTesting = () => {
   return (
     <div className="font-serif relative">
@@ -59,12 +57,11 @@ const DiagnosisTesting = () => {
         desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run."
       />
 
-      <ServiceSolution title="Key Components and Systems We Inspect"
-       desc="Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
-       data={solutions} />
-
-
-
+      <ServiceSolution
+        title="Key Components and Systems We Inspect"
+        desc="Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
 
       <ServiceBenefits
         img1={img1}
@@ -96,7 +93,8 @@ const DiagnosisTesting = () => {
       <div
         className="md:root_parent_wrapper   py-24"
         data-aos="fade-up"
-        date-aos-duration="1000">
+        date-aos-duration="1000"
+      >
         <div className="md:block hidden root_child_wrapper">
           <BookContact />
         </div>
