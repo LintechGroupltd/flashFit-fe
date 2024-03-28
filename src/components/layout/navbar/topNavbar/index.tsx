@@ -215,7 +215,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
       <div className={"h-[68px]"} />
 
       <div
-        className="text-[#fff] fixed top-0 left-0  bg-[#2A317F] w-full h-auto z-[100]"
+        className="text-[#fff] fixed top-0 left-0  bg-[#2A317F] w-full h-auto z-[100] pb-4"
         style={{ visibility: isSticky ? "hidden" : undefined }}>
         <div className="flex mt-3 justify-between  text-[#fff]  mx-auto root_child_wrapper">
           <Typography
@@ -257,7 +257,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
           <motion.button
             whileHover="on_hover"
             style={{ fontWeight: "600" }}
-            className="  font-sans hidden lg:block mt-2 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
+            className="  font-sans hidden lg:block mt-1 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
             <a href={"/contact-us"} className="flex items-center gap-3">
               <div className="bg-[#fff] w-[40px] h-[40px] relative rounded-full p-3 text-[16px] font-[600] font-sans overflow-hidden">
                 <div className="absolute w-full h-full left-0 top-0 flex items-center justify-center">
@@ -296,7 +296,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
       </div>
 
       <div
-        className="fixed top-0 left-0 h-screen bg-[#2A317F] z-50 w-full"
+        className="fixed top-0 left-0 h-screen bg-[#2A317F] z-50 w-full "
         style={{ display: !openNav ? "none" : "block" }}>
         <div className="flex mt-1 justify-between  text-[#fff]  mx-auto root_child_wrapper">
           <Typography
