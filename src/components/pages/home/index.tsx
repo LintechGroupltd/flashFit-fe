@@ -27,7 +27,7 @@ function HOME() {
 
       <div className="root_parent_wrapper ">
         <div className="root_child_wrapper">
-          <div className="" data-aos="fade-up" data-aos-duration="1500">
+          <div className="">
             <SearchVehicle />
           </div>
 
