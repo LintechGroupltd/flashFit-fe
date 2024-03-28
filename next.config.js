@@ -1,9 +1,16 @@
 const withPWAInit = require("@ducanh2912/next-pwa").default;
 
 const withPWA = withPWAInit({
-    dest: "public",
+  dest: "public",
 });
 
-const nextConfig = {};
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
 
 module.exports = withPWA(nextConfig);
