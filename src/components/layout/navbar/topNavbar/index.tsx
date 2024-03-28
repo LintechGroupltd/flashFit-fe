@@ -4,8 +4,6 @@ import React, { Fragment } from "react";
 import navbarLogo from "../../../../../public/assets/navabar/FlashfitLogo.svg";
 import downArrow from "../../../../../public/assets/navabar/Arrow_Down.svg";
 
-import GetInTouchArrow_Right from "../../../../../public/assets/navabar/GetInTouchArrowRight.svg";
-
 import contactUs_arrow_right from "../../../../../public/assets/navabar/contactUs-arrow-right.svg";
 import DropdownMegamenuImage from "../../../../../public/assets/navabar/DropdonMegamenuImage.svg";
 
@@ -28,18 +26,19 @@ import Link from "next/link";
 
 import { navListMenuItems } from "../data";
 
+import { motion } from "framer-motion";
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon,mobile_icon, title, description, url }, key) => (
+    ({ icon, mobile_icon, title, description, url }, key) => (
       <Link href={url} key={key}>
         <MenuItem
           className="flex md:items-center md:gap-3 gap-4 md:hover:bg-[#E9EAF3] hover:bg-[#2A317F] rounded-lg"
           placeholder="">
           <div className=" rounded-lg  md:p-2 ">
             {" "}
-            <Image src={icon} alt="" className="md:block hidden" /> 
+            <Image src={icon} alt="" className="md:block hidden" />
             <Image src={mobile_icon} alt="" className="md:hidden block" />
           </div>
           <div className="mt-2 ">
@@ -255,20 +254,41 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
             )}
           </IconButton>
 
-          <button
+          <motion.button
+            whileHover="on_hover"
             style={{ fontWeight: "600" }}
             className="  font-sans hidden lg:block mt-2 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
-            <Link href={"/contact-us"} className="flex items-center gap-3">
-              <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
-                <Image
-                  src={GetInTouchArrow_Right}
-                  alt="navbarRightArrowIcon"
-                  className=""
-                />
+            <a href={"/contact-us"} className="flex items-center gap-3">
+              <div className="bg-[#fff] w-[40px] h-[40px] relative rounded-full p-3 text-[16px] font-[600] font-sans overflow-hidden">
+                <div className="absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                  <motion.img
+                    initial={{ x: "-30px" }}
+                    variants={{
+                      on_hover: {
+                        x: 0,
+                      },
+                    }}
+                    src={"/assets/navabar/GetInTouchArrowRight.svg"}
+                    alt="navbarRightArrowIcon"
+                  />
+                </div>
+
+                <div className="absolute w-full h-full left-0 top-0 flex items-center justify-center">
+                  <motion.img
+                    initial={{ x: 0 }}
+                    variants={{
+                      on_hover: {
+                        x: "30px",
+                      },
+                    }}
+                    src={"/assets/navabar/GetInTouchArrowRight.svg"}
+                    alt="navbarRightArrowIcon"
+                  />
+                </div>
               </div>
               Get in touch
-            </Link>
-          </button>
+            </a>
+          </motion.button>
         </div>
         {/* <Collapse open={openNav}>
           <NavList />
