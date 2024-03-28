@@ -10,6 +10,7 @@ interface Benefit {
 
 interface ServiceBenefitsProps {
   img1: any;
+  img2?:any;
   figure: string;
   title: string;
   desc1: string;
@@ -20,6 +21,7 @@ interface ServiceBenefitsProps {
 
 const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
   img1,
+  img2,
   figure,
   title,
   desc1,
@@ -83,7 +85,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
                 data-aos="fade-up-right"
                 data-aos-duration="500">
                 <Image
-                  src={wheelImg}
+                  src={img2}
                   alt="wheelImg"
                   className="w-full h-full rounded-2xl"
                   style={{ maxHeight: "300px" }}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AOSInit } from "@/lib/Aos";
-import AppFooter from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
   title: "flashfit.com",
@@ -18,10 +17,11 @@ export default function RootLayout({
       <body>
       <AOSInit />
         {children}
-        <AppFooter />
         </body>
     </html>
   );
 }
 
 
+
+ 

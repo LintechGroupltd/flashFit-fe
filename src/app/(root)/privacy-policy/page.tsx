@@ -1,13 +1,15 @@
 import PrivacyAndPolicy from "@/components/pages/privacyAndPolicy";
 import TopBar from "@/components/layout/topBar";
+import AppFooter from "@/components/layout/footer/Footer";
 import React from "react";
 
 const page = () => {
   return (
-    <main>
+    <div>
       <TopBar title="Privacy Policy" />
       <PrivacyAndPolicy />
-    </main>
+      <AppFooter />
+    </div>
   );
 };
 

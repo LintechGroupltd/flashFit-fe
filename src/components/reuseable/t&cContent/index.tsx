@@ -65,10 +65,12 @@ const PrivacyAndConditions = () => {
   return (
     <section className="w-full h-full">
         <div className="w-full flex flex-col gap-10">
+
+
           {contents.map((item, idx) => (
             <div key={idx} className="flex flex-col gap-4">
-              <h4 className="font-bold text-2xl" style={{color:'#0F0F0F'}}>{item.title}</h4>
-              <p className="text-lg " style={{fontWeight:'200', color:'#505050'}}>{item.desc}</p>
+              <h4 className="font-bold text-2xl " style={{color:'#0F0F0F'}}>{item.title}</h4>
+              <p className="text-lg lg:w-4/5" style={{fontWeight:'200', color:'#505050'}}>{item.desc}</p>
               {item.list && (
                 <ul className="list-disc px-8">
                   {Object.values(item.list).map((listItem, index) => (
@@ -78,6 +80,9 @@ const PrivacyAndConditions = () => {
               )}
             </div>
           ))}
+
+
+
         </div>
     </section>
   );

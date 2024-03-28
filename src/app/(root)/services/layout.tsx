@@ -1,12 +1,12 @@
-import Footer from "@/components/layout/footer/Footer";
-import TopBar from "@/components/layout/topBar";
+import AppFooter from "@/components/layout/footer/Footer";
+
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <main className="">
-        {/* <TopBar title="MOT TESTING" /> */}
         {children}
+        <AppFooter />
       </main>
     </>
   );

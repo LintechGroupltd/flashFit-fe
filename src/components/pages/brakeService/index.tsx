@@ -5,7 +5,10 @@ import CustomerReview from "@/components/reuseable/customerReview/customerReview
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
+import heroImg from "../../../../public/assets/services/images/brakeHeroImg.png";
 import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
+import img2 from "../../../../public/assets/services/images/manCheckingCar.png";
+
 import React from "react";
 
 export const benefits = [
@@ -21,6 +24,7 @@ const BrakeService = () => {
       <ServicesTopSection
         title="Brake Service"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        heroImg={heroImg}
       />
 
       <ServicePageDesc
@@ -31,15 +35,12 @@ const BrakeService = () => {
 
       <ServiceBenefits
         img1={img1}
+        img2={img2}
         figure={"10x"}
-        title="Advanced Equipment"
-        desc1=" Our cutting-edge diagnostic tools provide 10 times the accuracy
-              in identifying vehicle issues, ensuring comprehensive
-              assessment."
-        title2=" Expert Analysis"
-        desc2=" With our skilled technicians, you receive 10 times the expertise
-              in interpreting diagnostic results, leading to precise
-              recommendations for repairs."
+        title="Expert Repairs"
+        desc1="With skilled technicians and advanced techniques, we deliver 10 times the precision in brake repairs, ensuring optimal stopping power."
+        title2="Performance Optimization"
+        desc2="Experience 10 times the confidence in your vehicle's braking performance, with adjustments made to enhance responsiveness and control."
         data={benefits}
       />
 
