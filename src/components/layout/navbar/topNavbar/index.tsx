@@ -217,7 +217,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
       <div
         className="text-[#fff] fixed top-0 left-0  bg-[#2A317F] w-full h-auto"
         style={{ visibility: isSticky ? "hidden" : undefined }}>
-        <div className="flex mt-1 justify-between  text-[#fff]  mx-auto root_child_wrapper">
+        <div className="flex mt-3 justify-between  text-[#fff]  mx-auto root_child_wrapper">
           <Typography
             placeholder=""
             as="a"
@@ -231,7 +231,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
             />
           </Typography>
 
-          <div className="hidden lg:block ">
+          <div className="hidden lg:block mt-3">
             <NavList />
           </div>
 
@@ -256,7 +256,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
 
           <button
             style={{ fontWeight: "600" }}
-            className="  font-sans hidden lg:block  text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
+            className="  font-sans hidden lg:block mt-3 text-[#fff] px-5 rounded-lg   text-[15px] transition duration-300">
             <Link href={"/contact-us"} className="flex items-center gap-3">
               <div className="bg-[#fff] w-[40px] h-[40px] rounded-full p-3 text-[16px] font-[600] font-sans">
                 <Image
