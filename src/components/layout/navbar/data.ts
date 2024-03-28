@@ -35,7 +35,7 @@ export const navListMenuItems = [
     icon: TyresLogo,
     title: "Tyres and Wheels Alignments",
     description: "Grip Enhanced, Stability Guaranteed",
-    url: "/services/tyres",
+    url: "/services/tyres-servicing",
   },
   {
     icon: wheesLogo,
