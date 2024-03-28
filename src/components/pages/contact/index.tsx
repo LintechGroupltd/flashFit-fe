@@ -98,7 +98,8 @@ const ContactPage = () => {
 
       {(activeStep > 0 && activeStep !== totalSteps - 1) && ( <div className="absolute bottom-4" data-aos='fade-right'> <FlashLogo /> </div> )}
 
-      {/*____________________________ contact page content _____________________*/}
+
+
       <div className="w-full h-full flex items-center justify-center">
         <>
           {activeStep === 0 && ( <ContactServiceType handleStepChange={handleStepChange} handleOptionSelect={handleOptionSelect} /> )}
@@ -107,7 +108,7 @@ const ContactPage = () => {
         </>
       </div>
 
-
+ a
       {/*________________________ contact bottom  ____________________*/}
       <div className="w-full flex items-center">
         <div className="progress-bar w-full flex items-center  justify-center">
