@@ -5,6 +5,10 @@ import { AOSInit } from "@/lib/Aos";
 export const metadata: Metadata = {
   title: "flashfit.com",
   description: "Website landing page",
+  manifest: "/manifest.json",
+  icons: {
+    apple: "/icon-512x512.png",
+  },
 };
 
 export default function RootLayout({
@@ -15,13 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <AOSInit />
+        <AOSInit />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
-
-
-
- 
