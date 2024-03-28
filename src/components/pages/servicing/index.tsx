@@ -10,6 +10,8 @@ import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
 import img2 from "../../../../public/assets/services/images/manCheckingCar.png";
 import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
 import React from "react";
+import ServicePricing from "@/components/reuseable/servicePricing/servicePricing";
+
 
 export const benefits = [
   { id: 1, item: "Early Issue Detection" },
@@ -57,12 +59,21 @@ const Servicing = () => {
 
       <div className="root_parent_wrapper">
         <div className="root_child_wrapper">
+           <ServicePricing/>
+        </div>
+      </div>
+  
+
+      <div className="root_parent_wrapper mt-24">
+        <div className="root_child_wrapper">
           <FaqSection />
         </div>
       </div>
 
+ 
+
       <div
-        className="md:root_parent_wrapper   py-24"
+        className="md:root_parent_wrapper   py-20"
         data-aos="fade-up"
         date-aos-duration="1000">
         <div className="md:block hidden root_child_wrapper">
