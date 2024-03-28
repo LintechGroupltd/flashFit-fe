@@ -9,7 +9,7 @@ import heroImgAngleBg from "../../../../../public/assets/home/bannerSection/hero
 function HomeBanner() {
   return (
     <div className="">
-      <div className="grid md:grid-cols-2  w-full justify-between mx-auto  items-center pt-14 pb-44">
+      <div className="grid md:grid-cols-2  w-full justify-between mx-auto  items-center pt-14 pb-44 ">
         <div className="" data-aos="fade-right">
           <h2 className="md:text-[67px] text-[34px] text-[#fff] md:leading-[70px] leading-[45px] font-[600]  font-serif">
             Revitalize Your

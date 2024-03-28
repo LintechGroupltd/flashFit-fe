@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.png";
-import rightArrow from "../../../../public/assets/reuseableComponentImg/customerReview/rightArrow.svg";
-import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/leftArrow.svg";
+import rightArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewRightWhiteArrow.svg";
+import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewLeftWhiteArrow.svg";
 
 function CustomerReviewCard() {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
@@ -30,7 +30,7 @@ function CustomerReviewCard() {
             <Image
               src={review.customerImg}
               alt="Customer"
-              className="w-full md:w-auto"
+              className="w-full h-full"
             />
           </div>
 
@@ -38,7 +38,7 @@ function CustomerReviewCard() {
           <div className="md:mt-0 mt-3">
             <div className="">
               {[...Array(5)].map((_, index) => (
-                <span key={index} className="text-yellow-500 text-[30px]">
+                <span key={index} className="text-[#FEC84B] text-[30px]">
                   &#9733;
                 </span>
               ))}
@@ -57,19 +57,22 @@ function CustomerReviewCard() {
             </div>
 
             <div className="flex gap-4">
-              <div className="bg-[#D7D7D7] hover:bg-[#F8AD39] w-[54px] h-[54px] rounded-full">
+              <div className=" bg-[#F8AD39] hover:bg-[#F0970E] w-[54px] h-[54px] rounded-full">
                 <Image
                   src={review.leftArrow}
                   alt="Left Arrow"
                   className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto"
                 />
               </div>
-
+ 
+              <div className="bg-[#F8AD39] hover:bg-[#F0970E]  w-[54px] h-[54px] rounded-full">
               <Image
                 src={review.rightArrow}
                 alt="Right Arrow"
-                className="md:w-[55px] w-[50px] md:h-[55px] h-[50px]"
+                className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto"
               />
+              </div>  
+            
             </div>
           </div>
         </div>
