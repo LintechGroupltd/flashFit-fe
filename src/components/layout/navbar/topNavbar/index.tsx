@@ -215,7 +215,7 @@ function MegaMenuWithHover({ isSticky }: { isSticky?: boolean }) {
       <div className={"h-[68px]"} />
 
       <div
-        className="text-[#fff] fixed top-0 left-0  bg-[#2A317F] w-full h-auto"
+        className="text-[#fff] fixed top-0 left-0  bg-[#2A317F] w-full h-auto z-[100]"
         style={{ visibility: isSticky ? "hidden" : undefined }}>
         <div className="flex mt-3 justify-between  text-[#fff]  mx-auto root_child_wrapper">
           <Typography
