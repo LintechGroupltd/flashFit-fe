@@ -34,7 +34,7 @@ function BottomNavbar({ isSticky }: { isSticky?: boolean }) {
   const handleOutsideClick = (event?: any) => {
     if (event?.target?.id === selectedItem?.id) return;
 
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (menuRef?.current && !menuRef.current?.contains(event.target)) {
       setselectedItem(null);
     }
   };
