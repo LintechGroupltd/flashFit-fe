@@ -40,7 +40,7 @@ const ContactPage = () => {
       className="font-serif relative w-full h-screen flex flex-col justify-between px-6 md:px-12 lg:px-28 py-10 text-white"
       style={{ backgroundColor: "#2A317F" }}
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="contactNav w-full flex items-center justify-between">
         <div>
           {(activeStep <= 0 || activeStep === totalSteps - 1) &&  (<div className=" " data-aos='fade-right'><Link href={'/'}> <FlashLogo /> </Link></div>)}
      
@@ -62,17 +62,9 @@ const ContactPage = () => {
         </div>
 
 
-        {activeStep !== totalSteps -1 && <div>
-          {selectedOptions.map((option, index) => (
-            <button
-              type="button"
-              key={index}
-              className="contact-bg  thin flex items-center justify-center gap-2  text-xs sm:text-base cursor-pointer px-4 py-4 rounded-lg bg-white bg-opacity-10 border border-white"
-              data-aos="fade-up-right" >
-              {option}
-            </button>
-          ))}
-        </div>}
+         
+       
+       
 
 
         <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`}> 
@@ -90,11 +82,24 @@ const ContactPage = () => {
           </div>
           </Link>
           </div> 
-
-
-
-
       </div>
+
+
+     
+      {activeStep !== totalSteps -1 && <div className="absolute top-28 lg:top-10 left-1/2 -translate-x-1/2 w-auto flex items-center justify-center">
+          {selectedOptions.map((option, index) => (
+            <button
+              type="button"
+              key={index}
+              className="  thin flex items-center justify-center gap-2  text-xs sm:text-base cursor-pointer px-4 py-4 rounded-lg bg-white bg-opacity-10 border border-white"
+              data-aos="fade-up-right" >
+              {option} 
+            </button>
+          ))}
+        </div>}
+
+
+
 
       {(activeStep > 0 && activeStep !== totalSteps - 1) && ( <div className="absolute bottom-4" data-aos='fade-right'> <FlashLogo /> </div> )}
 
@@ -108,7 +113,7 @@ const ContactPage = () => {
         </>
       </div>
 
- a
+ 
       {/*________________________ contact bottom  ____________________*/}
       <div className="w-full flex items-center">
         <div className="progress-bar w-full flex items-center  justify-center">

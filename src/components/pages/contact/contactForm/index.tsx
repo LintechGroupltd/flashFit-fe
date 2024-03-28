@@ -22,7 +22,7 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
           className="w-full flex flex-col gap-6"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="w-full flex gap-4 md:gap-10">
+          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
             <input
               className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
@@ -37,7 +37,9 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
             />
           </div>
 
-          <div className="w-full flex gap-4 md:gap-10">
+
+
+          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
             <input
               className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
@@ -61,16 +63,18 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
             ></textarea>
           </div>
 
+
+
+
           <div className="w-full">
             <div
-              className="float-right"
+              className="lg:float-right bg-[#F8AD39] flex justify-center rounded-md"
               onClick={() => {
                 handleStepChange(2);
               }}
             >
               <Button
                 title="Submit"
-                bgColor="#F8AD39"
                 btnPadding="12px 24px 12px 24px"
                 textColor="#fff"
               />
