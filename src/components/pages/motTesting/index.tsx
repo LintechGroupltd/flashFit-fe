@@ -26,8 +26,6 @@ const MotTesting = () => {
         heroImg={heroImg}
       />
 
-
-
       <ServicePageDesc
         title=" Road-Ready MOT Testing at FlashFit"
         desc1="At Flash Fit, we prioritize your safety on the road. Our MOT
@@ -76,8 +74,7 @@ const MotTesting = () => {
       <div
         className="md:root_parent_wrapper   py-24"
         data-aos="fade-up"
-        date-aos-duration="1000"
-      >
+        date-aos-duration="1000">
         <div className="md:block hidden root_child_wrapper">
           <BookContact />
         </div>
