@@ -10,12 +10,14 @@ import FlashBenefit from "@/components/reuseable/flashBenefit/flashBenefit";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
-import Footer from "@/components/layout/footer/Footer";
+
 import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics";
+import FloatingPencilIcon from "@/components/reuseable/FloatingPencilIcon";
 
 function HOME() {
   return (
     <div className="mt-1">
+      <FloatingPencilIcon />
       <div className="root_parent_wrapper bg-[#2A317F]">
         <div className="root_child_wrapper">
           <Navbar />
@@ -25,7 +27,7 @@ function HOME() {
 
       <div className="root_parent_wrapper ">
         <div className="root_child_wrapper">
-          <div className="" data-aos="fade-up" data-aos-duration="1500">
+          <div className="">
             <SearchVehicle />
           </div>
 
@@ -77,11 +79,6 @@ function HOME() {
           <Footer />
         </div>
       </div> */}
-
-
-      <div className="floatingBtn boreder border-r-deep-orange-600 p-10 rounded-full">
-       
-      </div>
     </div>
   );
 }
