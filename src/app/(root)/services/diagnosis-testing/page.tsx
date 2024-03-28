@@ -1,10 +1,10 @@
-import Servicing from "@/components/pages/servicing";
+import DiagnosisTesting from "@/components/pages/diagnosis-testing";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <Servicing />
+      <DiagnosisTesting />
     </div>
   );
 };
