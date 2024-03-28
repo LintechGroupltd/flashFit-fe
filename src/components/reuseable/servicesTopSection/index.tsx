@@ -19,11 +19,11 @@ const ServicesTopSection: React.FC<Props> = ({
   console.log({ heroImg });
   return (
     <div className="relative w-full h-full ">
-      <div className="">
+      <div className="md:h-full h-[450px]">
         <TopBar title={title} subTitle={subTitle} />
       </div>
 
-      <div className={showSearchVehicle ? "" : "translate-y-[-25%]"}>
+      <div className={showSearchVehicle ? "md:mt-0 mt-10" : "translate-y-[-25%]"}>
         <div
           className={
             showSearchVehicle

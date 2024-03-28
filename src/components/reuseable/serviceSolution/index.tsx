@@ -19,7 +19,7 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
   data,
 }) => {
   return (
-    <div className="font-serif w-full h-full root_parent_wrapper bg-[#2A317F]  text-white py-14 lg:py-28">
+    <div className="font-serif w-full h-full root_parent_wrapper bg-[#2A317F]  text-white py-14 lg:py-28 md:translate-y-[0%] translate-y-[-5%]">
       <div className="root_child_wrapper flex flex-col gap-10 ">
         <div className="flex flex-col gap-8 max-w-md lg:max-w-2xl">
           <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-left" data-aos='fade-up'>{title}</h1>

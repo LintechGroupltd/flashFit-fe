@@ -8,7 +8,7 @@ interface props {
 
 const ServicePageDesc = ({ title, desc1, desc2 }: props) => {
   return (
-    <div className="root_parent_wrapper">
+    <div className="root_parent_wrapper md:translate-y-[0%] translate-y-[-27%]">
       <div className="root_child_wrapper ">
         {/* <div className="w-full flex flex-col lg:flex-row justify-between gap-10 pt-[30px] pb-[40px] sm:pt-24 sm:pb-24"> */}
         <div className="w-full flex flex-col lg:flex-row justify-between gap-10 pt-[30px] pb-[40px] sm:pt-24 sm:pb-24 lg:py-28 ">
