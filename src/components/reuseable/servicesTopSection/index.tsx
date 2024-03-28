@@ -23,8 +23,8 @@ const ServicesTopSection: React.FC<Props> = ({
         <TopBar title={title} subTitle={subTitle} />
       </div>
 
-      <div className="translate-y-[-25%] root_child_wrapper">
-        <div className="w-full h-auto relative  ">
+      <div className="translate-y-[-25%] ">
+        <div className="w-full h-auto relative  root_child_wrapper">
           {heroImg && (
             <Image
               src={heroImg}
@@ -32,7 +32,7 @@ const ServicesTopSection: React.FC<Props> = ({
               width={1200}
               height={300}
               layout="responsive"
-              className="rounded-[24px] overflow-hidden w-full max-w-[1200px] mx-auto "
+              className="rounded-[24px] overflow-hidden w-full  mx-auto "
             />
           )}
 
