@@ -75,7 +75,8 @@ const ContactPage = () => {
         </div>}
 
 
-        <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`} onClick={handleBack}> 
+        <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`}> 
+        <Link href={'/'}>
             <div className={`${styles.arrowWrapper}`}>
             <span className={`${styles.arrowSpan}`}>
                <div  className={`${styles.arr1} flex items-center justify-center`}>
@@ -87,6 +88,7 @@ const ContactPage = () => {
                 </div>
             </span>
           </div>
+          </Link>
           </div> 
 
 
