@@ -41,7 +41,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
 
 
 
-          <div className="flex flex-col lg:flex-row gap-8 border-2 border-red-800">
+          <div className="flex flex-col lg:flex-row gap-8">
             <div className="w-full h-auto" data-aos="fade-right">
               <Image
                 src={img1}

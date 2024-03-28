@@ -19,27 +19,28 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
   data,
 }) => {
   return (
-    <div className="font-serif w-full h-full root_parent_wrapper bg-[#2A317F]  text-white lg:py-28">
+    <div className="font-serif w-full h-full root_parent_wrapper bg-[#2A317F]  text-white py-14 lg:py-28">
       <div className="root_child_wrapper flex flex-col gap-10 ">
-
-        <div className="flex flex-col gap-8">
-          <h1 className="text-5xl max-w-md lg:max-w-2xl">{title}</h1>
-          <p className="text-lg">{desc}</p>
+        <div className="flex flex-col gap-8 max-w-md lg:max-w-2xl">
+          <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-left" data-aos='fade-up'>{title}</h1>
+          <p className="text-sm md:text-lg font-thin" data-aos='fade-up'>{desc}</p>
         </div>
 
-
-
-        <div className="">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-black" data-aos='fade-up'>
           {data.map((item, idx) => (
-            <div className="flex items-center " key={idx}>
+            <div
+              className="flex flex-col lg:flex-row gap-4 lg:gap-10 bg-white px-10  py-10 rounded-md"
+              key={idx}
+            >
               <div>
                 <SolutionListIcon />
               </div>
 
 
-              <div className="flex flex-col ">
-                <h3>{item.tag}</h3>
-                <p>{item.item}</p>
+
+              <div className="flex flex-col gap-6">
+                <h3 className="text-lg lg:text-2xl font-bold">{item.tag}</h3>
+                <p className="">{item.item}</p>
               </div>
             </div>
           ))}
