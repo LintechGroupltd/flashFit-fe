@@ -6,7 +6,8 @@ export const contactServiceOptions = [
   { id: 3, tag: "Brakes" },
   { id: 4, tag: "Exhaust" },
   { id: 5, tag: "Tyres & Wheels" },
-  { id: 6, tag: "Diagnosis Testing" },
+  {id:6, tag: "wheels Alignments"},
+  { id: 7, tag: "Diagnosis Testing" },
 ];
 
 

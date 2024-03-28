@@ -114,11 +114,11 @@ const ContactPage = () => {
       </div>
 
  
-      {/*________________________ contact bottom  ____________________*/}
+      {/*________________________progress bar ____________________*/}
       <div className="w-full flex items-center">
         <div className="progress-bar w-full flex items-center  justify-center">
-          <div className="progress-step w-2/5  h-2 bg-gray-300 sm:w-[100%]]">
-            <div className="active h-full" style={{ width: `${progressWidth}%`, backgroundColor: "#F8AD39" }}></div>
+          <div className="progress-step w-2/5  h-2 bg-gray-300 sm:w-[100%]] rounded-md">
+            <div className="active h-full rounded-md" style={{ width: `${progressWidth}%`, backgroundColor: "#F8AD39" }}></div>
           </div>
         </div>
       </div>
