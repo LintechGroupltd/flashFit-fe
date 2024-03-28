@@ -1,18 +1,16 @@
 import React from "react";
 
-const CloseNavIcon = (props:any) => {
+const CloseNavIcon = () => {
   return (
     <svg
-      width="60"
-      height="60"
-      viewBox="0 0 60 60"
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
-      <circle cx="30" cy="30" r="25" stroke="white" strokeWidth="1.5" />
       <path
-        d="M36.2499 23.7501L23.75 36.25M23.7499 23.75L36.2499 36.2499"
+        d="M13.2499 0.750051L0.75 13.25M0.749947 0.75L13.2499 13.2499"
         stroke="white"
         strokeWidth="1.5"
         strokeLinecap="round"

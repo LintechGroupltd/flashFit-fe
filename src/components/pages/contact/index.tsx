@@ -7,6 +7,7 @@ import ContactServiceType from "./contactServiceType";
 import ContactForm from "./contactForm";
 import ContactSuccessMessage from "./contactSuccessMessage";
 import Link from "next/link";
+ import styles from "./styles.module.css";
 
 const ContactPage = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -36,13 +37,28 @@ const ContactPage = () => {
 
   return (
     <div
-      className="relative w-full h-screen flex flex-col justify-between px-6 md:px-12 lg:px-28 py-10 text-white"
+      className="font-serif relative w-full h-screen flex flex-col justify-between px-6 md:px-12 lg:px-28 py-10 text-white"
       style={{ backgroundColor: "#2A317F" }}
     >
       <div className="w-full flex items-center justify-between">
         <div>
           {(activeStep <= 0 || activeStep === totalSteps - 1) &&  (<div className=" " data-aos='fade-right'><Link href={'/'}> <FlashLogo /> </Link></div>)}
-          {(activeStep !== 0 && activeStep !== totalSteps -1 )  &&  ( <div className="cursor-pointer" onClick={handleBack}>  <RoundedBackBtn />  </div> )}
+     
+ 
+             {(activeStep !== 0 && activeStep !== totalSteps -1 )  && ( 
+             <div className={`${styles.arrowMain} border px-2 py-5 rounded-full cursor-pointer`} onClick={handleBack}> 
+            <div className={`${styles.arrowWrapper}`}>
+            <span className={`${styles.arrowSpan}`}>
+               <div  className={`${styles.arr1} flex items-center justify-center`}>
+                <RoundedBackBtn /> 
+                </div>
+               <div className={`${styles.arr2} flex items-center justify-center `}>
+                <RoundedBackBtn /> 
+                </div>
+            </span>
+          </div>
+          </div> 
+          )}
         </div>
 
 
@@ -58,8 +74,24 @@ const ContactPage = () => {
           ))}
         </div>}
 
-        <div className="" data-aos='fade-left'> <Link href={"/"}> <CloseNavIcon /></Link>
-        </div>
+
+        <div className={`${styles.arrowMain} border px-3 py-5 rounded-full cursor-pointer`} onClick={handleBack}> 
+            <div className={`${styles.arrowWrapper}`}>
+            <span className={`${styles.arrowSpan}`}>
+               <div  className={`${styles.arr1} flex items-center justify-center`}>
+                <CloseNavIcon /> 
+                </div>
+
+               <div className={`${styles.arr2} flex items-center justify-center `}>
+                <CloseNavIcon /> 
+                </div>
+            </span>
+          </div>
+          </div> 
+
+
+
+
       </div>
 
       {(activeStep > 0 && activeStep !== totalSteps - 1) && ( <div className="absolute bottom-4" data-aos='fade-right'> <FlashLogo /> </div> )}
