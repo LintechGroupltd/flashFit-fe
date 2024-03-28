@@ -97,7 +97,7 @@ function SearchVehicle() {
            <input className="h-[48px] font-sans text-[16px] border border-grey-500 rounded-[8px] pl-14 focus:outline-none"
               placeholder="Enter Number"
            />
-           <div className="bg-[#2A317F] w-[40px] absolute top-[35px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
+           <div className="bg-[#2A317F] w-[40px] absolute top-[32px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
              <h2 className="text-[#fff] text-[16px] font-[500]  text-center font-sans">UK</h2>
            </div>
          </div>

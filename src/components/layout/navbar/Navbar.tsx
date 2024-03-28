@@ -178,7 +178,7 @@ function NavListMenu() {
             </div>
           </div>
 
-          <div className="bg-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
+          <div className="bg-[#2A317F] focus:outline-none border-b border-l border-r border-[#2A317F] outline-none outline-0 text-[18px] flex justify-center gap-2 py-4 text-[#F8AD39] font-[600] ">
             <Link href={"/contact-us"}>
               <button>Contact Us</button>
             </Link>
@@ -245,8 +245,8 @@ function NavList() {
         </div>
       </Typography>
 
-      <div className="md:hidden block mt-6">
-        <div className="bg-[#F8AD39] rounded-[8px] outline-none outline-0 text-[15px] flex justify-center gap-2 py-3 text-[#fff] font-[600] ">
+      <div className="md:hidden block mt-6 ">
+        <div className="bg-[#F8AD39] rounded-[8px] focus:outline-none  outline-none outline-0 text-[15px] flex justify-center gap-2 py-3 text-[#fff] font-[600] ">
           <button>Contact Us</button>
           <div>
             <Image
