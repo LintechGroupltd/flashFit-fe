@@ -23,8 +23,13 @@ const ServicesTopSection: React.FC<Props> = ({
         <TopBar title={title} subTitle={subTitle} />
       </div>
 
-      <div className="translate-y-[-25%] ">
-        <div className="h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper">
+      <div className={showSearchVehicle ? "" : "translate-y-[-25%]"}>
+        <div
+          className={
+            showSearchVehicle
+              ? "root_child_wrapper"
+              : "h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper"
+          }>
           {heroImg && (
             <Image
               src={heroImg}
