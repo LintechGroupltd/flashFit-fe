@@ -10,7 +10,7 @@ import FlashBenefit from "@/components/reuseable/flashBenefit/flashBenefit";
 import CustomerReview from "@/components/reuseable/customerReview/customerReview";
 import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
-import Footer from "@/components/layout/footer/Footer";
+
 import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics";
 import FloatingPencilIcon from "@/components/reuseable/FloatingPencilIcon";
 
