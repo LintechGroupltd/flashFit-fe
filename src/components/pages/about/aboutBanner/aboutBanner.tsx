@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aboutPositioningBannerImg from '../../../../../public/assets/about/aboutBannerPositioningImg.png'
+import aboutPositioningBannerImg from '../../../../../public/assets/about/aboutBannerPositioningImg.svg'
 
 function AboutBanner() {
   return (
