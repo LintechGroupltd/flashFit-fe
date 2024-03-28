@@ -16,22 +16,16 @@ import VehicleStatics from "@/components/reuseable/vehicleStatics/vehicleStatics
 function HOME() {
   return (
     <div className="">
-      <div
-        className="root_parent_wrapper bg-[#2A317F]"
-      
-      >
+      <div className="root_parent_wrapper bg-[#2A317F]">
         <div className="root_child_wrapper">
           <Navbar />
           <HomeBanner />
         </div>
-
       </div>
 
-      
-
-      <div className="root_parent_wrapper " >
+      <div className="root_parent_wrapper ">
         <div className="root_child_wrapper">
-          <div className="" data-aos='fade-up' data-aos-duration='1500'>
+          <div className="" data-aos="fade-up" data-aos-duration="1500">
             <SearchVehicle />
           </div>
 
@@ -66,8 +60,10 @@ function HOME() {
         </div>
       </div>
 
-  
-      <div className="md:root_parent_wrapper   py-24" data-aos='fade-up' date-aos-duration='1000'>
+      <div
+        className="md:root_parent_wrapper   py-24"
+        data-aos="fade-up"
+        date-aos-duration="1000">
         <div className="md:block hidden root_child_wrapper">
           <BookContact />
         </div>
