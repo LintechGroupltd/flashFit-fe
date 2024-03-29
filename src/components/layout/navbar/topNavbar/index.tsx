@@ -34,7 +34,7 @@ function NavListMenu() {
     ({ icon, mobile_icon, title, description, url }, key) => (
       <Link href={url} key={key}>
         <MenuItem
-          className="flex md:items-center md:gap-3 gap-4 md:hover:bg-[#E9EAF3] hover:bg-[#2A317F] rounded-lg"
+          className="flex md:items-center md:gap-3 gap-4 md:hover:bg-[#E9EAF3] hover:bg-[#2A317F] focus:bg-[#2A317F] active:bg-[#2A317F]"
           placeholder="">
           <div className=" rounded-lg  md:p-2 ">
             {" "}
