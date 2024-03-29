@@ -16,7 +16,6 @@ const ServicesTopSection: React.FC<Props> = ({
   heroImg,
   showSearchVehicle,
 }: Props) => {
-  console.log({ heroImg });
   return (
     <div className="relative w-full h-full ">
       <div className="">
