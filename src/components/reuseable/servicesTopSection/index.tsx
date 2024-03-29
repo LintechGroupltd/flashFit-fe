@@ -19,16 +19,16 @@ const ServicesTopSection: React.FC<Props> = ({
   console.log({ heroImg });
   return (
     <div className="relative w-full h-full ">
-      <div className="md:h-full h-[450px]">
+      <div className="">
         <TopBar title={title} subTitle={subTitle} />
       </div>
 
-      <div className={showSearchVehicle ? "md:mt-0 mt-10" : "translate-y-[-25%]"}>
+      <div className={showSearchVehicle ? "" : "translate-y-[-25%]"}>
         <div
           className={
             showSearchVehicle
               ? "root_child_wrapper"
-              : "h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper"
+              : "h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper "
           }>
           {heroImg && (
             <Image
@@ -40,7 +40,8 @@ const ServicesTopSection: React.FC<Props> = ({
             />
           )}
 
-          {showSearchVehicle && <SearchVehicle />}
+          {/* Here was your searchehicle */}
+        
         </div>
       </div>
     </div>
