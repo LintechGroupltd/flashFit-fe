@@ -65,8 +65,8 @@
   @apply absolute top-[22px] right-[22px];
 }
 
-.hideInSmallScreen {
-}
+/* .hideInSmallScreen { */
+/* } */
 
 .hideInBigScreen {
   @apply hidden;
