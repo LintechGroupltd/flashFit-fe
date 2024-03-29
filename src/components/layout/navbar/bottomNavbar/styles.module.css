@@ -1,5 +1,5 @@
 .main {
-  @apply hidden lg:block w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30;
+  @apply  w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30;
   /* transform: translateY(150px); */
 }
 
@@ -21,7 +21,7 @@
   flex-wrap rounded-[12px] px-[4px] xs:px-[16px] sm:px-[16px]
   gap-[4px] xs:gap-[8px] border border-[#D7D7D7] flex-1;
 
-  min-width: 120px; /* Set the minimum width for children */
+  /* min-width: 120px;  */
 }
 
 .nav_button_img {

@@ -106,7 +106,7 @@ function BottomNavbar({ isSticky }: { isSticky?: boolean }) {
                 }
                 key={item?.id}
                 id={item?.id}
-                className={`${styles.nav_button} ${item?.hideInSmallScreen ? styles.hideInSmallScreen : item?.hideInBigScreen ? styles.hideInBigScreen : null}`}
+                className={`${styles.nav_button}`}
                 style={{
                   background:
                     active && item?.activeBg ? item?.activeBg : item?.bg,
