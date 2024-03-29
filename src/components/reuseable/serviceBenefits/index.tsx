@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import wheelImg from "../../../../public/assets/services/images/manCheckingCar.png";
 import BenefitListIcon from "@/components/svg/BenefitListIcon";
 
 interface Benefit {

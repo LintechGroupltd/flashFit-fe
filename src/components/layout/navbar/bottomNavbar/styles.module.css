@@ -1,5 +1,5 @@
 .main {
-  @apply w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30 hidden lg:flex;
+  @apply hidden lg:block w-full px-[0] xs:px-[10px] sm:px-6 fixed bottom-0 right-0 z-30;
   /* transform: translateY(150px); */
 }
 
@@ -66,8 +66,8 @@
   @apply absolute top-[22px] right-[22px];
 }
 
-.hideInSmallScreen {
-}
+/* .hideInSmallScreen { */
+/* } */
 
 .hideInBigScreen {
   @apply hidden;
