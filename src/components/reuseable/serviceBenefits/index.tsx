@@ -44,7 +44,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
         {/* START */}
 
         <div className="block lg:flex gap-[24px] root_child_wrapper">
-          <div className="flex basis-[calc((100%/3)*2)]  gap-[24px]  h-[clamp(300px,calc(300/1420*100vw),415px)]">
+          <div className="flex basis-[calc((100%/3)*2)]  gap-[24px]  h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]">
             <div className="hidden lg:flex  flex-1 rounded-[16px] overflow-hidden">
               {im1_component}
             </div>
@@ -60,7 +60,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
               </div>
             </div>
           </div>
-          <div className="mt-[24px] lg:mt-0 basis-[calc(100%/3)] flex h-[clamp(300px,calc(300/1420*100vw),415px)]  rounded-[16px] overflow-hidden">
+          <div className="mt-[24px] lg:mt-0 basis-[calc(100%/3)] flex  h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]  rounded-[16px] overflow-hidden">
             <div
               className="w-full h-full flex flex-col gap-6 bg-white py-8 px-10 "
               data-aos="fade-left">
@@ -77,7 +77,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
           <div className="hidden lg:flex basis-[calc((100%/3)*2)] rounded-[16px] overflow-hidden h-[clamp(300px,calc(300/1420*100vw),415px)]">
             {im2_component}
           </div>
-          <div className="basis-[calc(100%/3)]  h-[clamp(300px,calc(300/1420*100vw),415px)]   rounded-[16px] overflow-hidden">
+          <div className="basis-[calc(100%/3)]   h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]   rounded-[16px] overflow-hidden">
             <div
               className="bg-[#2A317F] flex-1 w-full flex flex-col gap-6  h-full py-8 px-10"
               data-aos="fade-up-left"
