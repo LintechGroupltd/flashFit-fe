@@ -57,6 +57,16 @@ const DiagnosisTesting = () => {
         desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run."
       />
 
+      
+
+      <ServiceSolution
+        title="Key Components and Systems We Inspect"
+        desc="Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
+
+
+
       <ServiceBenefits
         img1={img1}
         img2={img2}
@@ -70,12 +80,6 @@ const DiagnosisTesting = () => {
                 in interpreting diagnostic results, leading to precise
                 recommendations for repairs."
         data={benefits}
-      />
-
-      <ServiceSolution
-        title="Key Components and Systems We Inspect"
-        desc="Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
-        data={solutions}
       />
 
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">

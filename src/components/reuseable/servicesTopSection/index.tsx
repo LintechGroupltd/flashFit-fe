@@ -27,7 +27,8 @@ const ServicesTopSection: React.FC<Props> = ({
           className={
             showSearchVehicle
               ? "root_child_wrapper"
-              : "h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper"
+              : "h-[200px] sm:h-[300px] xl:h-full relative  root_child_wrapper"
+              // : "h-[200px] sm:h-[300px] xl:h-[452px] relative  root_child_wrapper"
           }>
           {heroImg && (
             <Image
@@ -35,6 +36,7 @@ const ServicesTopSection: React.FC<Props> = ({
               alt=""
               width={1200}
               height={452}
+
               className="rounded-[24px] w-full h-full overflow-hidden object-cover  mx-auto "
             />
           )}
