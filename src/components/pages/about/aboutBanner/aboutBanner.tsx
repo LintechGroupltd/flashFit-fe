@@ -23,7 +23,7 @@ function AboutBanner() {
         </p>
       </div>
 
-      {/* <div>
+      <div>
         <div className=" w-full overflow-hidden rounded-[24px] absolute top-[65%] lg:top-[80%] 3xl:top-[75%] 4xl:top-[65%] mx-auto">
           <Image
             src={aboutPositioningBannerImg}
@@ -36,7 +36,7 @@ function AboutBanner() {
             className="w-full mx-auto md:hidden block"
           />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

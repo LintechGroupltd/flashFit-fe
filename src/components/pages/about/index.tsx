@@ -18,17 +18,17 @@ import AboutBannerImageForMobile from "../../../../public/assets/about/AboutBann
 function ABOUT() {
   return (
     <div className="">
-      {/* <div className="md:h-[1000px]">
+      <div className="md:h-[1000px]">
         <div className="root_parent_wrapper bg-[#2A317F]">
           <div className="root_child_wrapper ">
             <Navbar />
             <AboutBanner />
           </div>
         </div>
-      </div> */}
+      </div>
 
-  {/* For desktop  */}
-      <div className="font-serif relative md:block hidden">
+  
+      {/* <div className="font-serif relative md:block hidden">
         <ServicesTopSection 
           title="About FlashFit"
           subTitle="Where Automotive Passion Meets Precision:
@@ -38,7 +38,7 @@ function ABOUT() {
         />
       </div>
 
-   {/* For Mobile */}
+ 
       <div className="font-serif relative md:hidden block">
         <ServicesTopSection 
           title="About FlashFit"
@@ -47,7 +47,7 @@ function ABOUT() {
         Excellence."
           heroImg={AboutBannerImageForMobile}
         />
-      </div>
+      </div> */}
 
 
       <div className="root_parent_wrapper">

@@ -65,6 +65,16 @@ const TyreServicing = () => {
         desc1="At FlashFit, we understand the pivotal role tyres play in your driving experience. That's why we offer comprehensive tyre care services designed to keep you rolling smoothly and safely on the road. From tyre inspections to puncture repairs and replacements, our expert technicians ensure your tyres are in optimal condition for enhanced grip, stability, and fuel efficiency."
         desc2="Our tyre care services encompass thorough inspections to detect signs of wear or damage, providing recommendations for necessary repairs or replacements. Whether you encounter a puncture or require routine maintenance, trust FlashFit to keep your tyres road-ready for every journey. Drive with peace of mind, knowing that your tyres are in expert hands with Flash Fit's tyre excellence."
       />
+     </div>
+      
+    <div className="md:mt-0 mt-10">
+     <ServiceSolution
+        title="Our Comprehensive Solution for a Smooth Ride"
+        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
+    </div>
+     
 
    
 
