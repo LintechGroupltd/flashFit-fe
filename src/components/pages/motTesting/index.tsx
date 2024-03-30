@@ -5,9 +5,9 @@ import CustomerReview from "@/components/reuseable/customerReview/customerReview
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
-import heroImg from "../../../../public/assets/services/images/motHeroImg.png";
-import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/motHeroImg.png";
+import heroImg from "../../../../public/assets/services/images/motHeroImg.webp";
+import img1 from "../../../../public/assets/services/images/motImg1.webp";
+import img2 from "../../../../public/assets/services/images/motImg2.webp";
 import React from "react";
 
 export const benefits = [

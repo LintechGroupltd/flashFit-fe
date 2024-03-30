@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/motHeroImg.png";
+import img1 from "../../../../public/assets/services/images/tyreImg1.webp";
+import img2 from "../../../../public/assets/services/images/tyreImg2.webp";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
@@ -45,7 +45,7 @@ const TyreServicing = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Tyres"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Drive confidently with Flash Fit's tire services. From inspections to repairs, we ensure optimal tire condition for safety and performance. "
         showSearchVehicle={true}
       />
 
@@ -55,11 +55,7 @@ const TyreServicing = () => {
         desc2="at Flash Fit, we prioritize transparency and customer satisfaction. We always seek authorization before beginning any additional work during your car service, and our team is available to assist with all inquiries, estimates, and advice for your vehicle repair needs."
       />
 
-      <ServiceSolution
-        title="Our Comprehensive Solution for a Smooth Ride"
-        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
-        data={solutions}
-      />
+   
 
       <ServiceBenefits
         img1={img1}
@@ -75,6 +71,16 @@ const TyreServicing = () => {
               recommendations for repairs."
         data={benefits}
       />
+
+
+<ServiceSolution
+        title="Our Comprehensive Solution for a Smooth Ride"
+        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
+
+
+
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">

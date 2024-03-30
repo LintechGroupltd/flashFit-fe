@@ -5,9 +5,9 @@ import CustomerReview from "@/components/reuseable/customerReview/customerReview
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
-import heroImg from "../../../../public/assets/services/images/brakeHeroImg.png";
-import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/manCheckingCar.png";
+import heroImg from "../../../../public/assets/services/images/brakeHeroImg.webp";
+import img1 from "../../../../public/assets/services/images/brakeImg1.webp";
+import img2 from "../../../../public/assets/services/images/brakeImg2.webp";
 
 import React from "react";
 

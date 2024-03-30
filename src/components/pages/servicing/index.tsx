@@ -6,8 +6,8 @@ import CustomerReview from "@/components/reuseable/customerReview/customerReview
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
-import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/manCheckingCar.png";
+import img1 from "../../../../public/assets/services/images/servicingImg1.webp";
+import img2 from "../../../../public/assets/services/images/servicigImg2.webp";
 import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
 import React from "react";
 import ServicePricing from "@/components/reuseable/servicePricing/servicePricing";
@@ -26,7 +26,7 @@ const Servicing = () => {
       <ServicesTopSection
         title="Service"
         subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
-        heroImg={"/assets/services/servicing.webp"}
+        heroImg={"/assets/services/images/servicingHeroImg.webp"}
       />
 
       <ServicePageDesc

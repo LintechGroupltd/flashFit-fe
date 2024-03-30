@@ -52,7 +52,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
               <div
                 className="w-full h-full flex flex-col gap-[16px] xl:gap-6 bg-white py-8 px-10 "
                 data-aos="fade-up">
-                <h1 className="text-5xl font-semibold text-[#2A317F]">
+                <h1 className="text-5xl font-semibold text-[#2D2D2D]">
                   {figure}
                 </h1>
                 <h4 className="text-2xl font-semibold">{title}</h4>
@@ -64,7 +64,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
             <div
               className="w-full h-full flex flex-col gap-6 bg-white py-8 px-10 "
               data-aos="fade-left">
-              <h1 className="text-5xl font-semibold text-[#2A317F]">
+              <h1 className="text-5xl font-semibold text-[#2D2D2D]">
                 {figure}
               </h1>
               <h4 className="text-2xl font-semibold">{title2}</h4>
@@ -79,10 +79,10 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
           </div>
           <div className="basis-[calc(100%/3)]   h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]   rounded-[16px] overflow-hidden">
             <div
-              className="bg-[#2A317F] flex-1 w-full flex flex-col gap-6  h-full py-8 px-10"
+              className="bg-[#F8AD39] flex-1 w-full flex flex-col gap-6  h-full py-8 px-10"
               data-aos="fade-up-left"
               data-aos-duration="1000">
-              <h1 className="text-[#F8AD39] font-bold text-5xl">Benefits </h1>
+              <h1 className="text-white font-bold text-5xl">Benefits </h1>
 
               <ul className="flex flex-col gap-4">
                 {data.map((benefits, idx) => (
