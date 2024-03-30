@@ -47,14 +47,15 @@ const DiagnosisTesting = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Diagnostics Testing"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Detect and address issues early with our advanced diagnostic tools and experienced technicians, ensuring your vehicle stays in top condition. "
         heroImg={"/assets/services/images/dgHeroImg.webp"}
       />
 
       <ServicePageDesc
         title="FlashFit's Diagnostic Expertise"
-        desc1="Diagnostic testing is the cornerstone of our approach at Flash Fit. We understand that identifying and addressing automotive issues early is crucial to maintaining vehicle performance and safety. That's why we invest in state-of-the-art diagnostic equipment and employ skilled technicians who are trained to interpret diagnostic data accurately.."
-        desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run."
+        desc1="At FlashFit, our diagnostic testing goes beyond the surface, delving deep into your vehicle's systems to uncover any issues and provide accurate solutions. Using state-of-the-art equipment and advanced techniques, our skilled technicians meticulously analyze your car's performance, identifying potential problems before they escalate."
+
+        desc2="When you entrust your vehicle to FlashFit for diagnostic services, you're gaining access to a team dedicated to uncovering the root cause of any issues. Our commitment to excellence means you can trust us to provide accurate diagnoses and reliable solutions, keeping you informed every step of the way. "
       />
 
       

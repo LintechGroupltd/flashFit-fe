@@ -11,10 +11,9 @@ import BookContact from "@/components/reuseable/BookContact/bookContact";
 import ServiceSolution from "@/components/reuseable/serviceSolution";
 
 export const benefits = [
-  { id: 1, item: "Early Issue Detection" },
-  { id: 2, item: "Accurate Repairs" },
-  { id: 3, item: "Transparent Communication" },
-  { id: 4, item: "Confidence in Vehicle Performance" },
+  { id: 1, item: "Tyre Durability" },
+  { id: 2, item: "Ensures optimal performance" },
+  { id: 3, item: "Efficient puncture repairs, minimizing downtime and inconvenience" },
 ];
 
 export const solutions = [
@@ -42,7 +41,7 @@ export const solutions = [
 
 const TyreServicing = () => {
   return (
-    <div className="font-serif relative">
+    <div className="relative">
       <ServicesTopSection
         title="Tyres"
         subTitle="Drive confidently with Flash Fit's tire services. From inspections to repairs, we ensure optimal tire condition for safety and performance. "
@@ -50,9 +49,10 @@ const TyreServicing = () => {
       />
 
       <ServicePageDesc
-        title="Overview"
-        desc1="At Flash Fit, we service all makes and models with cutting-edge equipment. Our focus on quality extends to competitive pricing. Regular servicing is essential for safety and reliability. Trust Flash Fit for comprehensive maintenance that keeps your car in top condition. Regular servicing is not just a recommendation; it's a necessity to avoid mechanical problems and ensure your vehicle's safety on the road.    "
-        desc2="at Flash Fit, we prioritize transparency and customer satisfaction. We always seek authorization before beginning any additional work during your car service, and our team is available to assist with all inquiries, estimates, and advice for your vehicle repair needs."
+        title="FlashFit's Tyre Care"
+        desc1="At FlashFit, we understand the pivotal role tyres play in your driving experience. That's why we offer comprehensive tyre care services designed to keep you rolling smoothly and safely on the road. From tyre inspections to puncture repairs and replacements, our expert technicians ensure your tyres are in optimal condition for enhanced grip, stability, and fuel efficiency.."
+
+        desc2="Our tyre care services encompass thorough inspections to detect signs of wear or damage, providing recommendations for necessary repairs or replacements. Whether you encounter a puncture or require routine maintenance, trust FlashFit to keep your tyres road-ready for every journey. Drive with peace of mind, knowing that your tyres are in expert hands with Flash Fit's tyre excellence.."
       />
 
       <ServiceSolution
@@ -65,16 +65,13 @@ const TyreServicing = () => {
         img1={img1}
         img2={img2}
         figure={"10x"}
-        title="Advanced Equipment"
-        desc1=" Our cutting-edge diagnostic tools provide 10 times the accuracy
-              in identifying vehicle issues, ensuring comprehensive
-              assessment."
-        title2=" Expert Analysis"
-        desc2=" With our skilled technicians, you receive 10 times the expertise
-              in interpreting diagnostic results, leading to precise
-              recommendations for repairs."
+        title="Wheel Alignment Precision"
+        desc1="Our advanced alignment equipment ensures 10 times the accuracy, providing precise adjustments for optimal handling and tire wear.."
+        title2="Tyre Selection"
+        desc2="Choose from our extensive range of tires, offering 10 times the options for durability, performance, and reliability on the road."
         data={benefits}
       />
+
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">

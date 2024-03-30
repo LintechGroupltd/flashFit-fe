@@ -52,23 +52,27 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
               <div
                 className="w-full h-full flex flex-col gap-[16px] xl:gap-6 bg-white py-8 px-10 "
                 data-aos="fade-up">
-                <h1 className="text-5xl font-semibold text-[#2D2D2D]">
+                <h1 className="font-sans text-5xl font-semibold text-[#2A317F]">
                   {figure}
                 </h1>
-                <h4 className="text-2xl font-semibold">{title}</h4>
-                <p className="text-base">{desc1}</p>
+                <h4 className="font-sans text-2xl font-semibold text-[#0F0F0F]">{title}</h4>
+                <p className="font-serif text-base text-[#505050]">{desc1}</p>
               </div>
             </div>
           </div>
+
+
+
+
           <div className="mt-[24px] lg:mt-0 basis-[calc(100%/3)] flex  h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]  rounded-[16px] overflow-hidden">
             <div
               className="w-full h-full flex flex-col gap-6 bg-white py-8 px-10 "
               data-aos="fade-left">
-              <h1 className="text-5xl font-semibold text-[#2D2D2D]">
+              <h1 className="font-sans text-5xl font-semibold text-[#2A317F] ">
                 {figure}
               </h1>
-              <h4 className="text-2xl font-semibold">{title2}</h4>
-              <p className="text-base">{desc2}</p>
+              <h4 className="font-sans text-2xl font-semibold text-[#0F0F0F]">{title2}</h4>
+              <p className="font-serif text-base text-[#505050]">{desc2}</p>
             </div>
           </div>
         </div>
@@ -79,10 +83,10 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
           </div>
           <div className="basis-[calc(100%/3)]   h-auto lg:h-[clamp(300px,calc(300/1420*100vw),415px)]   rounded-[16px] overflow-hidden">
             <div
-              className="bg-[#F8AD39] flex-1 w-full flex flex-col gap-6  h-full py-8 px-10"
+              className="bg-[#2A317F] flex-1 w-full flex flex-col gap-6  h-full py-8 px-10"
               data-aos="fade-up-left"
               data-aos-duration="1000">
-              <h1 className="text-white font-bold text-5xl">Benefits </h1>
+              <h1 className="text-[#F8AD39] font-bold text-5xl">Benefits </h1>
 
               <ul className="flex flex-col gap-4">
                 {data.map((benefits, idx) => (
@@ -90,7 +94,7 @@ const ServiceBenefits: React.FC<ServiceBenefitsProps> = ({
                     key={idx}
                     className="flex items-center gap-2  text-white font-thin">
                     <BenefitListIcon />
-                    <span>{benefits.item}</span>
+                    <span className="font-sans font-thin">{benefits.item}</span>
                   </li>
                 ))}
               </ul>

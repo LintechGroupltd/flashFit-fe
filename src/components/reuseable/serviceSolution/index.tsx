@@ -19,11 +19,11 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
   data,
 }) => {
   return (
-    <div className="font-serif w-full h-full root_parent_wrapper bg-[#2A317F]  text-white py-14 lg:py-28">
+    <div className=" w-full h-full root_parent_wrapper bg-[#2A317F]  text-white py-14 lg:py-28">
       <div className="root_child_wrapper flex flex-col gap-10 ">
         <div className="flex flex-col gap-8 max-w-md md:max-w-2xl">
-          <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-left" data-aos='fade-up'>{title}</h1>
-          <p className="text-sm md:text-lg font-thin" data-aos='fade-up'>{desc}</p>
+          <h1 className="font-sens text-3xl lg:text-5xl font-bold text-center md:text-left" data-aos='fade-up'>{title}</h1>
+          <p className="font-sans text-sm md:text-lg font-thin" data-aos='fade-up'>{desc}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-black" data-aos='fade-up'>
@@ -39,8 +39,8 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
 
 
               <div className="flex flex-col gap-6">
-                <h3 className="text-lg lg:text-2xl font-bold">{item.tag}</h3>
-                <p className="">{item.item}</p>
+                <h3 className="font-sans text-lg lg:text-2xl font-bold text-[#0F0F0F]">{item.tag}</h3>
+                <p className="font-sans font-thin text-[text-[#505050]">{item.item}</p>
               </div>
             </div>
           ))}
