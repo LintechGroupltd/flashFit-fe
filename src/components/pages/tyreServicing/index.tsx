@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import img1 from "../../../../public/assets/services/images/manfixcar.jpg.png";
-import img2 from "../../../../public/assets/services/images/motHeroImg.png";
+import img1 from "../../../../public/assets/services/images/tyreImg1.webp";
+import img2 from "../../../../public/assets/services/images/tyreImg2.webp";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
@@ -49,7 +49,7 @@ const TyreServicing = () => {
      <div className="md:bg-[#fff] md:h-[0%] h-[460px] bg-[#2A317F]">
       <ServicesTopSection
         title="Tyres"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Drive confidently with Flash Fit's tire services. From inspections to repairs, we ensure optimal tire condition for safety and performance. "
         showSearchVehicle={true}
       />
       <div className="root_parent_wrapper ">
@@ -65,16 +65,8 @@ const TyreServicing = () => {
         desc1="At FlashFit, we understand the pivotal role tyres play in your driving experience. That's why we offer comprehensive tyre care services designed to keep you rolling smoothly and safely on the road. From tyre inspections to puncture repairs and replacements, our expert technicians ensure your tyres are in optimal condition for enhanced grip, stability, and fuel efficiency."
         desc2="Our tyre care services encompass thorough inspections to detect signs of wear or damage, providing recommendations for necessary repairs or replacements. Whether you encounter a puncture or require routine maintenance, trust FlashFit to keep your tyres road-ready for every journey. Drive with peace of mind, knowing that your tyres are in expert hands with Flash Fit's tyre excellence."
       />
-     </div>
-      
-    <div className="md:mt-0 mt-10">
-     <ServiceSolution
-        title="Our Comprehensive Solution for a Smooth Ride"
-        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
-        data={solutions}
-      />
-    </div>
-     
+
+   
 
       <ServiceBenefits
         img1={img1}
@@ -90,6 +82,16 @@ const TyreServicing = () => {
               recommendations for repairs."
         data={benefits}
       />
+
+
+<ServiceSolution
+        title="Our Comprehensive Solution for a Smooth Ride"
+        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      />
+
+
+
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">

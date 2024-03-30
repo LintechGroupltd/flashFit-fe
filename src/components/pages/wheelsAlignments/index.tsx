@@ -5,9 +5,9 @@ import CustomerReview from "@/components/reuseable/customerReview/customerReview
 import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
-import heroImg from "../../../../public/assets/services/images/wheelsHeroImg.png";
-import img1 from "../../../../public/assets/services/images/wheelsImg1.jpg.png";
-import img2 from "../../../../public/assets/services/images/wheelsImg2.png";
+import heroImg from "../../../../public/assets/services/images/wheelsHeroImg.webp";
+import img1 from "../../../../public/assets/services/images/wheelsImg1.webp";
+import img2 from "../../../../public/assets/services/images/wheelsImg2.webp";
 
 import React from "react";
 
@@ -24,7 +24,7 @@ const WheelsAlignments = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Wheels Alignments"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Enhance stability and tire longevity with precision wheel alignment services for smoother handling and improved fuel efficiency."
         heroImg={heroImg}
       />
 
