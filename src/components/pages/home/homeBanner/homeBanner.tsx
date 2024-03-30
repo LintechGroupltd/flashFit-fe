@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 import heroImg from "../../../../../public/assets/home/bannerSection/heroImg.svg";
-import heroMobileImg from "../../../../../public/assets/home/bannerSection/heroMobileImg.png";
+import heroMobileImg from "../../../../../public/assets/home/bannerSection/heroMobileImg.svg";
 
-import heroImgAngleBg from "../../../../../public/assets/home/bannerSection/heroImgAngleBg.svg";
 
 function HomeBanner() {
   return (

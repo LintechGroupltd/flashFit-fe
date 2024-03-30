@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.png";
+import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.svg";
 import rightArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewRightWhiteArrow.svg";
 import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewLeftWhiteArrow.svg";
 
@@ -24,7 +24,7 @@ function CustomerReviewCard() {
   return (
     <div className="w-full ">
       {customerReviewData.map((review) => (
-        <div key={review.id} className="md:flex  gap-10">
+        <div key={review.id} className="md:flex  gap-[50px]">
           {/* left image section  */}
           <div className="mt-3  w-full h-full">
             <Image
@@ -57,6 +57,7 @@ function CustomerReviewCard() {
             </div>
 
             <div className="flex gap-4">
+            <button>
               <div className=" bg-[#F8AD39] hover:bg-[#F0970E] w-[54px] h-[54px] rounded-full">
                 <Image
                   src={review.leftArrow}
@@ -64,14 +65,17 @@ function CustomerReviewCard() {
                   className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto"
                 />
               </div>
+           </button>       
  
-              <div className="bg-[#F8AD39] hover:bg-[#F0970E]  w-[54px] h-[54px] rounded-full">
-              <Image
+              <button>
+              <div className="bg-[#F8AD39] hover:bg-[#F0970E]  w-[54px] h-[54px] rounded-full">   
+               <Image
                 src={review.rightArrow}
                 alt="Right Arrow"
                 className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto"
               />
               </div>  
+              </button>     
             
             </div>
           </div>

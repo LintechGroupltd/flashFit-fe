@@ -1,10 +1,13 @@
 import React from "react";
 import ourAchievementArrowIcon from "../../../../../public/assets/home/ourAchievement/ourAchievementArrowIcon.svg";
 // import wheelImg from "../../../../../public/assets/home/ourAchievement/wheelImg.svg";
-import wheelImg from "../../../../../public/assets/home/ourAchievement/wheelImg1.png";
-import wheelImgMobile from "../../../../../public/assets/home/ourAchievement/wheelImgMobile.png";
+import carRepairImg1 from "../../../../../public/assets/home/ourAchievement/carRepairImg1.png";
+import carRepairImg2 from "../../../../../public/assets/home/ourAchievement/carRepairImg2.svg";
 
-import wheelImg2 from "../../../../../public/assets/home/ourAchievement/wheel2Img.svg";
+import wheelImgMobile from "../../../../../public/assets/home/ourAchievement/wheelImgMobile.svg";
+import wheelImgMobile2 from "../../../../../public/assets/home/ourAchievement/wheelImgMobile2.svg";
+
+
 
 import aboutUsArrow from "../../../../../public/assets/home/ourAchievement/aboutUsArrow.svg";
 
@@ -56,20 +59,17 @@ function OurAchievement() {
   </div>
 
 
-
-
-
-
   <div className="w-full h-full">
-  <div className="flex  flex-row md:gap-10 gap-5 w-full h-full">
-    <div className="w-full md:w-full h-auto" data-aos="fade-up-right" data-aos-duration="500">
-      <Image src={wheelImg} alt="wheelImg" className="w-full h-full md:block hidden" style={{ maxHeight: "300px" }} />
-      <Image src={wheelImgMobile} alt="wheelImg" className="w-full h-full md:hidden block" style={{ maxHeight: "300px" }} />
+  <div className="flex flex-row md:gap-10 gap-5 w-full h-full">
+    <div className="w-full md:w-full  h-auto" data-aos="fade-up-right" data-aos-duration="500">
+      <Image src={carRepairImg1} alt="wheelImg" className="w-full h-full md:block hidden" style={{ maxHeight: "300px" }} />
+      <Image src={wheelImgMobile} alt="wheelImg" className="w-full h-full  md:hidden block" style={{ maxHeight: "300px" }} />
     </div>
 
 
     <div className="bg-[#F5F5F7] w-full md:w-1/4 h-auto rounded-[38px]" data-aos="fade-up-left" data-aos-duration="1000">
-      <Image src={wheelImg2} alt="ourAchievementCar" className="w-full h-full md:rounded-[38px]" style={{objectFit: "cover", maxHeight: "300px", height: "100%"}}/>
+      <Image src={carRepairImg2} alt="ourAchievementCar" className="w-full h-full md:block hidden md:rounded-[38px]" style={{objectFit: "cover", maxHeight: "300px", height: "100%"}}/>
+      <Image src={wheelImgMobile2} alt="ourAchievementCar" className="w-full h-full  md:hidden block md:rounded-[38px]" style={{objectFit: "cover", maxHeight: "300px", height: "100%"}}/>
     </div>
   </div>
 </div>

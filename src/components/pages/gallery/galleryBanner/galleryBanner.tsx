@@ -7,13 +7,12 @@ function GalleryBanner() {
       <div className="text-center text-[#fff]" data-aos='fade-right'>
         <h2 className="md:text-[72px] text-[35px] leading-[60px] font-serif font-[600]"> Flash Fit Gallery</h2>
         <p className="text-[18px] font-sans font-[400] md:block hidden mt-10">
-          Step into the world of automotive excellence with the Flash Fit<br/> Gallery. Browse through a collection of 
-          images showcasing our<br/> skilled technicians, cutting-edge equipment, and the<br/> outstanding results of our services.
+          Explore Automotive Excellence with Flash Fit's Gallery. Discover<br/> our skilled craftsmanship,
+           advanced equipment, and outstanding<br/> service results.
         </p>
         <p className="text-[16px] font-sans font-[400] md:hidden block mt-4">
-          Where Automotive Passion Meets Precision:
-          Unveiling the Heart Behind Flash Fit's Drive for
-          Excellence.
+           Explore Automotive Excellence with Flash Fit's Gallery. Discover our skilled craftsmanship, 
+           advanced equipment, and outstanding service results.
         </p>
       </div>
 

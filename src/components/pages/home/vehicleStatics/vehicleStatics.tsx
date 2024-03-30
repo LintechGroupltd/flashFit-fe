@@ -1,11 +1,13 @@
 import React from "react";
 import vehicleStaticsImg1 from "../../../../../public/assets/home/vehicleStatics/vehicleStaticsImg-1.svg";
-import wheelImgMobile from '../../../../../public/assets/home/ourAchievement/wheelImgMobile.png'
+import vehicleStaticsImg2 from "../../../../../public/assets/home/vehicleStatics/vehicleStaticsImg-2.svg";
+
+import wheelImgMobile1 from '../../../../../public/assets/home/vehicleStatics/wheelImgMobile1.svg'
 import wheelImg2 from '../../../../../public/assets/home/ourAchievement/wheel2Img.svg'
 
 
 
-import vehicleStaticsImg2 from "../../../../../public/assets/home/vehicleStatics/vehicleStaticsImg-2.svg";
+
 import Image from "next/image";
 
 function VehicleStatics() {
@@ -54,7 +56,7 @@ function VehicleStatics() {
   <div className="flex  flex-row md:gap-10 gap-5 w-full h-full">
     <div className="w-full md:w-full h-auto" data-aos="fade-up-right" data-aos-duration="500">
       
-      <Image src={wheelImgMobile} alt="wheelImg" className="w-full h-full md:hidden block" style={{ maxHeight: "300px" }} />
+      <Image src={wheelImgMobile1} alt="wheelImg" className="w-full h-full md:hidden block" style={{ maxHeight: "300px" }} />
     </div>
 
 

@@ -183,8 +183,10 @@ function NavList() {
           Gallery
         </div>
       </Typography>
-
+     
+    
       <div className="lg:hidden block mt-6">
+      <Link href={"/contact-us"}>
         <div className="bg-[#F8AD39] rounded-[8px] outline-none outline-0 text-[15px] flex justify-center gap-2 py-3 text-[#fff] font-[600] ">
           <button>Contact Us</button>
           <div>
@@ -195,7 +197,9 @@ function NavList() {
             />
           </div>
         </div>
+       </Link>  
       </div>
+     
     </List>
   );
 }

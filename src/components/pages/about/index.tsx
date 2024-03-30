@@ -13,6 +13,8 @@ import BookContact from "@/components/reuseable/BookContact/bookContact";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 
 import aboutPositioningBannerImg from "../../../../public/assets/about/aboutBannerPositioningImg.svg";
+import AboutBannerImageForMobile from "../../../../public/assets/about/AboutBannerImageForMobile.svg";
+
 function ABOUT() {
   return (
     <div className="">
@@ -25,8 +27,9 @@ function ABOUT() {
         </div>
       </div> */}
 
-      <div className="font-serif relative">
-        <ServicesTopSection
+  {/* For desktop  */}
+      <div className="font-serif relative md:block hidden">
+        <ServicesTopSection 
           title="About FlashFit"
           subTitle="Where Automotive Passion Meets Precision:
         Unveiling the Heart Behind Flash Fit's Drive for
@@ -34,6 +37,18 @@ function ABOUT() {
           heroImg={aboutPositioningBannerImg}
         />
       </div>
+
+   {/* For Mobile */}
+      <div className="font-serif relative md:hidden block">
+        <ServicesTopSection 
+          title="About FlashFit"
+          subTitle="Where Automotive Passion Meets Precision:
+        Unveiling the Heart Behind Flash Fit's Drive for
+        Excellence."
+          heroImg={AboutBannerImageForMobile}
+        />
+      </div>
+
 
       <div className="root_parent_wrapper">
         <div className="root_child_wrapper">
