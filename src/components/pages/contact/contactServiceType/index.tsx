@@ -19,7 +19,7 @@ interface StepProps {
 
 const ContactServiceType = ({handleStepChange,handleOptionSelect}:StepProps) => {
   return (
-    <div className="font-serif w-full  xl:w-4/5 flex flex-col gap-20 items-center" data-aos='fade-up'>
+    <div className="font-serif w-full h-full  xl:w-4/5 flex flex-col gap-20 items-center justify-center" data-aos='fade-up'>
       <h1 className="text-3xl sm:text-5xl lg:text-6xl text-center whitespace-nowrap">What Type of service ?</h1>
 
       <div>

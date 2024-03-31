@@ -4,8 +4,8 @@ import React from "react";
 
 const ContactSuccessMessage = () => {
   return (
-    <div className="font-serif flex flex-col gap-10 items-center " data-aos='fade-up'>
-      <h1 className="text-6xl max-w-2xl text-center">Your booking has been received!</h1>
+    <div className="w-full h-full font-serif flex flex-col gap-10 items-center justify-center" data-aos='fade-up'>
+      <h1 className="text-3xl md:text-6xl max-w-2xl text-center">Your booking has been received!</h1>
 
 
       <div className="cursor-pointer">

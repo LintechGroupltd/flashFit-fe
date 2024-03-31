@@ -12,26 +12,30 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
   const onSubmit = () => alert("form submitted!");
 
   return (
-    <div className="font-serif flex flex-col items-center lg:items-start gap-10 lg:gap-20 lg:flex-row ">
-      <h1 className="text-2xl md:text-6xl min-w-sm text-center lg:text-left">
+    <div className="w-full h-full font-serif flex flex-col items-center justify-center md:items-start gap-6 sm:gap-10 lg:gap-20 md:flex-row mt-10 ">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl min-w-sm text-center md:text-left" data-aos='fade-right'>
         Input your personal info
       </h1>
+
+
+
+
 
       <div className="w-full ">
         <form
           action=""
-          className="w-full flex flex-col gap-6"
+          className="w-full flex flex-col gap-4 sm:gap-6"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
+          <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
               placeholder="First Name"
               {...register("firstName")}
             />
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
               placeholder="Last Name"
               {...register("lastName")}
@@ -40,15 +44,15 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
 
 
 
-          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
+          <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
               placeholder="Phone"
               {...register("phoneNumber")}
             />
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="email"
               placeholder="Email"
               {...register("emailAddress")}
@@ -57,35 +61,45 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
 
 
 
-          <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-10">
+          <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
               placeholder="Vehicle Number"
               {...register("vehicleNumber")}
             />
 
-            <div className="w-full relative">
+
+            <div className="w-full py-2 px-2  md:px-4 flex items-center relative rounded-md bg-white bg-opacity-10 ">
             <input
-              className="w-full p-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
-              type="email"
+              className="w-full p-1 sm:p-2 bg-transparent  border-none outline-none "
+              type="text"
               placeholder="Book Date"
               {...register("bookingDate")}
             />
 
-            {/* <div className="absolute right-5 bottom-5 cursor-pointer">
-              <CalendarIcon />
-              </div> */}
-            </div>
-          
 
+            <div className="cursor-pointer">
+              <CalendarIcon />
+              </div>
+            </div>
           </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
           <div>
             <textarea
-              className="w-full p-4 rounded-md bg-white bg-opacity-10 outline-none"
+              className="w-full py-2 px-2 md:px-4 rounded-md bg-white bg-opacity-10 outline-none"
               id=""
               placeholder="Your message here"
               {...register("message")}
@@ -97,14 +111,14 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
 
           <div className="w-full">
             <div
-              className="lg:float-right bg-[#F8AD39] flex justify-center rounded-md"
+              className="lg:float-right bg-[#F8AD39] flex justify-center rounded-md  py-1 sm:py-3 px-6"
               onClick={() => {
                 handleStepChange(2);
               }}
             >
               <Button
                 title="Submit"
-                btnPadding="12px 24px 12px 24px"
+                // btnPadding="12px 24px 12px 24px"
                 textColor="#fff"
               />
             </div>
@@ -113,6 +127,8 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
 
         </form>
       </div>
+
+
     </div>
   );
 };
