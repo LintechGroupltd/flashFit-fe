@@ -28,9 +28,9 @@ const ExhaustMaintenance = () => {
       />
 
       <ServicePageDesc
-        title="FlashFit's Diagnostic Expertise"
-        desc1="Diagnostic testing is the cornerstone of our approach at Flash Fit. We understand that identifying and addressing automotive issues early is crucial to maintaining vehicle performance and safety. That's why we invest in state-of-the-art diagnostic equipment and employ skilled technicians who are trained to interpret diagnostic data accurately.   "
-        desc2="Our diagnostic testing process involves a thorough examination of your vehicle's systems and components, including the engine, transmission, brakes, suspension, and electrical systems. Using advanced scanning tools and diagnostic software, we can pinpoint potential issues with precision, saving you time and money in the long run.   "
+        title="FlashFit's Exhaust Maintenance"
+        desc1="At FlashFit, we recognize the importance of a well-maintained exhaust system for both your vehicle's performance and environmental impact. Our exhaust maintenance service is designed to ensure efficient emissions control and promote cleaner air for everyone. With skilled technicians and state-of-the-art equipment, we meticulously inspect and repair your exhaust system to keep it functioning optimally."
+        desc2="Our thorough inspections and expert repairs ensure that your vehicle meets emissions standards and operates efficiently. Drive with confidence knowing that your exhaust system is in the best hands with FlashFit. Experience the difference in air quality and vehicle performance with our exhaust maintenance service today."
       />
 
       <ServiceBenefits

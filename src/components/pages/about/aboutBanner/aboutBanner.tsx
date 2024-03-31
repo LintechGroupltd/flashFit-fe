@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import aboutPositioningBannerImg from "../../../../../public/assets/about/aboutBannerPositioningImg.svg";
+import aboutPositioningBannerImg from "../../../../../public/assets/about/aboutBannerPositioningImg.webp";
 import AboutBannerImageForMobile from "../../../../../public/assets/about/AboutBannerImageForMobile.svg";
 
 function AboutBanner() {
@@ -30,6 +30,7 @@ function AboutBanner() {
             alt="aboutPositioningBannerImg"
             className="w-full mx-auto md:block hidden"
           />
+        {/* for mobile image */}
           <Image
             src={AboutBannerImageForMobile}
             alt="aboutPositioningBannerImg"

@@ -46,7 +46,7 @@ const TyreServicing = () => {
   return (
     <div className="font-serif relative">
 
-     <div className="md:bg-[#fff] md:h-[0%] h-[460px] bg-[#2A317F]">
+     <div className="md:bg-[#fff] h-[510px] bg-[#2A317F]">
       <ServicesTopSection
         title="Tyres"
         subTitle="Drive confidently with Flash Fit's tire services. From inspections to repairs, we ensure optimal tire condition for safety and performance. "
@@ -59,7 +59,7 @@ const TyreServicing = () => {
       </div>
       </div> 
      
-     <div className="md:mt-0  mt-[260px]">
+     <div className="md:mt-[130px]  mt-[275px]">
      <ServicePageDesc
         title="FlashFit's Tyre Care"
         desc1="At FlashFit, we understand the pivotal role tyres play in your driving experience. That's why we offer comprehensive tyre care services designed to keep you rolling smoothly and safely on the road. From tyre inspections to puncture repairs and replacements, our expert technicians ensure your tyres are in optimal condition for enhanced grip, stability, and fuel efficiency."
@@ -76,7 +76,11 @@ const TyreServicing = () => {
     </div>
      
 
-   
+      {/* <ServiceSolution
+        title="Our Comprehensive Solution for a Smooth Ride"
+        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
+        data={solutions}
+      /> */}
 
       <ServiceBenefits
         img1={img1}
@@ -92,16 +96,6 @@ const TyreServicing = () => {
               recommendations for repairs."
         data={benefits}
       />
-
-
-<ServiceSolution
-        title="Our Comprehensive Solution for a Smooth Ride"
-        desc=" Explore How Flash Fit's Unrivaled Expertise, Unmatched Convenience, and Unwavering Commitment to Quality Service Elevate Your Driving Experience to New Heights."
-        data={solutions}
-      />
-
-
-
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">
@@ -119,7 +113,8 @@ const TyreServicing = () => {
       <div
         className="md:root_parent_wrapper   py-24"
         data-aos="fade-up"
-        date-aos-duration="1000">
+        date-aos-duration="1000"
+      >
         <div className="md:block hidden root_child_wrapper">
           <BookContact />
         </div>

@@ -95,14 +95,14 @@ function CustomerReviewCard() {
           </div>
 
           <div className="flex gap-4">
-            <button onClick={handlePreviousReview}>
-              <div className=" bg-[#F8AD39] hover:bg-[#F0970E] w-[54px] h-[54px] rounded-full">
-                <Image src={leftArrow} alt="Left Arrow" className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto" />
+            <button onClick={handlePreviousReview} className=" w-[52px] ">
+              <div className=" bg-[#F8AD39] hover:bg-[#F0970E] md:w-[54px] md:h-[54px]   rounded-full">
+                <Image src={leftArrow} alt="Left Arrow" className="md:w-[24px]  md:h-[55px] py-[14px] md:mt-0 mt-[14px] mx-auto" />
               </div>
             </button>
-            <button onClick={handleNextReview}>
-              <div className="bg-[#F8AD39] hover:bg-[#F0970E]  w-[54px] h-[54px] rounded-full">
-                <Image src={rightArrow} alt="Right Arrow" className="md:w-[24px] w-[50px] md:h-[55px] h-[24px] md:mt-0 mt-[14px] mx-auto" />
+            <button onClick={handleNextReview} className="w-[52px] ">
+              <div className="bg-[#F8AD39] hover:bg-[#F0970E]  md:w-[54px] md:h-[54px]  rounded-full">
+                <Image src={rightArrow} alt="Right Arrow" className="md:w-[24px]  md:h-[55px] py-[14px] md:mt-0 mt-[14px] mx-auto" />
               </div>
             </button>
           </div>

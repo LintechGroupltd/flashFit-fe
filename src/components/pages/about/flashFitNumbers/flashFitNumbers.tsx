@@ -4,7 +4,7 @@ import FlashFitNumbersCard from "./flashFitNumbersCard";
 
 function FlashFitNumbers() {
   return (
-    <div className="mt-[20px] sm:mt-[10px] 2xl:mt-[200px]">
+    <div className="mt-[240px] lg:mt-[120px] 3xl:mt-[350px]">
       <div className="text-center">
         <h2 className="md:text-[48px] text-[34px] leading-[40px] font-[600] font-serif">
           FlashFit by the Numbers

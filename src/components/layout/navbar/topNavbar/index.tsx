@@ -5,7 +5,7 @@ import navbarLogo from "../../../../../public/assets/navabar/FlashfitLogo.svg";
 import downArrow from "../../../../../public/assets/navabar/Arrow_Down.svg";
 
 import contactUs_arrow_right from "../../../../../public/assets/navabar/contactUs-arrow-right.svg";
-import DropdownMegamenuImage from "../../../../../public/assets/navabar/DropdonMegamenuImage.svg";
+import DropdownMegamenuImage from "../../../../../public/assets/navabar/DropdonMegamenuImage.webp";
 
 import {
   Navbar,

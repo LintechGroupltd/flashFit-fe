@@ -28,9 +28,9 @@ const BrakeService = () => {
       />
 
       <ServicePageDesc
-        title="FlashFit's Diagnostic Expertise"
-        desc1="Diagnostic testing is the cornerstone of our approach at Flash Fit. We understand that identifying and addressing automotive issues early is crucial to maintaining vehicle performance and safety. That's why we invest in state-of-the-art diagnostic equipment and employ skilled technicians who are trained to interpret diagnostic data accurately."
-        desc2="Using state-of-the-art equipment and meticulous attention to detail, we accurately assess your vehicle's condition and help you stay compliant with legal requirements. Trust Flash Fit for reliable MOT testing that goes above and beyond to ensure your vehicle is roadworthy and ready for the journey ahead. Drive with confidence knowing your vehicle is in expert hands at Flash Fit."
+        title="Brake Safety with Flash Fit"
+        desc1="Your safety on the road is paramount, and at FlashFit, we prioritize it with our meticulous brake service. Equipped with cutting-edge diagnostic tools and expertise, our skilled technicians thoroughly inspect every aspect of your braking system. From brake pad checks to rotor resurfacing and fluid flushes, we leave no detail overlooked in ensuring optimal brake performance."
+        desc2="When you choose Flash Fit for brake service, you're choosing peace of mind. Our commitment to excellence means you can trust us to deliver reliable, efficient care for your vehicle's brakes. Whether you're navigating city streets or embarking on a long journey, our brake mastery ensures you can stop safely whenever needed. Experience the FlashFit difference in braking performance today."
       />
 
       <ServiceBenefits
