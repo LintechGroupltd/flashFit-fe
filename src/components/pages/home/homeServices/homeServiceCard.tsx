@@ -17,6 +17,7 @@ import Brakes_Yellow_Bg from '../../../../../public/assets/services/OurServicesC
 
 import Exhaust_Blue_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Exhaust_Blue_Bg.svg'
 import Exhaust_Yellow_Bg from '../../../../../public/assets/services/OurServicesCardIcon/Exhaust_Yellow_Bg.svg'
+import Link from "next/link";
 
 
 function HomeServiceCard() {
@@ -33,6 +34,7 @@ function HomeServiceCard() {
       arrowIcon: serviceCardArrow,
       hoverLogo:MOT_Yellow_Bg,
       hoverArrowIcon:hoverWhiteBgArrowIcon,
+      url: "/services/mot-testing" // Example URL for MOT Testing
     },
     {
       id: 2,
@@ -42,7 +44,8 @@ function HomeServiceCard() {
       logo: Service_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Service_Yellow_Bg,
-      hoverArrowIcon:hoverWhiteBgArrowIcon
+      hoverArrowIcon:hoverWhiteBgArrowIcon,
+      url: "/services/servicing" // Example URL for Service
     },
     {
       id: 3,
@@ -52,7 +55,8 @@ function HomeServiceCard() {
       logo: Brakes_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Brakes_Yellow_Bg,
-      hoverArrowIcon:hoverWhiteBgArrowIcon
+      hoverArrowIcon:hoverWhiteBgArrowIcon,
+      url: "/services/brake-service" // Example URL for Brake
     },
     {
       id: 4,
@@ -62,14 +66,17 @@ function HomeServiceCard() {
       logo: Exhaust_Blue_Bg,
       arrowIcon: serviceCardArrow,
       hoverLogo:Exhaust_Yellow_Bg,
-      hoverArrowIcon:hoverWhiteBgArrowIcon
+      hoverArrowIcon:hoverWhiteBgArrowIcon,
+      url: "/services/exhaust-maintenance" // Example URL for Exhaust
     },
   ];
+  
   
 
   return (
     <div className="md:mt-10 mt-5 w-full grid md:grid-cols-2 gap-[35px]">
       {homeServiceData.map((item, index) => (
+      <Link href={item.url}>
         <div
           key={index}
           className={`p-9 rounded-[12px] md:flex lg:gap-6 xl:gap-4 transition duration-300 ease-in-out ${
@@ -102,6 +109,8 @@ function HomeServiceCard() {
             <p className="text-[15px] mt-[10px]  font-sans">{item.description}</p>
           </div>
         </div>
+      </Link>  
+      
       ))}
     </div>
   );

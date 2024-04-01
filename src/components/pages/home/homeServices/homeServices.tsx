@@ -23,7 +23,7 @@ function HomeServices() {
         </div>
 
         <div
-          className={`lg:flex md:block hidden  justify-center  gap-3 border border-[#2A317F] px-7 py-3 rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${
+          className={`lg:flex md:block hidden  justify-center  gap-3 border border-[#2A317F] w-[138px] py-[14px] rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${
             isHovered ? "bg-[#2A317F]" : ""
           }`}
           onMouseEnter={handleHover}
@@ -32,7 +32,7 @@ function HomeServices() {
           <Link href={"/services/our-services"}>
             {" "}
             <button className="text-[16px] font-sans  hover:text-[#fff] font-[600]">
-              Browse All
+              See All
             </button>
           </Link>
           {isHovered ? (

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.svg";
-import customerReviewImg2 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg2.svg";
-import customerReviewImg3 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg3.svg";
-import customerReviewImg4 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg4.svg";
+// import customerReviewImg2 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg2.svg";
+// import customerReviewImg3 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg3.svg";
+// import customerReviewImg4 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg4.svg";
 import rightArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewRightWhiteArrow.svg";
 import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewLeftWhiteArrow.svg";
 
@@ -16,36 +16,36 @@ function CustomerReviewCard() {
       customerImg: customerReviewImg1,
       review: "",
       title:
-        "1.Flash Fit exceeded my expectations with their exceptional service. From the moment I walked in, I felt confident in their expertise and attention to detail.",
-      customerName: "—Jason Mikel",
-      designation: "Head of Floral Design",
+        "FlashFit exceeded my expectations with their exceptional service. From the moment I walked in, I felt confident in their expertise and attention to detail.",
+      customerName: "— Jason Mikel",
+      designation: "Brand Designer",
     },
     {
       id: 2,
-      customerImg: customerReviewImg2,
+      customerImg: customerReviewImg1,
       review: "",
       title:
-        "2.Flash Fit exceeded my expectations with their exceptional service. From the moment I walked in, I felt confident in their expertise and attention to detail.",
-      customerName: "—Jason Mikel",
-      designation: "Head of Floral Design",
+        " I appreciate the convenience and reliability of FlashFit's services. Their MOT assurance gave me peace of mind, knowing that my vehicle met all regulatory standards.",
+      customerName: "— Harry Wilson",
+      designation: "Software Developer",
     },
     {
       id: 3,
-      customerImg: customerReviewImg3,
+      customerImg: customerReviewImg1,
       review: "",
       title:
-        "3.Flash Fit exceeded my expectations with their exceptional service. From the moment I walked in, I felt confident in their expertise and attention to detail.",
-      customerName: "—Jason Mikel",
-      designation: "Head of Floral Design",
+        "FlashFit not only delivered top-notch tyres but also provided swift installation, freeing up my time to focus on scaling my business.",
+      customerName: "— William Johnson",
+      designation: "Marketing Manager",
     },
     {
       id: 4,
-      customerImg: customerReviewImg4,
+      customerImg: customerReviewImg1,
       review: "",
       title:
-        "4.Flash Fit exceeded my expectations with their exceptional service. From the moment I walked in, I felt confident in their expertise and attention to detail.",
-      customerName: "—Jason Mikel",
-      designation: "Head of Floral Design",
+        "FlashFit brake service gives me peace of mind for long commutes and meetings. With Flash Fit, I can focus on business while they handle my car.",
+      customerName: "—Oliver Smith",
+      designation: "Accountant",
     },
   ];
 
@@ -73,7 +73,7 @@ function CustomerReviewCard() {
         </div>
 
         {/* right section */}
-        <div className="md:mt-0 mt-3">
+        <div className="md:mt-0 mt-3 w-full">
           <div className="">
             {[...Array(5)].map((_, index) => (
               <span key={index} className="text-[#FEC84B] text-[30px]">
