@@ -14,8 +14,8 @@ const TopBar = ({ title,subTitle }: props) => {
 
         <div className="w-full flex text-white items-center text-center justify-center py-12 md:py-24" data-aos='fade-right'>
           <div className="max-w-xl flex flex-col gap-5 sm:gap-10">
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-semibold">{title}</h1>
-          <p className="font-sans text-xs md:text-lg font-normal mb-10 sm:mb-20 ">{subTitle}</p>
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-7xl font-semibold">{title}</h1>
+          <p className="font-sans text-xs md:text-lg font-thin mb-10 sm:mb-20 " style={{fontWeight:"200"}}>{subTitle}</p>
           </div>
         </div>
       </div>

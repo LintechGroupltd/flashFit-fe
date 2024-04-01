@@ -33,7 +33,9 @@ const MotTesting = () => {
                 regulatory standards, providing you with peace of mind every
                 time you drive. Our certified technicians conduct thorough
                 inspections of essential components, including lights, brakes,
-                exhaust emissions, and more."
+                exhaust emissions, and more. "
+
+
         desc2="  Using state-of-the-art equipment and meticulous attention to
         detail, we accurately assess your vehicle's condition and help
         you stay compliant with legal requirements. Trust Flash Fit for

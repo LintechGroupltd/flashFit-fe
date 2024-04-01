@@ -12,7 +12,7 @@ const ServicePageDesc = ({ title, desc1, desc2 }: props) => {
       <div className="root_child_wrapper ">
         {/* <div className="w-full flex flex-col lg:flex-row justify-between gap-10 pt-[30px] pb-[40px] sm:pt-24 sm:pb-24"> */}
         <div className="w-full flex flex-col lg:flex-row justify-between gap-10 pt-[30px] pb-[40px] sm:pt-24 sm:pb-24 lg:py-28 ">
-          <h1 className="font-serif text-[#0F0F0F] text-3xl sm:text-5xl w-full lg:max-w-sm font-semibold lg:text-left text-center "  data-aos='fade-right'>
+          <h1 className="font-sans text-[#0F0F0F] text-3xl sm:text-5xl w-full lg:max-w-sm font-semibold lg:text-left text-center "  data-aos='fade-right'>
             {title}
           </h1>
 

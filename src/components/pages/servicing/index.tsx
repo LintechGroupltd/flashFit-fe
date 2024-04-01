@@ -14,10 +14,12 @@ import ServicePricing from "@/components/reuseable/servicePricing/servicePricing
 
 
 export const benefits = [
-  { id: 1, item: "Early Issue Detection" },
-  { id: 1, item: "Accurate Repairs" },
-  { id: 1, item: "Transparent Communication" },
-  { id: 1, item: "Confidence in Vehicle Performance" },
+  { id: 1, item: "Extends vehicle's lifespan" },
+  { id: 2, item: "Ensures optimal performance" },
+  { id: 3, item: "Improve Vehicle resale value" },
+  { id: 4, item: "Keeps your warranty intact" },
+  { id: 5, item: "Promotes smooth driving" },
+
 ];
 
 const Servicing = () => {
@@ -25,12 +27,12 @@ const Servicing = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Service"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Maintain peak performance and reliability with our comprehensive servicing packages tailored to your vehicle's needs."
         heroImg={"/assets/services/images/servicingHeroImg.webp"}
       />
 
       <ServicePageDesc
-        title="Revitalize Your Ride with Expert Servicing"
+        title="Extensive Servicing at Flash Fit"
         desc1="At Flash Fit, we service all makes and models with cutting-edge equipment. Our focus on quality extends to competitive pricing. Regular servicing is essential for safety and reliability. Trust Flash Fit for comprehensive maintenance that keeps your car in top condition. Regular servicing is not just a recommendation; it's a necessity to avoid mechanical problems and ensure your vehicle's safety on the road."
         desc2="At Flash Fit, we prioritize transparency and customer satisfaction. We always seek authorization before beginning any additional work during your car service, and our team is available to assist with all inquiries, estimates, and advice for your vehicle repair needs."
       />
@@ -39,14 +41,11 @@ const Servicing = () => {
         img1={img1}
         img2={img2}
         figure={"10x"}
-        title="Advanced Equipment"
-        desc1=" Our cutting-edge diagnostic tools provide 10 times the accuracy
-                in identifying vehicle issues, ensuring comprehensive
-                assessment."
-        title2=" Expert Analysis"
-        desc2=" With our skilled technicians, you receive 10 times the expertise
-                in interpreting diagnostic results, leading to precise
-                recommendations for repairs."
+        title="Wheel Alignment Precision"
+        desc1="Our servicing packages offer 10 times the coverage, addressing all aspects of vehicle maintenance for optimal performance."
+
+        title2="Skilled Technicians"
+        desc2="With our experienced technicians, you receive 10 times the expertise in servicing your vehicle, ensuring quality care and attention to detail."
         data={benefits}
       />
 

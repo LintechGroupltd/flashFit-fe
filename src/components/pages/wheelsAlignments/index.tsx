@@ -21,7 +21,7 @@ export const benefits = [
 
 const WheelsAlignments = () => {
   return (
-    <div className="font-serif relative">
+    <div className="relative">
       <ServicesTopSection
         title="Wheels Alignments"
         subTitle="Enhance stability and tire longevity with precision wheel alignment services for smoother handling and improved fuel efficiency."

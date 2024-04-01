@@ -23,15 +23,19 @@ const BrakeService = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Brake Service"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Keep your vehicle safe and responsive with our expert brake inspections and repairs."
         heroImg={heroImg}
       />
+
+      
 
       <ServicePageDesc
         title="Brake Safety with Flash Fit"
         desc1="Your safety on the road is paramount, and at FlashFit, we prioritize it with our meticulous brake service. Equipped with cutting-edge diagnostic tools and expertise, our skilled technicians thoroughly inspect every aspect of your braking system. From brake pad checks to rotor resurfacing and fluid flushes, we leave no detail overlooked in ensuring optimal brake performance."
         desc2="When you choose Flash Fit for brake service, you're choosing peace of mind. Our commitment to excellence means you can trust us to deliver reliable, efficient care for your vehicle's brakes. Whether you're navigating city streets or embarking on a long journey, our brake mastery ensures you can stop safely whenever needed. Experience the FlashFit difference in braking performance today."
       />
+
+
 
       <ServiceBenefits
         img1={img1}

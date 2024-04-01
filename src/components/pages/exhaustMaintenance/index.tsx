@@ -12,10 +12,10 @@ import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.we
 import React from "react";
 
 export const benefits = [
-  { id: 1, item: "Early Issue Detection" },
-  { id: 1, item: "Accurate Repairs" },
-  { id: 1, item: "Transparent Communication" },
-  { id: 1, item: "Confidence in Vehicle Performance" },
+  { id: 1, item: "Emissions Control" },
+  { id: 2, item: "Extended Vehicle Lifespan" },
+  { id: 3, item: "Reduced Maintenance Costs" },
+  { id: 4, item: "Safety Assurance" },
 ];
 
 const ExhaustMaintenance = () => {
@@ -23,9 +23,11 @@ const ExhaustMaintenance = () => {
     <div className="font-serif relative">
       <ServicesTopSection
         title="Exhaust Maintenance"
-        subTitle="Discover Our Passion for Precision, Commitment to Quality, and Dedication to Your Vehicle's Performance"
+        subTitle="Ensure optimal engine performance and emissions control with our exhaust system inspections and repairs."
         heroImg={heroImg}
       />
+
+
 
       <ServicePageDesc
         title="FlashFit's Exhaust Maintenance"
@@ -33,18 +35,16 @@ const ExhaustMaintenance = () => {
         desc2="Our thorough inspections and expert repairs ensure that your vehicle meets emissions standards and operates efficiently. Drive with confidence knowing that your exhaust system is in the best hands with FlashFit. Experience the difference in air quality and vehicle performance with our exhaust maintenance service today."
       />
 
+
       <ServiceBenefits
         img1={img1}
         img2={img2}
         figure={"10x"}
-        title="Advanced Equipment"
-        desc1=" Our cutting-edge diagnostic tools provide 10 times the accuracy
-                in identifying vehicle issues, ensuring comprehensive
-                assessment."
-        title2=" Expert Analysis"
-        desc2=" With our skilled technicians, you receive 10 times the expertise
-                in interpreting diagnostic results, leading to precise
-                recommendations for repairs."
+        title=" Comprehensive Inspections"
+        desc1="Our comprehensive inspections ensure thorough detection of exhaust system issues, ensuring optimal performance and emissions control."
+
+        title2="Engine Performance Optimization "
+        desc2="A well-maintained exhaust system boosts engine efficiency, improving fuel economy and vehicle operation."
         data={benefits}
       />
 

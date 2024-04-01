@@ -13,10 +13,9 @@ import SearchVehicle from "../home/homeBanner/searchVehicle";
 
 
 export const benefits = [
-  { id: 1, item: "Early Issue Detection" },
-  { id: 2, item: "Accurate Repairs" },
-  { id: 3, item: "Transparent Communication" },
-  { id: 4, item: "Confidence in Vehicle Performance" },
+  { id: 1, item: "Tyre Durability" },
+  { id: 2, item: "Ensures optimal performance" },
+  { id: 3, item: "Efficient puncture repairs, minimizing downtime and inconvenience" },
 ];
 
 export const solutions = [
@@ -86,16 +85,13 @@ const TyreServicing = () => {
         img1={img1}
         img2={img2}
         figure={"10x"}
-        title="Advanced Equipment"
-        desc1=" Our cutting-edge diagnostic tools provide 10 times the accuracy
-              in identifying vehicle issues, ensuring comprehensive
-              assessment."
-        title2=" Expert Analysis"
-        desc2=" With our skilled technicians, you receive 10 times the expertise
-              in interpreting diagnostic results, leading to precise
-              recommendations for repairs."
+        title="Wheel Alignment Precision"
+        desc1="Our advanced alignment equipment ensures 10 times the accuracy, providing precise adjustments for optimal handling and tire wear.."
+        title2="Tyre Selection"
+        desc2="Choose from our extensive range of tires, offering 10 times the options for durability, performance, and reliability on the road."
         data={benefits}
       />
+
 
       {/* review code and remove outter wrapper */}
       <div className="root_parent_wrapper bg-[#F5F5F7] pt-5 w-full">
