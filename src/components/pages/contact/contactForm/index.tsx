@@ -12,16 +12,18 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
   const onSubmit = () => alert("form submitted!");
 
   return (
-    <div className="w-full h-full font-serif flex flex-col items-center justify-center md:items-start gap-6 sm:gap-10 lg:gap-20 md:flex-row mt-10 ">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl min-w-sm text-center md:text-left" data-aos='fade-right'>
+    // <div className="w-full h-full font-serif flex flex-col items-center justify-center gap-6 sm:gap-10 lg:gap-20 md:flex-row mt-10 border-2">
+    <div className="absolute w-full  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  px-5  md:px-12 lg:px-28 mt-6">
+    <div className="content w-full flex flex-col md:flex-row gap-6 sm:gap-10 lg:gap-20">
+      <h1
+        className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl min-w-sm text-center md:text-left"
+        data-aos="fade-right"
+      >
         Input your personal info
       </h1>
 
 
-
-
-
-      <div className="w-full ">
+      <div className="w-full">
         <form
           action=""
           className="w-full flex flex-col gap-4 sm:gap-6"
@@ -42,8 +44,6 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
             />
           </div>
 
-
-
           <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
               className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
@@ -59,8 +59,6 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
             />
           </div>
 
-
-
           <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
               className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
@@ -69,33 +67,19 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
               {...register("vehicleNumber")}
             />
 
-
             <div className="w-full py-2 px-2  md:px-4 flex items-center relative rounded-md bg-white bg-opacity-10 ">
-            <input
-              className="w-full p-1 sm:p-2 bg-transparent  border-none outline-none "
-              type="text"
-              placeholder="Book Date"
-              {...register("bookingDate")}
-            />
+              <input
+                className="w-full p-1 sm:p-2 bg-transparent  border-none outline-none "
+                type="text"
+                placeholder="Book Date"
+                {...register("bookingDate")}
+              />
 
-
-            <div className="cursor-pointer">
-              <CalendarIcon />
+              <div className="cursor-pointer">
+                <CalendarIcon />
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
           <div>
             <textarea
@@ -105,9 +89,6 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
               {...register("message")}
             ></textarea>
           </div>
-
-
-
 
           <div className="w-full">
             <div
@@ -123,12 +104,9 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
               />
             </div>
           </div>
-
-
         </form>
       </div>
-
-
+      </div>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const ContactServiceType = ({
         What Type of service ?
       </h1>
 
-      <div className="w-fullmd:w-4/5">
+      <div className="w-full md:w-4/5">
         <ul className="flex items-center justify-center flex-wrap gap-4 sm:gap-6 md:gap-10">
           {contactServiceOptions.map((item, idx) => (
             <li
