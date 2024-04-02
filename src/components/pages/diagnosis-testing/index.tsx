@@ -9,11 +9,17 @@ import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import img1 from "../../../../public/assets/services/images/dgImg1.webp";
 import img2 from "../../../../public/assets/services/images/dgImg2.webp";
 import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
+// import dgIcon1 from ""
 import React from "react";
 import ServiceSolution from "@/components/reuseable/serviceSolution";
+import SolutionListIcon from "@/components/svg/SolutionListIcon";
+import DgIcon1 from "@/components/svg/dgIcon1";
+import DgIcon2 from "@/components/svg/DgIcon2";
+import DgIcon3 from "@/components/svg/DgIcon3";
+import DgIcon4 from "@/components/svg/DgIcon4";
 
 export const benefits = [
-  { id: 1, item: "Early Issue Detection" },
+  { id: 1,item: "Early Issue Detection" },
   { id: 1, item: "Accurate Repairs" },
   { id: 1, item: "Transparent Communication" },
   { id: 1, item: "Confidence in Vehicle Performance" },
@@ -22,25 +28,30 @@ export const benefits = [
 export const solutions = [
   {
     id: 1,
+    icon:<DgIcon1 />, 
     tag: "Engine Performance",
     item: "We analyze engine parameters such as fuel delivery, ignition timing, and exhaust emissions to ensure optimal performance and efficiency.",
   },
   {
     id: 2,
+    icon:<DgIcon2 />, 
     tag: "Budget Tyres",
     item: "Our diagnostic tests assess transmission fluid levels, shift points, and overall operation to detect any signs of wear or malfunction. ",
   },
   {
     id: 3,
+    icon:<DgIcon3 />, 
     tag: "Braking System",
     item: "We inspect brake pads, rotors, calipers, and hydraulic components to ensure your brakes are operating correctly and safely.",
   },
   {
     id: 4,
+    icon:<DgIcon4 />, 
     tag: "Suspension and Steering",
     item: "Our tests evaluate suspension components, including shocks, struts, and control arms, as well as steering responsiveness and alignment.",
   },
 ];
+
 
 const DiagnosisTesting = () => {
   return (
