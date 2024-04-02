@@ -38,7 +38,7 @@ const ContactPage = () => {
 
   return (
     <div
-      className="font-serif relative w-full h-screen flex flex-col gap-3 px-4 sm:px-6 md:px-12 lg:px-28 py-6 sm:py-10 text-white oveflow-y-hidden"
+      className="font-serif relative w-full h-screen flex flex-col  gap-3 px-4 sm:px-6 md:px-12 lg:px-28 py-6 sm:py-10 text-white oveflow-y-hidden"
       style={{ backgroundColor: "#2A317F" }}
     >
       <div className="contactNav w-full flex items-center justify-between">
