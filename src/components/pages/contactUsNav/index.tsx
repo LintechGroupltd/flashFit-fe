@@ -3,6 +3,7 @@ import React from "react";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
 import TopBar from "@/components/layout/topBar";
 import ContactUsNav from "./contactUsNav";
+import ContactUsMap from "./contactUsMap";
 
 const ContactUs = () => {
   return (
@@ -18,7 +19,9 @@ const ContactUs = () => {
         </div>
       </div>
 
-   
+      <div className="mt-40">
+        <ContactUsMap/>
+      </div>
      
     </div>
   );
