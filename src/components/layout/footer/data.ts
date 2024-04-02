@@ -25,8 +25,8 @@ export const quickLinks = [
           link: "/privacy-policy",
         },
         {
-          title: "Terms and Conditions",
-          link: "/terms-conditions",
+          title: "Cookie Policy",
+          link: "/cookie-policy",
         },
       ],
     },

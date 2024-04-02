@@ -12,11 +12,12 @@ import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.pn
 // import dgIcon1 from ""
 import React from "react";
 import ServiceSolution from "@/components/reuseable/serviceSolution";
-import SolutionListIcon from "@/components/svg/SolutionListIcon";
-import DgIcon1 from "@/components/svg/dgIcon1";
+
+
 import DgIcon2 from "@/components/svg/DgIcon2";
 import DgIcon3 from "@/components/svg/DgIcon3";
 import DgIcon4 from "@/components/svg/DgIcon4";
+import DgIcon1 from "@/components/svg/DgIcon1";
 
 export const benefits = [
   { id: 1,item: "Early Issue Detection" },
@@ -35,7 +36,7 @@ export const solutions = [
   {
     id: 2,
     icon:<DgIcon2 />, 
-    tag: "Budget Tyres",
+    tag: "Fluid level and Condition",
     item: "Our diagnostic tests assess transmission fluid levels, shift points, and overall operation to detect any signs of wear or malfunction. ",
   },
   {

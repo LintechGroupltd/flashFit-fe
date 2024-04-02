@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <div className="md:h-[432px] py-7">
+      <div className="md:h-[400px] py-4">
         <TopBar title="Privacy Policy" />
        </div> 
       <PrivacyAndPolicy />

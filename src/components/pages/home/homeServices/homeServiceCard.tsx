@@ -79,7 +79,7 @@ function HomeServiceCard() {
       <Link href={item.url}>
         <div
           key={index}
-          className={`p-9 rounded-[12px] md:flex lg:gap-6 xl:gap-4 transition duration-300 ease-in-out ${
+          className={`p-9 rounded-[12px] md:flex lg:gap-6 xl:gap-4 md:h-[255px] transition duration-300 ease-in-out ${
             hoveredIndex === index ? "bg-[#2A317F] text-white" : "bg-[#F5F5F7] text-[#2D2D2D]"
           }`}
           onMouseEnter={() => setHoveredIndex(index)}

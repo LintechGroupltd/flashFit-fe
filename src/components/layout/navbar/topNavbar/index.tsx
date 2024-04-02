@@ -184,6 +184,18 @@ function NavList() {
         </div>
       </Typography>
      
+
+      <Typography
+        placeholder=""
+        as="a"
+        href="/contactUs"
+        variant="small"
+        className="font-medium">
+        <div className="flex lg:border-none border-b border-[#3F4696] items-center gap-2 pr-[30px] md:py-2 py-4 text-[16px] font-[500] font-sans">
+          Contact Us
+        </div>
+      </Typography>
+
     
       <div className="lg:hidden block mt-6">
       <Link href={"/contact-us"}>

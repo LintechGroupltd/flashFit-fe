@@ -8,18 +8,19 @@ import ContactUsMap from "./contactUsMap";
 const ContactUs = () => {
   return (
     <div className="">
+     <div className="md:h-[400px] pt-5">
       <TopBar
         title="Contact Us"
-        // subTitle={subTitle}
       />
-
+     </div>   
+     
       <div className="root_parent_wrapper bg-[#fff]">
         <div className="root_child_wrapper">
           <ContactUsNav/>
         </div>
       </div>
 
-      <div className="mt-40">
+      <div className="md:mt-40 mt-28 mb-14">
         <ContactUsMap/>
       </div>
      

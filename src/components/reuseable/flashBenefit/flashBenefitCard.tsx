@@ -1,5 +1,9 @@
 import React from "react";
-import flashBenefitCardIcon from "../../../../public/assets/reuseableComponentImg/flashBenefitCardIcon.svg";
+import expertise from "../../../../public/assets/reuseableComponentImg/flashBenefit/expertise.svg";
+import comprehensive from "../../../../public/assets/reuseableComponentImg/flashBenefit/comprehensive.svg";
+import quality from "../../../../public/assets/reuseableComponentImg/flashBenefit/quality.svg";
+import transparent from "../../../../public/assets/reuseableComponentImg/flashBenefit/transparent.svg";
+
 import Image from "next/image";
 
 function FlashBenefitCard() {
@@ -9,28 +13,28 @@ function FlashBenefitCard() {
       title: "Expertise you can trust",
       description:
         "With years of experience and a team of skilled technicians, Flash Fit delivers top-notch service tailored to your vehicle's specific requirements. Trust us to keep your car running smoothly and reliably.",
-      logo: flashBenefitCardIcon,
+      logo: expertise,
     },
     {
       id: 2,
       title: "Comprehensive Solutions",
       description:
         "Our automotive service center offers everything from routine servicing to MOT testing, ensuring your vehicle receives comprehensive care conveniently. Our commitment is seamless care.",
-      logo: flashBenefitCardIcon,
+      logo: comprehensive,
     },
     {
       id: 3,
       title: "Quality Assurance",
       description:
         "We take pride in our workmanship and use only the highest quality parts and equipment for all repairs and replacements. Rest assured, your vehicle is in capable hands with Flash Fit.",
-      logo: flashBenefitCardIcon,
+      logo: quality,
     },
     {
       id: 4,
-      title: "Expertise you can trust",
+      title: "Transparent Communication",
       description:
         "We believe in keeping our customers informed every step of the way. You'll receive clear explanations of any issues found during inspections, along with honest recommendations for necessary repairs.",
-      logo: flashBenefitCardIcon,
+      logo: transparent,
     },
   ];
 

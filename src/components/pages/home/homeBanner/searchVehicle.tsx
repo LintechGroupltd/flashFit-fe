@@ -121,8 +121,8 @@ function SearchVehicle() {
 
     {/* search by Tyre size */}
       {searchType === "2" && (
-            <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
-            <div className="flex flex-col flex-1 gap-[5px] relative">
+            <div className="md:flex items-center px-[24px] py-[24px] gap-[20px] ">
+            <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
               <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
                 Width
               </label>
@@ -153,7 +153,7 @@ function SearchVehicle() {
             </div>
   
 
-            <div className="flex flex-col flex-1 gap-[5px] relative">
+            <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
               <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
                  Ratio
               </label>
@@ -184,7 +184,7 @@ function SearchVehicle() {
             </div>
 
 
-            <div className="flex flex-col flex-1 gap-[5px] relative">
+            <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
               <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
                 Rim
               </label>
@@ -215,7 +215,7 @@ function SearchVehicle() {
             </div>
 
 
-            <div className="flex flex-col flex-1 gap-[5px] relative">
+            <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
               <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
                 Speed
               </label>
@@ -246,7 +246,7 @@ function SearchVehicle() {
             </div>
 
   
-            <div className="flex flex-col flex-1 gap-[5px] md:mt-0 mt-5">
+            <div className="flex flex-col flex-1 gap-[5px] md:mt-0 mt-5 md:w-40">
               <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
                 Postcode
               </label>
@@ -256,7 +256,7 @@ function SearchVehicle() {
               />
             </div>
   
-            <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
+            <div className="flex flex-col flex-1 gap-[5px] mt-[31px] md:w-40">
               <button className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans">
                 Search
               </button>

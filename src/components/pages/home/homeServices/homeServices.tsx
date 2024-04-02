@@ -22,6 +22,7 @@ function HomeServices() {
           </h2>
         </div>
 
+       <Link href={"/services/our-services"}>
         <div
           className={`lg:flex md:block hidden  justify-center  gap-3 border border-[#2A317F] w-[138px] py-[14px] rounded-[10px] md:mt-[65px] text-[#2A317F] hover:text-[#fff] mt-5 ${
             isHovered ? "bg-[#2A317F]" : ""
@@ -29,18 +30,19 @@ function HomeServices() {
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
         >
-          <Link href={"/services/our-services"}>
+         
             {" "}
             <button className="text-[16px] font-sans  hover:text-[#fff] font-[600]">
               See All
             </button>
-          </Link>
+          
           {isHovered ? (
             <Image src={BrowseAllHoverArrowIcon} alt="arrow" />
           ) : (
             <Image src={arrowRight} alt="arrow" />
           )}
         </div>
+       </Link>   
       </div>
 
       <div data-aos="fade-up" data-aos-duration="10000">

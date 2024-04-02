@@ -10,7 +10,7 @@ const ContactUsNav = () => {
   const [fullName, setFullName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
-  const [service, setService] = React.useState('');
+//   const [service, setService] = React.useState('');
   const [message, setMessage] = React.useState('');
 
 
@@ -19,14 +19,14 @@ const ContactUsNav = () => {
 
 
 
-  const handleServiceChange = (e) => {
-    setService(e.target.value);
-  };
+//   const handleServiceChange = (e) => {
+//     setService(e.target.value);
+//   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', { fullName, email, phone, service, message });
+    console.log('Form submitted:', { fullName, email, phone, message });
   };
 
 
@@ -51,8 +51,15 @@ const ContactUsNav = () => {
 
 
   return (
-   <div>
-    <div className="grid grid-cols-2 gap-[50px] bg-[#F5F5F7] my-28 p-10 rounded-[16px]">
+     <div>
+        <div className='md:hidden block mt-14 text-center'>
+          <p className="md:text-[48px] text-[34px] font-[600] font-serif">Get In Touch</p>
+          <p className="text-[18px] font-[400] font-sans text-[#505050] py-3">
+           Connect with us: Engage in real-time chat, direct phone support, and visit our location for personalized assistance 
+         </p>
+        </div>
+    <div className="grid md:grid-cols-2 md:gap-[50px] gap-[30px] bg-[#F5F5F7] md:my-28 my-14 md:p-10 p-4 rounded-[16px]">
+
       <form className="w-full mx-auto my-8 " onSubmit={handleSubmit}>
         <div className="mb-6">
           <label htmlFor="fullName" className="block mb-2 font-[600] text-[13px] font-sans ">
@@ -96,37 +103,7 @@ const ContactUsNav = () => {
             required
           />
         </div>
-        {/* <div className="mb-6 relative">
-          <label htmlFor="service" className="block mb-2 font-[600] text-[13px] font-sans">
-            Service
-          </label>
-   
-          <Image 
-               src={contactDownArrow}
-               alt='contactDownArrow'
-               className=''
-             />
-          <select
-            id="service"
-            className="w-full  px-4 py-3 border-[1px] border-[#D7D7D7] rounded appearance-none focus:outline-none"
-            value={service}
-            onChange={handleServiceChange}
-            required   
-          >
        
-     
-
-            <option className='select-option text-[14px] font-[500] font-sans' value="">Select Service</option>
-            <option className='select-option text-[14px] font-[500] font-sans' value="MOT Testing">MOT Testing</option>
-            <option className='select-option text-[14px] font-[500] font-sans' value="Service">Service</option>
-            <option className='text-[14px] font-[500] font-sans' value="Brakes">Brakes</option>
-            <option className='text-[14px] font-[500] font-sans' value="Exhaust">Exhaust</option>
-            <option className='text-[14px] font-[500] font-sans' value="Tyres">Tyres</option>
-            <option className='text-[14px] font-[500] font-sans' value="Wheel Alignments">Wheel Alignments</option>
-            <option className='text-[14px] font-[500] font-sans' value="Diagnosis Testing">Diagnosis Testing</option>
-          </select>
-        </div> */}
-
       
 <div className="relative">
        <label htmlFor="service" className="block mb-2 font-[600] text-[13px] font-sans">
@@ -171,7 +148,7 @@ const ContactUsNav = () => {
             id="message"
             className="w-full px-4 text-[15px] font-sans border-[1px] border-[#D7D7D7] font-[400] py-3  rounded-[8px] focus:outline-none "
             placeholder="Enter your message here"
-            rows="4"
+            rows={4}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
@@ -179,35 +156,35 @@ const ContactUsNav = () => {
         </div>
         <button
           type="submit"
-          className="w-[188px] h-[56px] py-2 text-white bg-[#F8AD39] rounded-[8px] hover:bg-yellow-600 focus:outline-none text-[16px] font-[600] font-sans"
+          className="md:w-[188px] w-[180px] md:h-[56px] h-[50px] py-2 text-white bg-[#F8AD39] rounded-[8px] focus:outline-none text-[16px] font-[600] font-sans"
         >
           Submit
         </button>
       </form>
 
      {/* right section  */}
-      <div className="justify-center p-8">
-        <div>
-          <p className="text-[48px] font-[600] font-serif">Get In Touch</p>
+      <div className="justify-center md:p-8 p-5">
+        <div className='md:block hidden'>
+          <p className="md:text-[48px] text-[34px] font-[600] font-serif">Get In Touch</p>
           <p className="text-[18px] font-[400] font-sans text-[#505050] py-3">
            Connect with us: Engage in real-time chat, direct phone support, and visit our location for personalized assistance 
          </p>
         </div>
 
         <div className='mt-4'>
-           <h2 className='text-[20px] font-[600] font-serif '>Chat to us</h2> 
+           <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Chat to us</h2> 
            <p className='text-[16px] font-[400] font-sans mt-2'>Get instant assistance and support</p>
            <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>flashfit@example.com</p>
         </div>
 
         <div className='mt-4'>
-           <h2 className='text-[20px] font-[600] font-serif '>Phone</h2> 
+           <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Phone</h2> 
            <p className='text-[16px] font-[400] font-sans mt-2'>Give us a call on our dedicated phone line from Mon-Fri, 8am to 5-pm</p>
            <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>+44 20 1234 5678</p>
         </div>
 
         <div className='mt-4'>
-           <h2 className='text-[20px] font-[600] font-serif '>Office Address</h2> 
+           <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Office Address</h2> 
            <p className='text-[16px] font-[400] font-sans mt-2'>Come say hello at our office HQ.</p>
         </div>
 

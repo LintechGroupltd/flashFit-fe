@@ -34,17 +34,17 @@ export const galleyData = [
     },
     {
         id:4,
-        image:Img2
+        image:Img7
         
       },
       {// bosbe
         id: 5,
-        image:Img8
+        image:Img9
         
       },
       {
         id: 6,
-        image:Img6
+        image:Img11
         
       },
       {
@@ -64,12 +64,12 @@ export const galleyData = [
       },
       {// rplace hbe
         id: 10,
-        image:Img9
+        image:Img8
         
       },
       {
         id: 11,
-        image:Img11
+        image:Img6
         
       },
       {

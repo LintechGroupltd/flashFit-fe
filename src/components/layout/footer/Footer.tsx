@@ -31,7 +31,7 @@ function Footer() {
               // className={styles.logo}
             />
           </Link>
-
+{/* 
           <h4 className='text-[#000] font-serif font-[600] text-[20px] pt-[25px] md:pt-[38px] pb-[15px]'>Find Us On Social Media</h4>
           <div className='flex gap-[15px] items-center'>
             {socialLinks.map((socail, idx) => (
@@ -39,7 +39,7 @@ function Footer() {
                 <Image src={socail.img} alt={socail.label} className="w-9 h-9" />
               </Link>
             ))}
-          </div>
+          </div> */}
 
 
         </div>
@@ -104,10 +104,10 @@ function Footer() {
                 <Image src={locationIcon} alt='locationIcon' /> 
               </div> 
               <div>
-               <span className="text-[14px] font-[500] font-sans">
-                 123 Main Street
+              <span className="text-[14px] font-[500] font-sans">
+                 329-333 High St
                 <br />
-                 Cityville, USA
+                 London E15 2TF, UK
               </span>
               </div>                    
             </div>
@@ -116,12 +116,12 @@ function Footer() {
           </div> 
            </div>
 
-        <div className="w-full">
-          <div className='bg-[#D7D7D7] w-full h-[1px] my-[30px] sm:my-[60px]' />
-          <p className='w-full text-center text-[#000] pb-[0px] text-[16px] font-sans'>
+        <div className="w-full ">
+          <div className='bg-[#D7D7D7] w-full h-[1px] my-[30px] sm:my-[60px] ' />
+          <p className='w-full text-center text-[#000] text-[16px] font-sans pb-[16px]'>
              Copyright © 2024 John Clive Industries Ltd. Registered in England and Wales, UK
           </p>
-          <p className='w-full text-center text-[#000] text-[16px] pb-[0px] font-sans'>All rights reserved Website Developed by Lintech Group</p>
+          <p className='w-full text-center  text-[#000] text-[16px] font-sans pb-[5px]'>All rights reserved Website Developed by Lintech Group</p>
         </div>
       </main>
     </footer>

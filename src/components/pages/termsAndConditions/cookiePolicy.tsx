@@ -89,7 +89,7 @@ const CookiePolicy = () => {
       </div>
 
     {/* Cookies we use  */}
-      <div className='mt-9'>
+      <div className='mt-9 md:block hidden'>
          <h2 className='text-[24px] font-[600] font-serif'>Cookies we use</h2>
          <p className='mt-3 text-[18px] font-sans font-[400]'>We use the following cookies:</p>
 
