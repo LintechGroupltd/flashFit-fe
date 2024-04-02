@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.svg";
-// import customerReviewImg2 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg2.svg";
-// import customerReviewImg3 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg3.svg";
-// import customerReviewImg4 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg4.svg";
+import customerReviewImg1 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg1.webp";
+import customerReviewImg2 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg2.webp";
+import customerReviewImg3 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg3.webp";
+import customerReviewImg4 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg4.webp";
+import customerReviewImg5 from "../../../../public/assets/reuseableComponentImg/customerReview/customerReviewImg5.webp";
 import rightArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewRightWhiteArrow.svg";
 import leftArrow from "../../../../public/assets/reuseableComponentImg/customerReview/ReviewLeftWhiteArrow.svg";
 
@@ -22,7 +23,7 @@ function CustomerReviewCard() {
     },
     {
       id: 2,
-      customerImg: customerReviewImg1,
+      customerImg: customerReviewImg2,
       review: "",
       title:
         " I appreciate the convenience and reliability of FlashFit's services. Their MOT assurance gave me peace of mind, knowing that my vehicle met all regulatory standards.",
@@ -31,20 +32,29 @@ function CustomerReviewCard() {
     },
     {
       id: 3,
-      customerImg: customerReviewImg1,
+      customerImg: customerReviewImg3,
       review: "",
       title:
         "FlashFit not only delivered top-notch tyres but also provided swift installation, freeing up my time to focus on scaling my business.",
-      customerName: "— William Johnson",
+      customerName: "— Racheal Williams",
       designation: "Marketing Manager",
     },
     {
       id: 4,
-      customerImg: customerReviewImg1,
+      customerImg: customerReviewImg4,
       review: "",
       title:
         "FlashFit brake service gives me peace of mind for long commutes and meetings. With Flash Fit, I can focus on business while they handle my car.",
-      customerName: "—Oliver Smith",
+      customerName: "— Oliver Smith",
+      designation: "Accountant",
+    },
+    {
+      id: 5,
+      customerImg: customerReviewImg5,
+      review: "",
+      title:
+        "FlashFit brake service gives me peace of mind for long commutes and meetings. With Flash Fit, I can focus on business while they handle my car.",
+      customerName: "— Anita Barley",
       designation: "Accountant",
     },
   ];
@@ -71,6 +81,9 @@ function CustomerReviewCard() {
         <div className="mt-3  w-full h-full">
           <Image src={currentReview.customerImg} alt="Customer" className="w-full h-full" />
         </div>
+
+
+
 
         {/* right section */}
         <div className="md:mt-0 mt-3 w-full">

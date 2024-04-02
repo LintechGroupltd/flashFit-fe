@@ -5,6 +5,7 @@ interface Solutions {
   id: number;
   tag: string;
   item: string;
+  icon: JSX.Element;
 }
 
 interface ServiceSolutionProps {
@@ -33,13 +34,14 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
               key={idx}
             >
               <div>
-                <SolutionListIcon />
+                {/* icon here */}
+            {item.icon}
               </div>
 
 
 
               <div className="flex flex-col gap-6">
-                <h3 className="font-sans text-lg lg:text-2xl font-bold text-[#0F0F0F]">{item.tag}</h3>
+                <h3 className="font-sefit text-lg lg:text-2xl font-bold text-[#0F0F0F]">{item.tag}</h3>
                 <p className="font-sans font-thin text-[text-[#505050]">{item.item}</p>
               </div>
             </div>
@@ -51,3 +53,6 @@ const ServiceSolution: React.FC<ServiceSolutionProps> = ({
 };
 
 export default ServiceSolution;
+
+
+   {/* <SolutionListIcon /> */}

@@ -10,6 +10,10 @@ import FaqSection from "@/components/reuseable/Faqs/Faqs";
 import BookContact from "@/components/reuseable/BookContact/bookContact";
 import ServiceSolution from "@/components/reuseable/serviceSolution";
 import SearchVehicle from "../home/homeBanner/searchVehicle";
+import TyresIcon1 from "@/components/svg/TyresIcon1";
+import TyresIcon2 from "@/components/svg/TyresIcon2";
+import TyresIcon3 from "@/components/svg/TyresIcon3";
+import TyresIcon4 from "@/components/svg/TyresIcon4";
 
 
 export const benefits = [
@@ -21,21 +25,25 @@ export const benefits = [
 export const solutions = [
   {
     id: 1,
+    icon:<TyresIcon1 />, 
     tag: " New Tyres from Major Brands ",
     item: "Warning lights are indicators on the dashboard of a vehicle that alert the driver of a potential problem or malfunction. They can range from simple reminders, such as low fuel or seat belt not fastened, to critical warnings, such as engine overheating or brake failure.",
   },
   {
     id: 2,
+    icon:<TyresIcon2 />,
     tag: "Budget Tyres",
     item: "We understand that not everyone needs premium tyres, which is why we offer budget-friendly options without compromising on quality. Our budget tyres provide reliable performance and longevity at an affordable price point ",
   },
   {
     id: 3,
+    icon:<TyresIcon3 />,
     tag: "Puncture Repairs",
     item: "Dealing with a flat tyre can be frustrating, but our expert technicians are here to help. We offer prompt and efficient puncture repairs using industry-leading techniques to ensure a lasting solution and get you back on the road safely.",
   },
   {
     id: 4,
+    icon:<TyresIcon4 />,
     tag: "Wheel Balancing",
     item: "Even minor imbalances in your wheels can lead to vibrations and premature tyre wear. Our precision wheel balancing services use advanced equipment to identify and correct any imbalances, resulting in a smoother, more comfortable ride and extended tyre life. ",
   },
