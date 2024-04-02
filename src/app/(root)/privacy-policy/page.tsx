@@ -6,7 +6,9 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <TopBar title="Privacy Policy" />
+      <div className="md:h-[432px] py-7">
+        <TopBar title="Privacy Policy" />
+       </div> 
       <PrivacyAndPolicy />
       <AppFooter />
     </div>

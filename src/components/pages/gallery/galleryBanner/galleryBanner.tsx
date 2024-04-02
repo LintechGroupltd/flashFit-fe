@@ -3,7 +3,7 @@ import React from "react";
 
 function GalleryBanner() {
   return (
-    <div className="md:h-[530px] relative md:py-28 py-20">
+    <div className="md:h-[432px] relative md:py-32 py-20">
       <div className="text-center text-[#fff]" data-aos='fade-right'>
         <h2 className="md:text-[72px] text-[35px] leading-[60px] font-serif font-[600]"> Flash Fit Gallery</h2>
         <p className="text-[18px] font-sans font-[400] md:block hidden mt-10">

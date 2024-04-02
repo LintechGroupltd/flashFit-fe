@@ -6,7 +6,9 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <TopBar title="Terms & Conditions" />
+     <div className="md:h-[432px] py-7">
+       <TopBar title="Cookie Policy" />
+      </div> 
       <TermsAndConditions />
       <AppFooter />
     </div>
