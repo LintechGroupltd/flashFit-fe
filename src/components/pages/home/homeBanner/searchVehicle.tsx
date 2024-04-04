@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import searchVehicleDownArrow from "../../../../../public/assets/home/serachVehicle/searchVehicledownArrow.svg";
+import searchByTyreDownArrow from "../../../../../public/assets/home/serachVehicle/searchByTyreDownArrow.svg";
+
 import Image from "next/image";
 
 const data = [
@@ -127,28 +129,26 @@ function SearchVehicle() {
                 Width
               </label>
               <input
-                className="h-[48px] border border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
+                className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
                 // value={selectedOption}
                 readOnly
                 placeholder="Select Number"
                 // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
-              <div
-                className={`${
-                  isDropdownOpen ? "block" : "hidden"
-                } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
+              {/* <div
+                className={`$ absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
                 {options.map((option) => (
                   <div
-                    // key={option}
+                    key={option}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    // onClick={() => handleOptionSelect(option)}
+                    onClick={() => handleOptionSelect(option)}
                     >
-                    {/* {option} */}
+                    {option}
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-                <Image src={searchVehicleDownArrow} alt="" />
+                <Image src={searchByTyreDownArrow} alt="" />
               </div>
             </div>
   
@@ -158,28 +158,28 @@ function SearchVehicle() {
                  Ratio
               </label>
               <input
-                className="h-[48px] border border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
+                className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
                 // value={selectedOption}
                 placeholder="Select Number"
                 readOnly
                 // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
-              <div
+              {/* <div
                 className={`${
                   isDropdownOpen ? "block" : "hidden"
                 } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
                 {options.map((option) => (
                   <div
-                    // key={option}
+                    key={option}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    // onClick={() => handleOptionSelect(option)}
+                    onClick={() => handleOptionSelect(option)}
                     >
-                    {/* {option} */}
+                    {option}
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-                <Image src={searchVehicleDownArrow} alt="" />
+                <Image src={searchByTyreDownArrow} alt="" />
               </div>
             </div>
 
@@ -189,28 +189,28 @@ function SearchVehicle() {
                 Rim
               </label>
               <input
-                className="h-[48px] border border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
+                className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
                 // value={selectedOption}
                 placeholder="Select Number"
                 readOnly
                 // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
-              <div
+              {/* <div
                 className={`${
                   isDropdownOpen ? "block" : "hidden"
                 } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
                 {options.map((option) => (
                   <div
-                    // key={option}
+                    key={option}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    // onClick={() => handleOptionSelect(option)}
+                    onClick={() => handleOptionSelect(option)}
                     >
-                    {/* {option} */}
+                    {option}
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-                <Image src={searchVehicleDownArrow} alt="" />
+                <Image src={searchByTyreDownArrow} alt="" />
               </div>
             </div>
 
@@ -220,28 +220,28 @@ function SearchVehicle() {
                 Speed
               </label>
               <input
-                className="h-[48px] border border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
+                className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
                 // value={selectedOption}
                 readOnly
                 placeholder="Select Number"
                 // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
-              <div
+              {/* <div
                 className={`${
                   isDropdownOpen ? "block" : "hidden"
                 } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
                 {options.map((option) => (
                   <div
-                    // key={option}
+                    key={option}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    // onClick={() => handleOptionSelect(option)}
+                    onClick={() => handleOptionSelect(option)}
                     >
-                    {/* {option} */}
+                    {option}
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-                <Image src={searchVehicleDownArrow} alt="" />
+                <Image src={searchByTyreDownArrow} alt="" />
               </div>
             </div>
 
@@ -251,7 +251,7 @@ function SearchVehicle() {
                 Postcode
               </label>
               <input
-                className="h-[48px] border border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
+                className="h-[48px] border md:text-[16px] text-[14px] border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
                 placeholder="Enter Code"
               />
             </div>

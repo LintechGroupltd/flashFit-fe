@@ -17,8 +17,8 @@ const ServicePageDesc = ({ title, desc1, desc2 }: props) => {
           </h1>
 
           <div
-            className="font-sans w-full flex flex-col gap-10 text-base sm:text-xl lg:text-2xl text-[#505050]"
-            style={{ fontWeight: "200" }} data-aos='fade-left'>
+            className="font-sans w-full flex flex-col gap-10 text-base sm:text-xl md:text-[24px] font-[500] text-[#505050]"
+            data-aos='fade-left'>
             <p>{desc1}</p>
 
             <p>{desc2}</p>

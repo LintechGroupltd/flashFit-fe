@@ -39,6 +39,7 @@ const ContactUsNav = () => {
     'Tyres',
     'Wheel Alignments',
     'Diagnosis Testing',
+    'Others'
   ];
 
   const handleSelectService = (service: string) => {
@@ -128,7 +129,7 @@ const ContactUsNav = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="cursor-pointer px-4 py-2 hover:bg-gray-100"
+              className="cursor-pointer px-4 py-2 hover:bg-gray-100 font-sans text-[14px] font-[500]" 
               onClick={() => handleSelectService(service)}
             >
               {service}
@@ -167,30 +168,36 @@ const ContactUsNav = () => {
         <div className='md:block hidden'>
           <p className="md:text-[48px] text-[34px] font-[600] font-serif">Get In Touch</p>
           <p className="text-[18px] font-[400] font-sans text-[#505050] py-3">
-           Connect with us: Engage in real-time chat, direct phone support, and visit our location for personalized assistance 
+            Connect with us: Engage in real-time chat, direct phone support, and visit our location for personalized assistance 
          </p>
         </div>
 
         <div className='mt-4'>
            <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Chat to us</h2> 
            <p className='text-[16px] font-[400] font-sans mt-2'>Get instant assistance and support</p>
-           <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>flashfit@example.com</p>
+           <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>flashfit21@gmail.com</p>
         </div>
 
         <div className='mt-4'>
            <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Phone</h2> 
-           <p className='text-[16px] font-[400] font-sans mt-2'>Give us a call on our dedicated phone line from Mon-Fri, 8am to 5-pm</p>
-           <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>+44 20 1234 5678</p>
+           <p className='text-[16px] font-[400] font-sans mt-2'>Give us a call on our phone line from Mon-Sun, 8am to 8pm</p>
+           <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>+01 21 269 4786</p>
+        </div>
+
+        <div className='mt-4'>
+           <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Whatsapp</h2> 
+           <p className='text-[16px] font-[400] font-sans mt-2'>Chat with us on this line</p>
+           <p className='text-[#2A317F] text-[16px] font-[500] font-sans mt-1'>+07527 042810</p>
         </div>
 
         <div className='mt-4'>
            <h2 className='md:text-[20px] text-[18px] font-[600] font-serif '>Office Address</h2> 
-           <p className='text-[16px] font-[400] font-sans mt-2'>Come say hello at our office HQ.</p>
+           <p className='text-[16px] font-[400] font-sans mt-[5px]'>Come say hello at our office HQ.</p>
         </div>
 
-        <div className='mt-5'>
-           <p className='text-[16px] font-[500] font-sans mt-2 text-[#2A317F]'>100 Smith Street</p>
-           <p className='text-[16px] font-[500] font-sans text-[#2A317F]'>Collingwood VIC 3066 AU</p>
+        <div className='mt-2'>
+           <p className='text-[16px] font-[500] font-sans mt-2 text-[#2A317F]'>21 Factory Road,</p>
+           <p className='text-[16px] font-[500] font-sans text-[#2A317F]'>Birmingham, United Kingdom, B18 5JU</p>
         </div>
        
       

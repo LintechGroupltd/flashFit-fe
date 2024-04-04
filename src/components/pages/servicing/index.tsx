@@ -56,11 +56,11 @@ const Servicing = () => {
         </div>
       </div>
 
-      <div className="root_parent_wrapper">
+      {/* <div className="root_parent_wrapper">
         <div className="root_child_wrapper">
            <ServicePricing/>
         </div>
-      </div>
+      </div> */}
   
 
       <div className="root_parent_wrapper mt-24">

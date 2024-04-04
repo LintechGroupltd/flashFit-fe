@@ -31,15 +31,15 @@ function Footer() {
               // className={styles.logo}
             />
           </Link>
-{/* 
+
           <h4 className='text-[#000] font-serif font-[600] text-[20px] pt-[25px] md:pt-[38px] pb-[15px]'>Find Us On Social Media</h4>
           <div className='flex gap-[15px] items-center'>
             {socialLinks.map((socail, idx) => (
               <Link href={socail.url} key={idx}>
-                <Image src={socail.img} alt={socail.label} className="w-9 h-9" />
+                <Image src={socail.img} alt={socail.label} className="w-[40px] h-[40px]" />
               </Link>
             ))}
-          </div> */}
+          </div>
 
 
         </div>
@@ -69,7 +69,7 @@ function Footer() {
         })}
 
            <div>
-             <h4 className="text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px]"> Our Info</h4>   
+             <h4 className="text-[#000] font-[600] mt-3 text-[21px] font-serif pb-[6px] sm:pb-[15px]"> Our Info</h4>   
              <div className=''> 
  
           {/* telephone */}
@@ -79,9 +79,9 @@ function Footer() {
               </div> 
               <div>
                <span className="text-[14px] font-[500] font-sans">
-                 0121 272 9229 
+                  0121 269 4786
                 <br />
-                (Fri-Sat)
+                 (Mon-Sun, 8am - 8pm)
               </span>
               </div>                    
             </div>
@@ -93,7 +93,7 @@ function Footer() {
               </div>
               <div>
                <span className="text-[14px] font-[500] font-sans">
-                 +447301253447
+                 +07527 042810
                </span>
               </div> 
             </div>
@@ -105,9 +105,8 @@ function Footer() {
               </div> 
               <div>
               <span className="text-[14px] font-[500] font-sans">
-                 329-333 High St
-                <br />
-                 London E15 2TF, UK
+                 21 Factory Road,<br/>
+                 Birmingham     
               </span>
               </div>                    
             </div>
@@ -118,10 +117,10 @@ function Footer() {
 
         <div className="w-full ">
           <div className='bg-[#D7D7D7] w-full h-[1px] my-[30px] sm:my-[60px] ' />
-          <p className='w-full text-center text-[#000] text-[16px] font-sans pb-[16px]'>
-             Copyright © 2024 John Clive Industries Ltd. Registered in England and Wales, UK
+          <p className='w-full text-center text-[#000] text-[16px] font-sans pb-[4px]'>
+              © 2024 FlashFit. All rights reserved.
           </p>
-          <p className='w-full text-center  text-[#000] text-[16px] font-sans pb-[5px]'>All rights reserved Website Developed by Lintech Group</p>
+          <p className='w-full text-center  text-[#000] text-[16px] font-sans  pb-[25px]'>Website Developed by Lintech Group</p>
         </div>
       </main>
     </footer>

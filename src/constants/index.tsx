@@ -14,16 +14,16 @@ export const socialLinks = [
       url: "#",
       img: whatsAppIcon,
     },
-    {
-      label: "TIKTOK",
-      url: "#",
-      img: tiktokIcon,
-    },
-    {
-      label: "INSTAGRAM",
-      url: "#",
-      img: instagramIcon,
-    },
+    // {
+    //   label: "TIKTOK",
+    //   url: "#",
+    //   img: tiktokIcon,
+    // },
+    // {
+    //   label: "INSTAGRAM",
+    //   url: "#",
+    //   img: instagramIcon,
+    // },
     {
       label: "FACEBOOK",
       url: "#",

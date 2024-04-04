@@ -59,7 +59,7 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
             />
           </div>
 
-          <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
+          {/* <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
             <input
               className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
               type="text"
@@ -79,7 +79,7 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
                 <CalendarIcon />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div>
             <textarea
