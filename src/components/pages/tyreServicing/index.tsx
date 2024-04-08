@@ -53,20 +53,23 @@ const TyreServicing = () => {
   return (
     <div className="font-serif relative">
 
-     <div className="md:bg-[#fff] h-[510px] bg-[#2A317F]">
+     <div className="md:bg-[#fff] h-[510px] bg-[#2A317F] ">
+    
       <ServicesTopSection
         title="Tyres"
         subTitle="Drive confidently with Flash Fit's tire services. From inspections to repairs, we ensure optimal tire condition for safety and performance. "
         showSearchVehicle={true}
       />
+    
+      
       <div className="root_parent_wrapper ">
-        <div className="root_child_wrapper md:mt-0 mt-44 md:translate-y-[-0%] translate-y-[-35%]">
+        <div className="root_child_wrapper md:mt-0 mt-48 md:translate-y-[15%] translate-y-[-25%]">
           <SearchVehicle />
         </div>
       </div>
       </div> 
      
-     <div className="md:mt-[130px]  mt-[275px]">
+     <div className="md:mt-[130px]  mt-[350px]">
      <ServicePageDesc
         title="FlashFit's Tyre Care"
         desc1="At FlashFit, we understand the pivotal role tyres play in your driving experience. That's why we offer comprehensive tyre care services designed to keep you rolling smoothly and safely on the road. From tyre inspections to puncture repairs and replacements, our expert technicians ensure your tyres are in optimal condition for enhanced grip, stability, and fuel efficiency."

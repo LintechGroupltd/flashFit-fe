@@ -40,7 +40,7 @@ export const quickLinks = [
           link: "/services/mot-testing",
         },
         {
-          title: "Servicing",
+          title: "service",
           link: "/services/servicing",
         },
         {
@@ -66,10 +66,5 @@ export const quickLinks = [
       ],
     },
   
-    // {
-    //   id:3,   
-    //   title: "Our Info",
-     
-    // },
   ];
   

@@ -27,7 +27,7 @@ function HOME() {
 
       <div className="root_parent_wrapper ">
         <div className="root_child_wrapper">
-          <div className="">
+          <div className="md:mt-0 mt-5">
             <SearchVehicle />
           </div>
 

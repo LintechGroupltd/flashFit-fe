@@ -5,13 +5,13 @@ import bookContactBg from "../../../../public/assets/reuseableComponentImg/bookC
 const BookContact = () => {
   return (
     <div
-      className="mt-20 bg-[#2A317F] md:rounded-[30px]"
+      className="md:mt-20 bg-[#2A317F] md:rounded-[30px]"
       style={{
         backgroundImage: `url(${bookContactBg.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}>
-      <div className="text-center mt-28 py-24">
+      <div className="text-center md:mt-28 py-24">
         <h1 className="md:text-[48px] text-[32px] font-serif font-[600] text-[#fff] leading-[50px]">
           Get Your Vehicle
           <br /> Running Smoothly Today

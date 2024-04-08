@@ -196,7 +196,7 @@ const CookiePolicy = () => {
             <div className='w-1 h-1 rounded-full bg-[#000]'></div> 
          </div>
          <div>
-            <Link href='' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Internet Explorer</u></Link>
+            <Link href='https://support.microsoft.com/en-us/windows' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Internet Explorer</u></Link>
          </div>
         </div>
       
@@ -205,7 +205,7 @@ const CookiePolicy = () => {
             <div className='w-1 h-1 rounded-full bg-[#000]'></div> 
          </div>
          <div>
-            <Link href='' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Google Chrome</u></Link>
+            <Link href='https://support.google.com/chrome/answer/95647?hl=en-GB&p=cpn_cookies' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Google Chrome</u></Link>
          </div>
         </div>
         <div className='flex gap-2'>
@@ -213,7 +213,7 @@ const CookiePolicy = () => {
             <div className='w-1 h-1 rounded-full bg-[#000]'></div> 
          </div>
          <div>
-            <Link href='' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Mozilla Firefox</u></Link>
+            <Link href='https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox?redirectslug=Blocking+cookies&redirectlocale=en-US' className='mt-2 text-[18px] font-sans font-[400] text-[#2A317F]'><u>Mozilla Firefox</u></Link>
          </div>
         </div>
        </div> 

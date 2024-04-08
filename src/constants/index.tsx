@@ -11,7 +11,7 @@ import serviceDropdownOptionLogo from "../../public/assets/navabar/serviceDropdo
 export const socialLinks = [
     {
       label: "WHATSAPP",
-      url: "#",
+      url: "https://wa.me/+447527042810",
       img: whatsAppIcon,
     },
     // {
@@ -26,7 +26,7 @@ export const socialLinks = [
     // },
     {
       label: "FACEBOOK",
-      url: "#",
+      url: "https://www.facebook.com/profile.php?id=61557124996777",
       img: facebookIcon,
     },
    

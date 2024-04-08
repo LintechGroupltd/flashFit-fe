@@ -21,7 +21,7 @@ function Footer() {
         <div className="root_child_wrapper">
       
     <footer className='w-full py-[50px] sm:py-[80px] lg:pt-[110px] rounded-b-[20px];' style={{backgroundColor:'#F5F5F7'}}>
-      <main className=' w-full mx-auto flex flex-wrap items-start justify-between  gap-[24px];'>
+      <main className=' w-full mx-auto md:flex flex-wrap items-start justify-between  gap-[24px];'>
         <div>
           <Link href={"/"}>
             <Image
@@ -44,7 +44,7 @@ function Footer() {
 
         </div>
 
-        {quickLinks.map((item, i) => {
+        {/* {quickLinks.map((item, i) => {
           return (
             <div className='flex flex-col mt-3 items-start justify-start mb-[10px] gap-[10px] xs:gap-[16px] md:gap-[24px]' key={`${i}`}>
               <h4 className='text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px]'>
@@ -66,7 +66,48 @@ function Footer() {
            
             </div>
           );
-        })}
+        })} */}
+
+<>
+      {quickLinks.map((item, i) => (
+        <div className='flex flex-col md:mt-3 mt-6 items-start justify-start mb-[10px] gap-[10px] xs:gap-[16px] md:gap-[24px]' key={`${i}`}>
+          {/* Conditionally render Services section and its data based on screen size */}
+          {item.id === 2 && (
+            <h4 className='text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px] md:block hidden'>
+              {item.title}
+            </h4>
+          )}
+
+          {item.id === 2 && (
+            <div className="md:block">
+              {item.children.map((child, index) => (
+                <Link href={child.link} key={index}>
+                  <span className="font-sans text-[14px] font-[500] text-[#505050] hover:text-[#E08800] md:block hidden py-2">
+                    {child.title}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {/* Render other sections */}
+          {item.id !== 2 && (
+            <>
+              <h4 className='text-[#000] font-[600] text-[21px] font-serif pb-[6px] sm:pb-[15px]'>
+                {item.title}
+              </h4>
+              {item?.children?.map((child, index) => (
+                <Link href={child.link} key={index}>
+                  <span className="font-sans text-[14px] font-[500] text-[#505050] hover:text-[#E08800] ">
+                    {child.title}
+                  </span>
+                </Link>
+              ))}
+            </>
+          )}
+        </div>
+      ))}
+    </>
 
            <div>
              <h4 className="text-[#000] font-[600] mt-3 text-[21px] font-serif pb-[6px] sm:pb-[15px]"> Our Info</h4>   
@@ -117,10 +158,10 @@ function Footer() {
 
         <div className="w-full ">
           <div className='bg-[#D7D7D7] w-full h-[1px] my-[30px] sm:my-[60px] ' />
-          <p className='w-full text-center text-[#000] text-[16px] font-sans pb-[4px]'>
+          <p className='w-full text-center text-[#000] text-[16px] font-sans md:pb-[4px] pb-[4px]'>
               © 2024 FlashFit. All rights reserved.
           </p>
-          <p className='w-full text-center  text-[#000] text-[16px] font-sans  pb-[25px]'>Website Developed by Lintech Group</p>
+          <p className='w-full text-center  text-[#000] text-[16px] font-sans md:pb-[25px] pb-[30px]'>Website Developed by Lintech Group</p>
         </div>
       </main>
     </footer>
