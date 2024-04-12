@@ -8,7 +8,9 @@ import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import img1 from "../../../../public/assets/services/images/dgImg1.webp";
 import img2 from "../../../../public/assets/services/images/dgImg2.webp";
-import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.png";
+import DiagnosticsMobileImg from "../../../../public/assets/services/AllServiceMobileImg/DiagnosticsMobileImg.webp";
+
+
 // import dgIcon1 from ""
 import React from "react";
 import ServiceSolution from "@/components/reuseable/serviceSolution";
@@ -57,19 +59,34 @@ export const solutions = [
 const DiagnosisTesting = () => {
   return (
     <div className="font-serif relative">
+
+     {/* for desktop   */}
+     <div className="md:block hidden">
       <ServicesTopSection
         title="Diagnostics Testing"
         subTitle="Detect and address issues early with our advanced diagnostic tools and experienced technicians, ensuring your vehicle stays in top condition. "
         heroImg={"/assets/services/images/dgHeroImg.webp"}
       />
+     </div>   
 
+    {/* for Mobile   */}
+      <div className="md:hidden block bg-[#2A317F] h-[445px]">
+      <ServicesTopSection
+        title="Diagnostics Testing"
+        subTitle="Detect and address issues early with our advanced diagnostic tools and experienced technicians, ensuring your vehicle stays in top condition. "
+        heroImg={DiagnosticsMobileImg}
+      />
+     </div> 
+
+
+    <div className="md:mt-0 mt-56">
       <ServicePageDesc
         title="FlashFit's Diagnostic Expertise"
         desc1="At FlashFit, our diagnostic testing goes beyond the surface, delving deep into your vehicle's systems to uncover any issues and provide accurate solutions. Using state-of-the-art equipment and advanced techniques, our skilled technicians meticulously analyze your car's performance, identifying potential problems before they escalate."
 
         desc2="When you entrust your vehicle to FlashFit for diagnostic services, you're gaining access to a team dedicated to uncovering the root cause of any issues. Our commitment to excellence means you can trust us to provide accurate diagnoses and reliable solutions, keeping you informed every step of the way. "
       />
-
+    </div>
       
 
       <ServiceSolution

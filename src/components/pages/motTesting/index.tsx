@@ -6,6 +6,8 @@ import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import heroImg from "../../../../public/assets/services/images/motHeroImg.webp";
+import heroMobileImg from "../../../../public/assets/services/AllServiceMobileImg/MotMobileImg.webp";
+
 import img1 from "../../../../public/assets/services/images/motImg1.webp";
 import img2 from "../../../../public/assets/services/images/motImg2.webp";
 import React from "react";
@@ -20,13 +22,27 @@ export const benefits = [
 const MotTesting = () => {
   return (
     <div className="font-serif relative">
+
+    {/* for desktop   */}
+     <div className="md:block hidden">
       <ServicesTopSection
         title="MOT Testing"
         subTitle="Ensure Roadworthy Performance with Our Comprehensive MOT Assurance Service"
         heroImg={heroImg}
       />
-
-      <ServicePageDesc
+      </div> 
+      
+    {/* for mobile */}
+      <div className="md:hidden block bg-[#2A317F] h-[445px]">
+      <ServicesTopSection
+        title="MOT Testing"
+        subTitle="Ensure Roadworthy Performance with Our Comprehensive MOT Assurance Service"
+        heroImg={heroMobileImg}
+      />
+      </div>  
+   
+   <div className="md:mt-0 mt-52">
+    <ServicePageDesc
         title=" Road-Ready MOT Testing at FlashFit"
         desc1="At Flash Fit, we prioritize your safety on the road. Our MOT
                 testing services are designed to ensure your vehicle meets
@@ -44,6 +60,9 @@ const MotTesting = () => {
         with confidence knowing your vehicle is in expert hands at Flash
         Fit."
       />
+
+   </div>
+      
 
       <ServiceBenefits
         img1={img1}

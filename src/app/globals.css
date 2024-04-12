@@ -43,3 +43,16 @@ MenuList{
   transform-origin: center top;
   transform: scale(1);
 }
+
+
+.slick-slide>div {
+  margin: 0 30px;
+}
+
+.slick-slide>div:nth-child(1) {
+  margin-left: 0;
+}
+
+.slick-list {
+   margin-right: -30px;
+}

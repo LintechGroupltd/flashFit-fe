@@ -92,7 +92,7 @@ const ContactForm = ({ handleStepChange }: StepProps) => {
 
           <div className="w-full">
             <div
-              className="lg:float-right bg-[#F8AD39] flex justify-center rounded-md  py-1 sm:py-3 px-6"
+              className="lg:float-right bg-[#F8AD39] flex justify-center rounded-md  py-2 md:py-3 px-6"
               onClick={() => {
                 handleStepChange(2);
               }}

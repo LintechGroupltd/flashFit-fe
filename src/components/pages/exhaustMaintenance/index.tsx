@@ -9,6 +9,8 @@ import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import img1 from "../../../../public/assets/services/images/exImg1.webp";
 import img2 from "../../../../public/assets/services/images/exImg2.webp"
 import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.webp";
+import ExhaustMobileImg from "../../../../public/assets/services/AllServiceMobileImg/ExhaustMobileImg.webp";
+
 import React from "react";
 
 export const benefits = [
@@ -21,20 +23,32 @@ export const benefits = [
 const ExhaustMaintenance = () => {
   return (
     <div className="font-serif relative">
+
+     {/* for desktop   */}
+     <div className="md:block hidden"> 
       <ServicesTopSection
         title="Exhaust Maintenance"
         subTitle="Ensure optimal engine performance and emissions control with our exhaust system inspections and repairs."
         heroImg={heroImg}
       />
+     </div>   
 
+     {/* for mobile */}
+     <div className="md:hidden block bg-[#2A317F] h-[500px]">
+      <ServicesTopSection
+        title="Exhaust Maintenance"
+        subTitle="Ensure optimal engine performance and emissions control with our exhaust system inspections and repairs."
+        heroImg={ExhaustMobileImg}
+      />
+     </div>  
 
-
+    <div className="md:mt-0 mt-56">
       <ServicePageDesc
         title="FlashFit's Exhaust Maintenance"
         desc1="At FlashFit, we recognize the importance of a well-maintained exhaust system for both your vehicle's performance and environmental impact. Our exhaust maintenance service is designed to ensure efficient emissions control and promote cleaner air for everyone. With skilled technicians and state-of-the-art equipment, we meticulously inspect and repair your exhaust system to keep it functioning optimally."
         desc2="Our thorough inspections and expert repairs ensure that your vehicle meets emissions standards and operates efficiently. Drive with confidence knowing that your exhaust system is in the best hands with FlashFit. Experience the difference in air quality and vehicle performance with our exhaust maintenance service today."
       />
-
+    </div>
 
       <ServiceBenefits
         img1={img1}

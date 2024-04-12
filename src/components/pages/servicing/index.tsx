@@ -12,6 +12,8 @@ import heroImg from "../../../../public/assets/services/images/exhaustHeroImg.pn
 import React from "react";
 import ServicePricing from "@/components/reuseable/servicePricing/servicePricing";
 
+import ServiceMobileImg from '../../../../public/assets/services/AllServiceMobileImg/ServiceMobileImg.webp'
+
 
 export const benefits = [
   { id: 1, item: "Extends vehicle's lifespan" },
@@ -25,17 +27,32 @@ export const benefits = [
 const Servicing = () => {
   return (
     <div className="font-serif relative">
-      <ServicesTopSection
+
+   {/* for desktop */}
+    <div className="md:block hidden"> 
+     <ServicesTopSection
         title="Service"
         subTitle="Maintain peak performance and reliability with our comprehensive servicing packages tailored to your vehicle's needs."
         heroImg={"/assets/services/images/servicingHeroImg.webp"}
       />
+    </div>  
 
+   {/* For mobile  */}
+    <div className="md:hidden block bg-[#2A317F] h-[445px]">
+     <ServicesTopSection
+        title="Service"
+        subTitle="Maintain peak performance and reliability with our comprehensive servicing packages tailored to your vehicle's needs."
+        heroImg={ServiceMobileImg}
+      />
+    </div>  
+  
+    <div className="md:mt-0 mt-56">
       <ServicePageDesc
         title="Extensive Servicing at Flash Fit"
         desc1="At Flash Fit, we service all makes and models with cutting-edge equipment. Our focus on quality extends to competitive pricing. Regular servicing is essential for safety and reliability. Trust Flash Fit for comprehensive maintenance that keeps your car in top condition. Regular servicing is not just a recommendation; it's a necessity to avoid mechanical problems and ensure your vehicle's safety on the road."
         desc2="At Flash Fit, we prioritize transparency and customer satisfaction. We always seek authorization before beginning any additional work during your car service, and our team is available to assist with all inquiries, estimates, and advice for your vehicle repair needs."
       />
+    </div>
 
       <ServiceBenefits
         img1={img1}

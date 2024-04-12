@@ -41,7 +41,7 @@ export const navListMenuItems = [
     icon: wheesLogo,
     mobile_icon:Wheels__Mobile_logo,
     title: "Wheels Alignments",
-    description: "Grip Enhanced, Stability Guaranteed",
+    description: "Precision Aligned for Optimal Performance",
     url: "/services/wheels-alignments",
   },
   {

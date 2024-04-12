@@ -6,6 +6,8 @@ import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import heroImg from "../../../../public/assets/services/images/wheelsHeroImg.webp";
+import wheelMobileImg from "../../../../public/assets/services/AllServiceMobileImg/wheelMobileImg.webp";
+
 import img1 from "../../../../public/assets/services/images/wheelsImg1.webp";
 import img2 from "../../../../public/assets/services/images/wheelsImg2.webp";
 
@@ -22,17 +24,32 @@ export const benefits = [
 const WheelsAlignments = () => {
   return (
     <div className="relative">
+
+    {/* for desktop   */}
+     <div className="md:block hidden"> 
       <ServicesTopSection
         title="Wheels Alignments"
         subTitle="Enhance stability and tire longevity with precision wheel alignment services for smoother handling and improved fuel efficiency."
         heroImg={heroImg}
       />
+    </div>  
+    {/* for Mobile   */}
+    <div className="md:hidden block bg-[#2A317F] h-[445px]"> 
+      <ServicesTopSection
+        title="Wheels Alignments"
+        subTitle="Enhance stability and tire longevity with precision wheel alignment services for smoother handling and improved fuel efficiency."
+        heroImg={wheelMobileImg}
+      />
+    </div>  
 
+
+    <div className="md:mt-0 mt-56">
       <ServicePageDesc
         title="Overview"
         desc1="At Flash Fit, we understand the importance of proper wheel alignment in ensuring a smooth and safe driving experience. Our wheel alignment services go beyond just straightening your wheels – we meticulously adjust your vehicle's suspension angles to manufacturer specifications, ensuring optimal handling, stability, and tire wear.   "
         desc2="With state-of-the-art equipment and expert technicians, we guarantee precise alignment that enhances performance and extends the lifespan of your tires. Trust Flash Fit to align your wheels with precision, providing you with a smoother, more efficient drive every time you hit the road. Schedule your alignment service today and experience the difference at Flash Fit.  "
       />
+    </div>  
 
       <ServiceBenefits
         img1={img1}

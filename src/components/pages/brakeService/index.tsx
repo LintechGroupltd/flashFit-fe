@@ -6,6 +6,8 @@ import ServiceBenefits from "@/components/reuseable/serviceBenefits";
 import ServicePageDesc from "@/components/reuseable/servicePageDescription";
 import ServicesTopSection from "@/components/reuseable/servicesTopSection";
 import heroImg from "../../../../public/assets/services/images/brakeHeroImg.webp";
+import BrakeMobileImg from "../../../../public/assets/services/AllServiceMobileImg/BrakeMobileImg.webp";
+
 import img1 from "../../../../public/assets/services/images/brakeImg1.webp";
 import img2 from "../../../../public/assets/services/images/brakeImg2.webp";
 
@@ -21,19 +23,32 @@ export const benefits = [
 const BrakeService = () => {
   return (
     <div className="font-serif relative">
+
+     {/* for desktop   */}
+     <div className="md:block hidden"> 
       <ServicesTopSection
         title="Brake Service"
         subTitle="Keep your vehicle safe and responsive with our expert brake inspections and repairs."
         heroImg={heroImg}
       />
+     </div>
 
+   {/* for Mobile   */}
+     <div className="md:hidden block bg-[#2A317F] h-[445px]"> 
+      <ServicesTopSection
+        title="Brake Service"
+        subTitle="Keep your vehicle safe and responsive with our expert brake inspections and repairs."
+        heroImg={BrakeMobileImg}
+      />
+     </div>
       
-
+    <div className="md:mt-0 mt-56">
       <ServicePageDesc
         title="Brake Safety with Flash Fit"
         desc1="Your safety on the road is paramount, and at FlashFit, we prioritize it with our meticulous brake service. Equipped with cutting-edge diagnostic tools and expertise, our skilled technicians thoroughly inspect every aspect of your braking system. From brake pad checks to rotor resurfacing and fluid flushes, we leave no detail overlooked in ensuring optimal brake performance."
         desc2="When you choose Flash Fit for brake service, you're choosing peace of mind. Our commitment to excellence means you can trust us to deliver reliable, efficient care for your vehicle's brakes. Whether you're navigating city streets or embarking on a long journey, our brake mastery ensures you can stop safely whenever needed. Experience the FlashFit difference in braking performance today."
       />
+    </div>  
 
 
 
