@@ -12,7 +12,10 @@ const NextArrow = ({ onClick }: NextArrowProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="absolute right-[16px] -top-[85px]" onClick={onClick}>
+   <div>
+
+  {/* for desktop */}
+    <div className="absolute md:block hidden right-[16px] -top-[85px] " onClick={onClick}>
       <div
         className="cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
@@ -25,6 +28,24 @@ const NextArrow = ({ onClick }: NextArrowProps) => {
         )}
       </div>
     </div>
+
+    {/* For mobile */}
+     <div className="absolute md:hidden block right-[111px] top-[106%]" onClick={onClick}>
+      <div
+        className="cursor-pointer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {isHovered ? (
+          <Image src={rightHoverWhiteArrow} alt="rightHoverWhiteArrow" className='md:w-full md:h-full w-11/12 h-11/12'/>
+        ) : (
+          <Image src={rightBlueArrow} alt="rightBlueArrow" className='md:w-full md:h-full w-11/12 h-11/12'/>
+        )}
+      </div>
+    </div>
+
+
+   </div> 
   );
 };
 

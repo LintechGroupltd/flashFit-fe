@@ -2,15 +2,17 @@ import Button from "@/components/reuseable/button/Button";
 import Link from "next/link";
 import React from "react";
 
+
+
 const ContactSuccessMessage = () => {
   return (
     <div className="w-full h-full font-serif flex flex-col gap-10 items-center justify-center" data-aos='fade-up'>
       <h1 className="text-3xl md:text-6xl max-w-2xl text-center">Your booking has been received!</h1>
 
 
-      <div className="cursor-pointer">
+      <div className="cursor-pointer text-[16px] font-inter font-semibold ">
         <Link href={"/"}>
-          <Button textColor="#fff" bgColor="#F8AD39" title="Done" btnPadding="12px 24px 12px 24px"  />
+          <Button textColor="#fff" bgColor="#F8AD39" title="Done" btnPadding="12px 50px 12px 50px"  />
         </Link>
       </div>
     </div>
@@ -18,3 +20,4 @@ const ContactSuccessMessage = () => {
 };
 
 export default ContactSuccessMessage;
+

@@ -20,7 +20,7 @@ function OurAchievement() {
 
 
 
-<div className="w-full h-auto flex flex-col gap-10 md:mt-36 ">
+<div className="w-full h-auto flex flex-col gap-10 md:mt-36 mt-14 ">
   <div className="flex flex-col md:flex-row gap-10 w-full h-full md:max-h-[285px]">
 
 

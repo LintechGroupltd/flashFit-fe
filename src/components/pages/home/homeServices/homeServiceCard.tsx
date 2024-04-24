@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+
 interface ServiceData {
   id: number;
   title: string;
@@ -17,9 +18,9 @@ const HomeServiceCard: React.FC<{ serviceData: ServiceData }> = ({
   const { id, title, description, logo, url, learMoreUpperArrow } = serviceData;
 
   return (
-    <div className="w-full bg-[#2A317F] rounded-[8px] p-[28px] ml-2">
+    <div className="w-full bg-[#2A317F] rounded-[8px] p-[28px] ml-2 ">
       <div>
-        <h2 className="text-[24px] font-[600] font-serif text-center text-[#fff] uppercase">
+        <h2 className="md:text-[24px] text-[22px] font-[600] font-serif text-center text-[#fff] uppercase">
           {title}
         </h2>
       </div>
@@ -36,20 +37,21 @@ const HomeServiceCard: React.FC<{ serviceData: ServiceData }> = ({
         </div>
 
         <div className="mt-5">
-          <p className="text-[13px] font-[400] font-sans text-[#fff] text-center">
+          <p className="md:text-[13px] text-[12px] font-[400] font-sans text-[#fff] text-center">
             {description}
           </p>
         </div>
 
-        <Link href={url}>
+        <Link href={url} >
           <div className="flex justify-center border border-[#F8AD39] gap-3 bg-[#2A317F] hover:bg-[#F8AD39] mt-6 py-3 rounded-[8px]">
-            <p className="text-[#fff] text-[16px] font-[600] font-sans">
+            <p className="text-[#fff] md:text-[16px] text-[15px] font-[600] font-sans">
               Learn More
             </p>
             <div>
               <Image src={learMoreUpperArrow} alt="learMoreUpperArrow" />
             </div>
           </div>
+     
         </Link>
       </div>
     </div>
@@ -57,3 +59,8 @@ const HomeServiceCard: React.FC<{ serviceData: ServiceData }> = ({
 };
 
 export default HomeServiceCard;
+
+
+
+
+

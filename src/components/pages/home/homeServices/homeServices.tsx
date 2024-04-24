@@ -144,7 +144,7 @@ const HomeServices = () => {
           <br /> of services
         </h2>
       </div>
-      <Slider {...settings} className="md:mt-10 mt-28">
+      <Slider {...settings} className="md:mt-10 mt-5 z-0">
         {homeServiceData.map((serviceData, index) => (
           <HomeServiceCard key={index} serviceData={serviceData} />
         ))}

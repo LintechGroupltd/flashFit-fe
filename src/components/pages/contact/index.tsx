@@ -1,14 +1,16 @@
 "use client";
 import React, { useState } from "react";
-import FlashLogo from "@/components/svg/FlashLogo";
-import CloseNavIcon from "@/components/svg/CloseNavIcon";
-import RoundedBackBtn from "@/components/svg/RoundedBackBtn";
-import ContactServiceType from "./contactServiceType";
-import ContactForm from "./contactForm";
-import ContactSuccessMessage from "./contactSuccessMessage";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import RoundedBackBtn from "@/components/svg/RoundedBackBtn";
+import CloseNavIcon from "@/components/svg/CloseNavIcon";
+import ContactServiceType from "./contactServiceType";
+import ContactSuccessMessage from "./contactSuccessMessage";
+import ContactForm from "./contactForm";
+import FlashLogo from "@/components/svg/FlashLogo";
 import FlashMobileLogo from "@/components/svg/FlashMobileLogo";
+
+ 
 
 const ContactPage = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -23,7 +25,6 @@ const ContactPage = () => {
   };
 
   const totalSteps = 2;
-  // const progressWidth = (activeStep / (totalSteps - 1)) * 100;
   const progressWidth = activeStep === 0 ? 50 : 100;
 
   const handleBack = () => {
@@ -38,8 +39,8 @@ const ContactPage = () => {
 
   return (
     <div
-      className="font-serif relative w-full h-screen flex flex-col  gap-3 px-4 sm:px-6 md:px-12 lg:px-28 py-6 sm:py-10 text-white oveflow-y-hidden"
-      style={{ backgroundColor: "#2A317F" }}
+      className="font-serif relative w-full h-screen flex flex-col  gap-3 px-4 sm:px-6 md:px-12 lg:px-28 py-6 sm:py-10 text-white overflow-y-hidden"
+      style={{ backgroundColor: "#2D4392" }}
     >
       <div className="contactNav w-full flex items-center justify-between">
         <div>
@@ -47,11 +48,12 @@ const ContactPage = () => {
             <div className=" " data-aos="fade-right">
               <Link href={"/"}>
                 <div className="hidden md:block">
-                <FlashLogo />
+                 <FlashLogo />
+                
                 </div>
 
-                <div className="md:hidden">
-                <FlashMobileLogo />
+                <div className="md:hidden block ml-2">
+                   <FlashMobileLogo/>
                 </div>
               </Link>
             </div>
@@ -129,7 +131,7 @@ const ContactPage = () => {
       {activeStep > 0 && activeStep !== totalSteps - 1 && (
         <div className="absolute bottom-4" data-aos="fade-right">
           {" "}
-          <FlashLogo />{" "}
+          {/* <FlashLogo />{" "} */}
         </div>
       )}
 
@@ -142,7 +144,10 @@ const ContactPage = () => {
             />
           )}
           {activeStep === 1 && (
-            <ContactForm handleStepChange={handleStepChange} />
+            <ContactForm 
+             handleStepChange={handleStepChange}
+             selectedOptions={{ value: selectedOptions[0] }} // Pass selectedOptions to ContactForm
+            />
           )}
           {activeStep === 2 && <ContactSuccessMessage />}
         </>
@@ -157,7 +162,7 @@ const ContactPage = () => {
       {activeStep !== 2 && (
         <div className="w-full flex items-center">
           <div className="progress-bar w-full flex items-center  justify-center">
-            <div className="progress-step w-full md:w-2/5  h-2 bg-gray-300 sm:w-[100%]] rounded-md">
+            <div className="progress-step w-full md:w-2/5  h-2 bg-gray-300 sm:w-[100%] rounded-md">
               <div
                 className="active h-full rounded-md"
                 style={{

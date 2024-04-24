@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import searchVehicleDownArrow from "../../../../../public/assets/home/serachVehicle/searchVehicledownArrow.svg";
 import Image from "next/image";
+import axios from "axios";
 
 const data = [
   { id: "1", title: "Search by Vehicle" },
@@ -15,6 +16,32 @@ function SearchVehicle() {
   const [searchType, setSearchType] = useState(data[0]?.id);
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+
+  const [vehicleRegNumber, setVehicleRegNumber] = useState('');
+  const [postcode, setPostcode] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+
+  const handleSearch = async () => {
+    try {
+      // Make a request to the VES API
+      const response = await axios.get('https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles', {
+        params: {
+          vehicleRegNumber,
+          postcode,
+        },
+        // Add headers if necessary
+      });
+      // Set search result state
+      setSearchResult(response.data);
+    } catch (error) {
+      console.error('Error searching:', error);
+    }
+  };
+
+
+
+
 
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
@@ -56,7 +83,7 @@ function SearchVehicle() {
       </div>
 
      {/* Search by Vehicle section */}
-      <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
+      {/* <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
         <div className="flex flex-col flex-1 gap-[5px] relative">
           <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
             What are you looking for?
@@ -116,7 +143,70 @@ function SearchVehicle() {
             Search
           </button>
         </div>
+      </div> */}
+
+
+<div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
+      {/* Vehicle search */}
+      <div className="flex flex-col flex-1 gap-[5px] relative">
+        <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
+          Vehicle Registration
+        </label>
+        <input
+          className="h-[48px] font-sans text-[16px] border border-grey-500 rounded-[8px] pl-14 focus:outline-none"
+          placeholder="Enter Number"
+          value={vehicleRegNumber}
+          onChange={(e) => setVehicleRegNumber(e.target.value)}
+        />
+        <div className="bg-[#2A317F] w-[40px] absolute top-[32px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
+          <h2 className="text-[#fff] text-[16px] font-[500] text-center font-sans">UK</h2>
+        </div>
       </div>
+
+      {/* Postcode search */}
+      <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
+        <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
+          Postcode
+        </label>
+        <input
+          className="h-[48px] border border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
+          placeholder="Enter Code"
+          value={postcode}
+          onChange={(e) => setPostcode(e.target.value)}
+        />
+      </div>
+
+      {/* Search button */}
+      <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
+        <button
+          className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans"
+          onClick={handleSearch}
+        >
+          Search
+        </button>
+      </div>
+
+      {/* Modal to display search results */}
+      {searchResult && (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50">
+          <div className="bg-white p-4 rounded-md">
+            {/* Render search results here */}
+            {/* For example: */}
+            <pre>{JSON.stringify(searchResult, null, 2)}</pre>
+            <button
+              className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans"
+              onClick={() => setSearchResult(null)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+
+
+
+
 
      {/* search by Tyre section */}
      <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">

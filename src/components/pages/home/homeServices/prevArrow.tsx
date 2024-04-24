@@ -11,7 +11,9 @@ const PrevArrow = ({ onClick }: PrevArrowProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="absolute md:right-[99px] right-[80px] -top-[85px]" onClick={onClick}>
+   <div>
+
+    <div className="absolute  md:block hidden  md:right-[99px] right-[80px] -top-[85px]" onClick={onClick}>
        <div
         className="cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
@@ -24,6 +26,24 @@ const PrevArrow = ({ onClick }: PrevArrowProps) => {
         )}
       </div>
     </div>
+
+     
+     <div className="absolute  md:hidden block md:right-[99px] right-[188px]  bottom-0 top-[106%]" onClick={onClick}>
+       <div
+        className="cursor-pointer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {isHovered ? (
+          <Image src={leftHoverWhiteArrow} alt="rightHoverWhiteArrow"  className='md:w-full md:h-full w-11/12 h-11/12' />
+        ) : (
+          <Image src={leftBlueArrow} alt="rightBlueArrow"  className='md:w-full md:h-full w-11/12 h-11/12'/>
+        )}
+      </div>
+    </div>
+
+
+   </div> 
   );
 };
 

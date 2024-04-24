@@ -25,7 +25,7 @@ const ContactServiceType = ({
       data-aos="fade-up"
     >
       <h1 className="text-3xl sm:text-5xl lg:text-6xl text-center whitespace-nowrap">
-        What Type of service ?
+         What Type of service ?
       </h1>
 
       <div className="w-full md:w-4/5">
@@ -33,7 +33,7 @@ const ContactServiceType = ({
           {contactServiceOptions.map((item, idx) => (
             <li
               key={idx}
-              className=" w-[159.5px] h-[44px] sm:w-[171px] sm:h-[64px] whitespace-nowrap text-xs sm:text-base cursor-pointer text-center flex items-center justify-center  rounded-lg bg-white bg-opacity-10 border border-white hover:bg-opacity-5"
+              className=" w-[159.5px] font-inter h-[44px] sm:w-[171px] sm:h-[64px] whitespace-nowrap text-xs sm:text-base cursor-pointer text-center flex items-center justify-center  rounded-lg bg-white bg-opacity-10 border border-white hover:bg-opacity-5"
               onClick={() => {
                 handleStepChange(1);
                 handleOptionSelect(item.tag);
@@ -49,3 +49,11 @@ const ContactServiceType = ({
 };
 
 export default ContactServiceType;
+
+
+
+
+
+
+
+
