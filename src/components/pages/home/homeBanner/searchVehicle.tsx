@@ -24,7 +24,9 @@ function SearchVehicle() {
     setIsDropdownOpen(false);
   };
 
+  const [loading, setloading] = useState(false);
   const handleSearch = async () => {
+    setloading(true);
     fetch(`/api/vehicle-enquiry-endpoint`, {
       method: "POST",
       headers: {
@@ -40,7 +42,10 @@ function SearchVehicle() {
         setSearchResult(data);
         console.log({ data });
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => console.log("error", error))
+      .finally(() => {
+        setloading(false);
+      });
   };
 
   return (
@@ -173,9 +178,10 @@ function SearchVehicle() {
             {/* Search button */}
             <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
               <button
+                disabled={loading}
                 className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans"
                 onClick={handleSearch}>
-                Search
+                {loading ? "Loading..." : "Search"}
               </button>
             </div>
           </div>
