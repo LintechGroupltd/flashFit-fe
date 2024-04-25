@@ -15,6 +15,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/api/vehicle-enquiry-endpoint", // Match your API endpoint
+        destination:
+          "https://uat.driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles", // Replace with actual URL
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
