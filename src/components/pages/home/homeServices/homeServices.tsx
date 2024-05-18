@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HomeServiceCard from "./homeServiceCard";
-import commnImg from "../../../../../public/assets/gallery/Img1.svg";
+
 
 import motLogo from "../../../../../public/assets/services/serviceCardNewCardLogo/Mot.svg";
 import serviceLogo from "../../../../../public/assets/services/serviceCardNewCardLogo/service.svg";

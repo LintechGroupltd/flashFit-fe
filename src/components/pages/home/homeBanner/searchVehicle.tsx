@@ -1,11 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import searchVehicleDownArrow from "../../../../../public/assets/home/serachVehicle/searchVehicledownArrow.svg";
-import searchByTyreDownArrow from "../../../../../public/assets/home/serachVehicle/searchByTyreDownArrow.svg";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "../../contact/contactForm";
+
 
 const data = [
   { id: "1", title: "Search by Vehicle" },
@@ -25,29 +21,13 @@ export interface searchResultDataType {
 
 function SearchVehicle() {
   const [searchType, setSearchType] = useState("1");
-  const [selectedOption, setSelectedOption] = useState("Tyres");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [showContactForm, setShowContactForm] = useState<boolean>(false);
   const [searchResult, setSearchResult] = useState<searchResultDataType | null>(
     null
   );
-
-  const handleYesClick = () => {
-    setShowContactForm(true); // Show the ContactForm
-  };
-
-  const handleOptionSelect = (option: React.SetStateAction<string>) => {
-    setSelectedOption(option);
-    setIsDropdownOpen(false);
-  };
-
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
 
   const handleSearch = async () => {
     if (!registrationNumber) {
@@ -217,7 +197,7 @@ function SearchVehicle() {
                     <Link href="/contact-us">
                       <button
                         className="bg-[#2A317F] hover:bg-[#42569D] text-white font-bold py-2 px-6 rounded"
-                        onClick={handleYesClick}
+                        
                       >
                         Yes
                       </button>
