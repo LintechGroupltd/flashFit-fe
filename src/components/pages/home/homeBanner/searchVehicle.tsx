@@ -1,336 +1,237 @@
+"use client";
 import React, { useState } from "react";
 import searchVehicleDownArrow from "../../../../../public/assets/home/serachVehicle/searchVehicledownArrow.svg";
 import searchByTyreDownArrow from "../../../../../public/assets/home/serachVehicle/searchByTyreDownArrow.svg";
-
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
+import ContactForm from "../../contact/contactForm";
+
 const data = [
   { id: "1", title: "Search by Vehicle" },
-  { id: "2", title: "Search by Tyre Size" },
+  // { id: "2", title: "Search by Tyre Size" },
 ];
 
-const options = ["Tyres", "Others"];
+const options = ["Tyres", "Others", "dfgd", "tfret", "dffdsf"];
+
+export interface searchResultDataType {
+  registrationNumber: string;
+  make: string;
+  colour: string;
+  yearOfManufacture: number;
+  fuelType: string;
+  // Add other properties as needed
+}
 
 function SearchVehicle() {
-  const [searchType, setSearchType] = useState(data[0]?.id);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const [searchType, setSearchType] = useState("1");
+  const [selectedOption, setSelectedOption] = useState("Tyres");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const [registrationNumber, setRegistrationNumber] = useState("");
-  const [postcode, setPostcode] = useState("");
-  const [searchResult, setSearchResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [showContactForm, setShowContactForm] = useState<boolean>(false);
+  const [searchResult, setSearchResult] = useState<searchResultDataType | null>(
+    null
+  );
+
+  const handleYesClick = () => {
+    setShowContactForm(true); // Show the ContactForm
+  };
 
   const handleOptionSelect = (option: React.SetStateAction<string>) => {
     setSelectedOption(option);
     setIsDropdownOpen(false);
   };
 
-  const [loading, setloading] = useState(false);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   const handleSearch = async () => {
-    setloading(true);
-    fetch(`/api/vehicle-enquiry-endpoint`, {
-      method: "POST",
-      headers: {
-        "x-api-key": "rubhdsUsqs7817KkODFnC8xOjazulvao3CgPnXt8",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        registrationNumber: "AA19AAA",
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setSearchResult(data);
-        console.log({ data });
-      })
-      .catch((error) => console.log("error", error))
-      .finally(() => {
-        setloading(false);
+    if (!registrationNumber) {
+      setError("Please enter a valid registration number");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+      const response = await fetch(`/api/vehicle-enquiry-endpoint`, {
+        method: "POST",
+        headers: {
+          "x-api-key": apiKey || "", // Ensure apiKey is not undefined
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          registrationNumber: registrationNumber,
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      setSearchResult(data);
+      localStorage.setItem("FlashFit_result", JSON.stringify(data));
+      setShowModal(true); // Open the modal after search completes
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError("Your registration number is not correct.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCloseModal = () => {
+    // Reset search result and close the modal
+    setSearchResult(null);
+    setShowModal(false);
+    setRegistrationNumber("");
   };
 
   return (
-    <div
-      style={{
-        boxShadow: "0px 4px 40px 0px rgba(0, 0, 0, 0.12)",
-      }}
-      className="bg-[#fff] z-0 shadow-lg  w-full overflow-hidden rounded-[24px] min-h-[180px]  translate-y-[-50%] mx-auto ">
-      <div className="flex bg-[#a4a7c8] h-[56px]">
-        {data.map((item) => {
-          const isActive = searchType === item?.id;
-          return (
-            <button
-              onClick={() => setSearchType(item?.id)}
-              key={item?.id}
-              className={
-                isActive
-                  ? "w-auto h-full px-[24px] bg-white text-[#2A317F] font-serif font-semibold flex gap-[12px] items-center justify-center"
-                  : "w-auto h-full px-[24px] bg-inherit text-[#ffffff] font-serif font-semibold flex gap-[12px] items-center justify-center"
-              }>
-              <span className="font-serif text-[14px]">{item?.title}</span>
-
-              <img
-                className="md:w-[20px] md:h-[20px] w-[15px] h-[15px] object-cover"
-                src={
+    <div>
+      <div className="bg-white z-0 md:h-[171px] h-[240px] shadow-lg w-full overflow-hidden rounded-lg translate-y-[-50%] mx-auto ">
+        {/* Search type buttons */}
+        <div className="flex bg-[#a4a7c8] h-[56px]">
+          {data.map((item) => {
+            const isActive = searchType === item?.id;
+            return (
+              <button
+                onClick={() => setSearchType(item?.id)}
+                key={item?.id}
+                className={
                   isActive
-                    ? "/assets/icons/search_blue.svg"
-                    : "/assets/icons/search_white.svg"
+                    ? "w-auto h-full px-[24px] bg-white text-[#2A317F] font-serif font-semibold flex gap-[12px] items-center justify-center"
+                    : "w-auto h-full px-[24px] bg-inherit text-[#ffffff] font-serif font-semibold flex gap-[12px] items-center justify-center"
                 }
-              />
-            </button>
-          );
-        })}
-      </div>
+              >
+                <span className="font-serif text-[14px]">{item?.title}</span>
 
-      {searchType === "1" && (
-        // <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
-        //   <div className="flex flex-col flex-1 gap-[5px] relative">
-        //     <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
-        //       What are you looking for?
-        //     </label>
-        //     <input
-        //       className="h-[48px] border border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
-        //       value={selectedOption}
-        //       readOnly
-        //       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-        //     />
-        //     <div
-        //       className={`${
-        //         isDropdownOpen ? "block" : "hidden"
-        //       } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
-        //       {options.map((option) => (
-        //         <div
-        //           key={option}
-        //           className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-        //           onClick={() => handleOptionSelect(option)}>
-        //           {option}
-        //         </div>
-        //       ))}
-        //     </div>
-        //     <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-        //       <Image src={searchVehicleDownArrow} alt="" />
-        //     </div>
-        //   </div>
+                <img
+                  className="md:w-[20px] md:h-[20px] w-[15px] h-[15px] object-cover"
+                  src={
+                    isActive
+                      ? "/assets/icons/search_blue.svg"
+                      : "/assets/icons/search_white.svg"
+                  }
+                />
+              </button>
+            );
+          })}
+        </div>
 
-        //   <div className="relative flex flex-col flex-1 gap-[5px] md:mt-0 mt-5">
-        //     <label className="text-[#000000]  font-semibold font-sans mb-[5px] text-[14px]">
-        //       Vehicle Registration
-        //     </label>
-        //     <input
-        //       className="h-[48px] font-sans text-[16px] border border-grey-500 rounded-[8px] pl-14 focus:outline-none"
-        //       placeholder="Enter Number"
-        //     />
-        //     <div className="bg-[#2A317F] w-[40px] absolute top-[32px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
-        //       <h2 className="text-[#fff] text-[16px] font-[500]  text-center font-sans">
-        //         UK
-        //       </h2>
-        //     </div>
-        //   </div>
-
-        //   <div className="flex flex-col flex-1 gap-[5px] md:mt-0 mt-5">
-        //     <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
-        //       Postcode
-        //     </label>
-        //     <input
-        //       className="h-[48px] border border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
-        //       placeholder="Enter Code"
-        //     />
-        //   </div>
-
-        //   <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
-        //     <button className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans">
-        //       Search
-        //     </button>
-        //   </div>
-        // </div>
-        <div>
-          <div className="md:flex items-center px-[24px] py-[24px] gap-[24px]">
+        {/* Search form based on searchType */}
+        {searchType === "1" && (
+          <div className="md:flex items-center px-[24px] gap-[24px]">
             {/* Input for registration number */}
-            <div className="flex flex-col flex-1 gap-[5px] relative">
-              <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
+            <div className="flex flex-col flex-1 gap-[5px] relative mt-1">
+              <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px] md:mt-0 mt-2">
                 Vehicle Registration
               </label>
               <input
                 className="h-[48px] font-sans text-[16px] border border-grey-500 rounded-[8px] pl-14 focus:outline-none"
                 placeholder="Enter Number"
                 value={registrationNumber}
-                onChange={(e) => setRegistrationNumber(e.target.value)}
+                onChange={(e) =>
+                  setRegistrationNumber(e.target.value.toUpperCase())
+                }
               />
-              <div className="bg-[#2A317F] w-[40px] absolute top-[32px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
+              <div className="bg-[#2A317F] w-[40px] absolute md:top-[32px] top-[40px] py-[11px] rounded-tl-[8px] rounded-bl-[8px]">
                 <h2 className="text-[#fff] text-[16px] font-[500] text-center font-sans">
                   UK
                 </h2>
               </div>
             </div>
 
-            {/* Input for postcode */}
-            <div className="flex flex-col flex-1 gap-[5px] relative">
-              <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
-                Postcode
-              </label>
-              <input
-                className="h-[48px] border border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
-                placeholder="Enter Code"
-                value={postcode}
-                onChange={(e) => setPostcode(e.target.value)}
-              />
-            </div>
-
             {/* Search button */}
-            <div className="flex flex-col flex-1 gap-[5px] mt-[31px]">
+            <div className="md:flex flex-col flex-1 gap-[5px] md:mt-[33px] mt-5">
               <button
                 disabled={loading}
-                className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans"
-                onClick={handleSearch}>
+                className="bg-[#F8AD39] h-[48px] w-full text-white font-semibold rounded-[8px]"
+                onClick={handleSearch}
+              >
                 {loading ? "Loading..." : "Search"}
               </button>
             </div>
           </div>
-
-          {/* Display search result in a modal */}
-          {searchResult && (
-            <div className="modal">
-              {/* Your modal content here */}
-              <pre>{JSON.stringify(searchResult, null, 2)}</pre>
-            </div>
-          )}
+        )}
+        <div className="mt-1 px-6">
+          {/* Error message */}
+          {error && <p className="text-red-500">{error}</p>}
         </div>
-      )}
+      </div>
 
-      {/* search by Tyre size */}
-      {searchType === "2" && (
-        <div className="md:flex items-center px-[24px] py-[24px] gap-[20px] ">
-          <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
-            <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
-              Width
-            </label>
-            <input
-              className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
-              // value={selectedOption}
-              readOnly
-              placeholder="Select Number"
-              // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            />
-            {/* <div
-                className={`$ absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
-                {options.map((option) => (
-                  <div
-                    key={option}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    onClick={() => handleOptionSelect(option)}
-                    >
-                    {option}
-                  </div>
-                ))}
-              </div> */}
-            <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-              <Image src={searchByTyreDownArrow} alt="" />
+      {/* Modal for displaying search result */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50 w-full md:mx-0 px-3">
+          <div className="bg-white p-8 rounded-lg w-[620px]">
+            <div className="flex justify-between items-center">
+              <h2 className="text-[19px] font-semibold uppercase font-sans">
+                Your Search Result
+              </h2>
+              <button
+                className="text-[14px] text-white font-bold py-2 px-6 rounded bg-[#2A317F] hover:bg-[#42569D] font-sans uppercase hover:text-[#F8AD39]"
+                onClick={handleCloseModal}
+              >
+                Close
+              </button>
             </div>
-          </div>
 
-          <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
-            <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
-              Ratio
-            </label>
-            <input
-              className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
-              // value={selectedOption}
-              placeholder="Select Number"
-              readOnly
-              // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            />
-            {/* <div
-                className={`${
-                  isDropdownOpen ? "block" : "hidden"
-                } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
-                {options.map((option) => (
-                  <div
-                    key={option}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    onClick={() => handleOptionSelect(option)}
+            <hr className="h-[3px] bg-[#2A317F] my-3" />
+
+            {searchResult && typeof searchResult === "object" && (
+              <div>
+                {/* Display specific search result properties if searchResult is an object */}
+                <p className="mb-2 text-[15px]">
+                  <span className="font-bold">Registration Number:</span>{" "}
+                  <span>{searchResult.registrationNumber}</span>
+                </p>
+                <p className="mb-2 text-[15px]">
+                  <span className="font-bold">Make:</span>{" "}
+                  <span>{searchResult.make}</span>
+                </p>
+                <p className="mb-2 text-[15px]">
+                  <span className="font-bold">Colour:</span>{" "}
+                  <span>{searchResult.colour}</span>
+                </p>
+                <p className="mb-2 text-[15px]">
+                  <span className="font-bold">Year of Manufacture:</span>{" "}
+                  <span>{searchResult.yearOfManufacture}</span>
+                </p>
+                <p className="mb-2 text-[15px]">
+                  <span className="font-bold">Fuel Type:</span>{" "}
+                  <span>{searchResult.fuelType}</span>
+                </p>
+
+                <hr className="h-[3px] bg-[#2A317F] my-3" />
+
+                <div className="w-full mt-3">
+                  <p className="text-[15px] mb-3">Is this Your Car?</p>
+                  <div className="flex gap-4">
+                    <Link href="/contact-us">
+                      <button
+                        className="bg-[#2A317F] hover:bg-[#42569D] text-white font-bold py-2 px-6 rounded"
+                        onClick={handleYesClick}
+                      >
+                        Yes
+                      </button>
+                    </Link>
+                    <button
+                      className="bg-gray-300 hover:bg-gray-400 text-[#2A317F] font-bold py-2 px-6 rounded"
+                      onClick={handleCloseModal}
                     >
-                    {option}
+                      No, Search Again
+                    </button>
                   </div>
-                ))}
-              </div> */}
-            <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-              <Image src={searchByTyreDownArrow} alt="" />
-            </div>
-          </div>
-
-          <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
-            <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
-              Rim
-            </label>
-            <input
-              className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
-              // value={selectedOption}
-              placeholder="Select Number"
-              readOnly
-              // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            />
-            {/* <div
-                className={`${
-                  isDropdownOpen ? "block" : "hidden"
-                } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
-                {options.map((option) => (
-                  <div
-                    key={option}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    onClick={() => handleOptionSelect(option)}
-                    >
-                    {option}
-                  </div>
-                ))}
-              </div> */}
-            <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-              <Image src={searchByTyreDownArrow} alt="" />
-            </div>
-          </div>
-
-          <div className="flex flex-col flex-1 gap-[5px] relative md:w-40">
-            <label className="text-[#000000] font-sans font-semibold mb-[5px] text-[14px]">
-              Speed
-            </label>
-            <input
-              className="h-[48px] border text-[14px] border-grey-500 rounded-[8px] pl-4 pr-12 focus:outline-none font-sans"
-              // value={selectedOption}
-              readOnly
-              placeholder="Select Number"
-              // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            />
-            {/* <div
-                className={`${
-                  isDropdownOpen ? "block" : "hidden"
-                } absolute top-[0]  right-0 md:mt-[-45px] mt-[85px] z-10 w-full bg-white shadow-lg rounded-md`}>
-                {options.map((option) => (
-                  <div
-                    key={option}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    onClick={() => handleOptionSelect(option)}
-                    >
-                    {option}
-                  </div>
-                ))}
-              </div> */}
-            <div className="absolute top-[52px] right-2 flex items-center pr-3 pointer-events-none">
-              <Image src={searchByTyreDownArrow} alt="" />
-            </div>
-          </div>
-
-          <div className="flex flex-col flex-1 gap-[5px] md:mt-0 mt-5 md:w-40">
-            <label className="text-[#000000] font-semibold font-sans mb-[5px] text-[14px]">
-              Postcode
-            </label>
-            <input
-              className="h-[48px] border md:text-[16px] text-[14px] border-grey-500 rounded-[8px] font-sans pl-3 focus:outline-none"
-              placeholder="Enter Code"
-            />
-          </div>
-
-          <div className="flex flex-col flex-1 gap-[5px] mt-[31px] md:w-40">
-            <button className="bg-[#F8AD39] h-[48px] text-[#fff] rounded-[8px] font-[600] text-[16px] font-sans">
-              Search
-            </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}

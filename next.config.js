@@ -2,6 +2,9 @@
 
 const withPWA = require("next-pwa");
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const nextConfig = {
   ...withPWA({
     dest: "public",

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Fragment } from "react";
-import navbarLogo from "../../../../../public/assets/navabar/FlashfitLogo.svg";
+import navbarLogo from "../../../../assets/FlashFitNewImg/Flash Fit Logo/HeaderLogo.svg";
 import downArrow from "../../../../../public/assets/navabar/Arrow_Down.svg";
 
 import contactUs_arrow_right from "../../../../../public/assets/navabar/contactUs-arrow-right.svg";

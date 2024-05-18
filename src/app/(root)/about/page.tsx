@@ -1,11 +1,13 @@
 "use client";
+
 import Footer from "@/components/layout/footer/Footer";
-import About from "@/components/pages/about";
+import ABOUT from "@/components/pages/about";
+
 
 const page = () => {
   return (
     <div className="">
-      <About />
+      <ABOUT />
       <Footer />
     </div>
   );

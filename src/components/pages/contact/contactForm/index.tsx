@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -8,49 +7,75 @@ interface StepProps {
   selectedOptions: { value: string };
 }
 
-const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
+const ContactForm = ({ handleStepChange, selectedOptions }: StepProps) => {
+  const search_result = JSON.parse(
+    localStorage.getItem("FlashFit_result") ?? " "
+  );
+
   const [formData, setFormData] = useState({
     serviceType: selectedOptions.value,
+
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     try {
       const data = {
-        from: "mayor.Yakoob <info@Yakoob.com>",
-        to: "Admin | Customer Care <info@Yakoob.com>",
-        subject: "Yakoob",
+        from: "FlashFit <info@FlashFit.com>",
+        to: "Admin | Customer Care <info@FlashFit.com>",
+        subject: "FlashFit",
         data: [
-            {
-                key: "Service Type",
-                value: formData.serviceType // Include serviceType in the form data
-              },
-            {
+          {
+            key: "Service Type",
+            value: formData.serviceType,
+          },
+          {
             key: "Full Name",
-            value: formData.firstName
+            value: formData.firstName,
           },
           {
             key: "Last Name",
-            value: formData.email
+            value: formData.lastName,
           },
           {
             key: "Phone",
-            value: formData.phone
+            value: formData.phone,
           },
           {
-            key: "email",
-            value: formData.email
+            key: "Email",
+            value: formData.email,
           },
           {
             key: "Message",
-            value: formData.message
-          }
-        ]
+            value: formData.message,
+          },
+          {
+            key: "Registration Number",
+            value: search_result ? search_result.registrationNumber : "N/A",
+          },
+          {
+            key: "Make",
+            value: search_result ? search_result.make : "N/A",
+          },
+          {
+            key: "Colour",
+            value: search_result ? search_result.colour : "N/A",
+          },
+          {
+            key: "Year of Manufacture",
+            value: search_result ? search_result.yearOfManufacture : "N/A",
+          },
+          {
+            key: "Fuel Type",
+            value: search_result ? search_result.fuelType : "N/A",
+          },
+        ],
       };
 
       const response = await axios.post(
@@ -58,13 +83,13 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
         data
       );
       console.log("Form submitted successfully:", response.data);
-      console.log(data)
+      console.log(data);
 
       Swal.fire({
         icon: "success",
         title: "Thank You!",
         text: "",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
       });
 
       // Clear form fields after successful submission
@@ -74,7 +99,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
         lastName: "",
         phone: "",
         email: "",
-        message: ""
+        message: "",
       });
 
       // Call handleStepChange after successful form submission
@@ -86,7 +111,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
         icon: "error",
         title: "Oops...",
         text: "Something went wrong! Please try again later.",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
       });
     }
   };
@@ -96,7 +121,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
   };
 
   return (
-    <div className="absolute w-full  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  px-5  md:px-12 lg:px-28 mt-6">
+    <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-5 md:px-12 lg:px-28 mt-6">
       <div className="content w-full flex flex-col md:flex-row gap-6 sm:gap-10 lg:gap-20">
         <h1
           className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl min-w-sm text-center md:text-left"
@@ -112,7 +137,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
           >
             <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
               <input
-                className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+                className="w-full py-2 px-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
                 type="text"
                 placeholder="First Name"
                 value={formData.firstName}
@@ -120,7 +145,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
                 required
               />
               <input
-                className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+                className="w-full py-2 px-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
                 type="text"
                 placeholder="Last Name"
                 value={formData.lastName}
@@ -131,7 +156,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
 
             <div className="w-full flex flex-col md:flex-row gap-4 lg:gap-6">
               <input
-                className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+                className="w-full py-2 px-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
                 type="text"
                 placeholder="Phone"
                 value={formData.phone}
@@ -139,7 +164,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
                 required
               />
               <input
-                className="w-full py-2 px-2  md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
+                className="w-full py-2 px-2 md:p-4 rounded-md bg-white bg-opacity-10 outline-none"
                 type="email"
                 placeholder="Email"
                 value={formData.email}
@@ -162,7 +187,7 @@ const ContactForm = ({ handleStepChange,selectedOptions }: StepProps) => {
             <div className="w-full">
               <button
                 type="submit"
-                className="lg:float-right bg-[#F8AD39] text-[#FFF] text-[16px] font-semibold font-inter flex justify-center rounded-md  py-2 md:py-3 px-6"
+                className="lg:float-right bg-[#F8AD39] text-[#FFF] text-[16px] font-semibold font-inter flex justify-center rounded-md py-2 md:py-3 px-6"
               >
                 Submit
               </button>

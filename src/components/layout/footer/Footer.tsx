@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import flahFitFooterLogo from '../../../../public/assets/footer/FlashfitLogo.svg'
+import flahFitFooterLogo from '../../../assets/FlashFitNewImg/Flash Fit Logo/FooterLogo.svg'
 
 import telephoneIcon from '../../../../public/assets/footer/telephone.svg'
 import infoWhatsApp from '../../../../public/assets/footer/infoWhatsApp.svg'

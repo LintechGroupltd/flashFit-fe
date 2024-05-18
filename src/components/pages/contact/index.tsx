@@ -135,6 +135,13 @@ const ContactPage = () => {
         </div>
       )}
 
+
+
+
+
+
+
+
       <div className="w-full h-full flex items-center justify-center">
         <>
           {activeStep === 0 && (
@@ -145,6 +152,7 @@ const ContactPage = () => {
           )}
           {activeStep === 1 && (
             <ContactForm 
+            
              handleStepChange={handleStepChange}
              selectedOptions={{ value: selectedOptions[0] }} // Pass selectedOptions to ContactForm
             />

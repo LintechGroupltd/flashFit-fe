@@ -131,7 +131,6 @@ export const contents: Content[] = [
     list: {
       item1:
         "The supply of appropriate evidence of your identity (for this purpose, we will usually accept a photocopy of your passport certified by a solicitor or bank, plus an original copy of a utility bill showing your current address).",
-  
     },
     bottomDsc1:'',
     bottomDsc2:'',
