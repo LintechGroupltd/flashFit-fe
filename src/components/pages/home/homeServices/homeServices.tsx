@@ -137,7 +137,7 @@ const HomeServices = () => {
   };
 
   return (
-    <div className="relative bg-[#fff] w-full md:mt-20  ">
+    <div className="relative bg-[#fff] w-full md:mt-10  ">
       <div>
         <h2 className="md:text-[48px] text-[34px] font-[600] font-serif md:leading-[55px] leading-[45px] ml-1">
           Browse our set
