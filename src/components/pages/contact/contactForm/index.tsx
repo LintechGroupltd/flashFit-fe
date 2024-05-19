@@ -8,9 +8,20 @@ interface StepProps {
 }
 
 const ContactForm = ({ handleStepChange, selectedOptions }: StepProps) => {
-  const search_result = JSON.parse(
-    localStorage.getItem("FlashFit_result") ?? " "
-  );
+  // Safely parse the localStorage item
+  const getLocalStorageItem = (key: string, defaultValue: any) => {
+    const storedValue = localStorage.getItem(key);
+    if (!storedValue) return defaultValue;
+
+    try {
+      return JSON.parse(storedValue);
+    } catch (error) {
+      console.error(`Error parsing localStorage item "${key}":`, error);
+      return defaultValue;
+    }
+  };
+
+  const search_result = getLocalStorageItem("FlashFit_result", null);
 
   const [formData, setFormData] = useState({
     serviceType: selectedOptions.value,

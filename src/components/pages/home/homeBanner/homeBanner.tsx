@@ -12,7 +12,7 @@ function HomeBanner() {
         <div className="" data-aos="fade-right">
           <h2 className="md:text-[67px] text-[34px] text-[#fff] md:leading-[70px] leading-[45px] font-[600]  font-serif">
             Revitalise Your
-            <br /> Ride with FlashFix
+            <br /> Ride with FlashFit
           </h2>
 
           {/*for desktop  */}
